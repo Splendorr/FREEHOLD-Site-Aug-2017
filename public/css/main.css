@@ -296,6 +296,12 @@ iframe {
   -ms-interpolation-mode: bicubic;
   display: block;
 }
+@font-face {
+  font-family: 'questrial-regular';
+  src: url("../fonts/questrial-regular-webfont.eot");
+/* IE9 Compat Modes */
+  src: url("../fonts/questrial-regular-webfont.eot?#iefix") format('embedded-opentype'), url("../fonts/questrial-regular-webfont.woff") format('woff'), url("../fonts/questrial-regular-webfont.ttf") format('truetype'), url("../fonts/questrial-regular-webfont.svg#questrialregular") format('svg');
+}
 .clearfix::after,
 .cf::after {
   content: '';
@@ -348,7 +354,7 @@ body {
   font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
   -webkit-font-smoothing: antialiased;
-  font-family: Helvetica, sans-serif;
+  font-family: 'questrial-regular', Helvetica, sans-serif;
   background-color: #302a26;
   color: #ebe8e7;
   overflow-x: hidden;
