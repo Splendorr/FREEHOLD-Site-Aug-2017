@@ -420,3 +420,12 @@ a.rise:active {
 .navSocial {
   float: right;
 }
+.headerLogo {
+  margin: 0 auto;
+  width: 75%;
+}
+@media only screen and (min-width: 1000px) {
+  .headerLogo {
+    width: 45%;
+  }
+}
