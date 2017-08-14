@@ -1,0 +1,132 @@
+@charset "UTF-8";
+
+@import 'jeet'
+
+global-reset()
+normalize-css()
+border-box-html()
+// base()
+fluid-media()
+
+// @font-face {
+//   font-family: 'do_it_againregular';
+//   src: url('../fonts/thinkdust_-_doitagain-regular-webfont.woff2') format('../fonts/woff2'), 
+//   url('../fonts/thinkdust_-_doitagain-regular-webfont.woff') format('woff');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+.clearfix, .cf
+  clearfix()
+
+percenter(value, pad = null)
+  margin-left auto
+  margin-right auto
+  width 100%
+  float: none
+  u = unit(value)
+  if (u is 'rem' or u is '%')
+    max-width unit(value, u)
+  else
+    // max-width rem(value)
+    max-width value
+  if (pad is null)
+    return
+  else
+    p = unit(pad)
+    if (p is 'rem' or p is '%')
+      padding-left  unit(pad, p)
+      padding-right  unit(pad, p)
+    else
+      // padding-left rem(pad)
+      // padding-right rem(pad)
+      padding-left pad
+      padding-right pad
+
+// @mixin flex-video-container {
+.flex-video {
+  position: relative;
+  padding-top: rem-calc(25);
+  padding-bottom: 67.5%;
+  height: 0;
+  margin-bottom: rem-calc(16);
+  overflow: hidden;
+
+  &.widescreen { padding-bottom: 56.34%; }
+  &.vimeo { padding-top: 0; }
+
+  iframe,
+  object,
+  embed,
+  video {
+    position: absolute;
+    top: 0;
+    // #{$default-float}: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// SVG fix for IE
+img
+  width: 100%
+img, svg
+  max-width 100%
+svg
+  width 100%
+  height auto
+  max-height 100%
+
+breakiPhone5 = 350px
+breakiPhone6 = 374px
+breaksm = 426px
+breakxs = 590px
+breakmd = 760px
+breakxm = 1000px
+breaklg = 1375px
+breakxl = 1560px
+
+// COLORS //
+clBlack = #000
+clWhite = #fff
+
+html, body
+  font-kerning: normal;
+  letter-spacing: 0px;
+  text-rendering: optimizeLegibility;
+  text-rendering: geometricPrecision;
+  font-smooth: always;
+  font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  font-family: Helvetica, sans-serif
+  background-color: #20040c
+  // color: clRed
+  // text-shadow: 0px 0px 30px rgba(clRedGlow, .8), 0px 0px 15px rgba(clRed, .5)
+  color: clWhite
+  overflow-x: hidden;
+  overflow-y hidden
+  font-size: 40px
+  // height 100vh
+  // +above(breakmd)
+  //   // height 100vh
+  //   height 100%
+
+a
+  display: inline-block
+  transition transform .2s ease-out, color .2s ease-out, text-shadow 2s ease-out
+  text-decoration: none
+  // color: clActive
+
+  &:link
+    // color:  clActive
+  &:hover, &:focus, &:active
+    // color: clActive2 !important 
+  &:visited
+    // color: clActive
+a.rise
+  &:hover, &:focus
+    transform translateY(-3px)
+    // transform scale(1.05)
+  &:active
+    transform translateY(3px)
