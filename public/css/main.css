@@ -356,6 +356,7 @@ body {
   -webkit-font-smoothing: antialiased;
   font-family: 'questrial-regular', Helvetica, sans-serif;
   background-color: #302a26;
+  background-image: url("../img/freehold_tile.png");
   color: #ebe8e7;
   overflow-x: hidden;
   overflow-y: hidden;
