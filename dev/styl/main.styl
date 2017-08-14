@@ -136,18 +136,23 @@ a.rise
   display: inline-flex
   align-items: center
   justify-content: center
+  // flex-wrap wrap
   padding-top: 20px
   padding-bottom: 20px
   background-color: rgba(clBlack, .5)
-  freeBoxShadow()
+  // freeBoxShadow()
   margin-bottom: vertRhythm
   a
+    font-size: 14px
     margin-right 20px
+    +above(breakxm)
+      font-size: 18px
+      margin-right 10px
     &:last-child
       margin-right: 0px
 
-.navSocial
-  float: right
+// .navSocial
+//   float: right
 
 .headerLogo
   margin 0 auto

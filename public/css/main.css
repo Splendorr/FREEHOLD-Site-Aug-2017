@@ -408,18 +408,20 @@ a.rise:active {
   padding-top: 20px;
   padding-bottom: 20px;
   background-color: rgba(23,20,18,0.5);
-  -webkit-box-shadow: 0px 2px 10px rgba(23,20,18,0.5);
-          box-shadow: 0px 2px 10px rgba(23,20,18,0.5);
   margin-bottom: 80px;
 }
 .navBar a {
+  font-size: 14px;
   margin-right: 20px;
+}
+@media only screen and (min-width: 1000px) {
+  .navBar a {
+    font-size: 18px;
+    margin-right: 10px;
+  }
 }
 .navBar a:last-child {
   margin-right: 0px;
-}
-.navSocial {
-  float: right;
 }
 .headerLogo {
   margin: 0 auto;
