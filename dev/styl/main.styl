@@ -111,16 +111,17 @@ html, body
 
 a
   display: inline-block
-  transition transform .2s ease-out, color .2s ease-out, text-shadow 2s ease-out
+  transition transform .15s ease-out, color .15s ease-out
   text-decoration: none
-  // color: clActive
-
+  color: clOrange
   &:link
-    // color:  clActive
-  &:hover, &:focus, &:active
-    // color: clActive2 !important 
+    color:  clOrange
+  &:hover, &:focus
+    color: clOrange + 35%
+  &:active
+    color: clOrange - 35%
   &:visited
-    // color: clActive
+    color: clOrange
 a.rise
   &:hover, &:focus
     transform translateY(-3px)
