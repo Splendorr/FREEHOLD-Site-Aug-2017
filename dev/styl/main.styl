@@ -169,6 +169,9 @@ a.rise
   +above(breakxm)
     percenter(100%, 40px)
 
+.game
+  margin-bottom: vertRhythm
+
 .game-info
   background-color: rgba(clBlack, .75)
   display: inline-flex
@@ -190,8 +193,10 @@ a.rise
 
 .game-screens
   padding-right: 0
+  margin-bottom: 20px
   +above(breakxs)
     padding-right: 20px
+    margin-bottom: 0px
 .game-description
   padding-left: 0
   +above(breakxs)
@@ -202,6 +207,8 @@ a.rise
   flex-direction: row
   flex-wrap: wrap
   justify-content: center
+  margin-bottom -2%
+  margin-bottom -2vw
   .grid-item
     // border: solid 3px clWhite
     // width 100%
@@ -225,8 +232,11 @@ a.rise
 
 .qud
   .game-description
-    font-size: 32px;
-    line-height: 40px
+    +above(breakxm)
+      font-size: 32px;
+      line-height: 40px
     +above(breaklg)
       font-size: 36px;
       line-height: 44px
+    p
+      margin-bottom: 1em

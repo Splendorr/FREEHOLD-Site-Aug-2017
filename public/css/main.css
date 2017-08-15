@@ -455,6 +455,9 @@ a.rise:active {
     padding-right: 40px;
   }
 }
+.game {
+  margin-bottom: 80px;
+}
 .game-info {
   background-color: rgba(23,20,18,0.75);
   display: -webkit-inline-box;
@@ -496,10 +499,12 @@ a.rise:active {
 }
 .game-screens {
   padding-right: 0;
+  margin-bottom: 20px;
 }
 @media only screen and (min-width: 590px) {
   .game-screens {
     padding-right: 20px;
+    margin-bottom: 0px;
   }
 }
 .game-description {
@@ -523,6 +528,8 @@ a.rise:active {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: -2%;
+  margin-bottom: -2vw;
 }
 .grid-container .grid-item {
   display: inline-block;
@@ -544,13 +551,18 @@ a.rise:active {
 .grid-container .grid-item img {
   border: solid 3px #ebe8e7;
 }
-.qud .game-description {
-  font-size: 32px;
-  line-height: 40px;
+@media only screen and (min-width: 1000px) {
+  .qud .game-description {
+    font-size: 32px;
+    line-height: 40px;
+  }
 }
 @media only screen and (min-width: 1375px) {
   .qud .game-description {
     font-size: 36px;
     line-height: 44px;
   }
+}
+.qud .game-description p {
+  margin-bottom: 1em;
 }
