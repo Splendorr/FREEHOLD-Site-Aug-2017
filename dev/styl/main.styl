@@ -102,8 +102,8 @@ html, body
   // color: clRed
   // text-shadow: 0px 0px 30px rgba(clRedGlow, .8), 0px 0px 15px rgba(clRed, .5)
   color: clWhite
-  overflow-x: hidden;
-  overflow-y hidden
+  // overflow-x: hidden;
+  // overflow-y hidden
   font-size: 18px
   line-height: 22px
   // height 100vh
@@ -154,8 +154,64 @@ a.rise
 // .navSocial
 //   float: right
 
+.freeShadow
+  freeBoxShadow()
+
 .headerLogo
   margin 0 auto
   width 75%
   +above(breakxm)
     width 45%
+  margin-bottom: vertRhythm
+
+.mainContent
+  percenter(100%, 20px)
+  +above(breakxm)
+    percenter(100%, 40px)
+
+.game-info
+  background-color: rgba(clBlack, .75)
+  display: inline-flex
+  flex-direction: column
+  flex-wrap: wrap
+  justify-content: space-between
+  padding: 20px
+  +above(breakxs)
+    flex-direction: row
+  +above(breakxm)
+    padding 40px
+
+.game-screens, .game-description
+  width 100%
+  // display: block
+  +above(breakxs)
+    width 49%
+    // display inline-block
+
+.grid-container
+  display: inline-flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: center
+  .grid-item
+    // border: solid 3px clWhite
+    // width 100%
+    // padding-bottom 1%
+    display inline-block
+    // +above(breakxm)
+    width: 49%
+    padding-bottom 2%
+    padding-bottom 2vw
+    &:nth-child(odd)
+      padding-right 1%
+      padding-right 1vw
+      &:last-child
+        padding-right 0
+    &:nth-child(even)
+      padding-left 1%
+      padding-left 1vw
+    
+    img
+      border: solid 3px clWhite
+
+  
