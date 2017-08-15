@@ -412,7 +412,7 @@ a.rise:active {
   padding-top: 20px;
   padding-bottom: 20px;
   background-color: rgba(23,20,18,0.5);
-  margin-bottom: 80px;
+  margin-bottom: 120px;
 }
 .navLinks {
   display: -webkit-box;
@@ -445,12 +445,12 @@ a.rise:active {
 }
 .headerLogo {
   margin: 0 auto;
-  width: 75%;
-  margin-bottom: 80px;
+  width: 80%;
+  margin-bottom: 120px;
 }
 @media only screen and (min-width: 1000px) {
   .headerLogo {
-    width: 45%;
+    width: 50%;
   }
 }
 .mainContent {
