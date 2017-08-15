@@ -132,7 +132,7 @@ a.rise
     transform translateY(3px)
 
 .navBar
-  width 100%
+  percenter(100%, 20px)
   display: inline-flex
   align-items: center
   justify-content: center
@@ -142,14 +142,26 @@ a.rise
   background-color: rgba(clBlack, .5)
   // freeBoxShadow()
   margin-bottom: vertRhythm
+
+.navLinks
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-wrap wrap
+  // width 60%
+  // margin-left: 20%
+  // margin-right 20%
+  // margin auto 0
   a
     font-size: 14px
-    margin-right 20px
+    margin-left: 10px
+    margin-right 10px
     +above(breakxm)
       font-size: 18px
-      margin-right 10px
-    &:last-child
-      margin-right: 0px
+      margin-left 20px
+      margin-right 20px
+    // &:last-child
+    //   margin-right: 0px
 
 // .navSocial
 //   float: right
