@@ -205,6 +205,7 @@ a.rise
     margin-bottom: 1em
 
 .grid-container
+  width 100%
   display: inline-flex
   flex-direction: row
   flex-wrap: wrap
@@ -250,6 +251,8 @@ a.rise
     text-transform uppercase
     font-size: 42px;
     line-height: 46px
+    margin-top: 0
+    margin-bottom: 20px
     +above(breakxs)
       font-size: 48px;
       line-height: 52px
@@ -266,6 +269,10 @@ a.rise
   width: 100%
   padding-left: 0
   padding-right: 0
+  p
+    margin-bottom: 1em
+    &:last-child
+      margin-bottom: 0
   +above(breakxs)
     width: 49%
     &:nth-child(odd)
@@ -302,13 +309,58 @@ a.rise
   padding-bottom: 40px
 
 .project-image
-  padding-bottom: 50%
+  padding-bottom: 66%
   background-origin: center
   background-position center
   background-size cover
 
 .project-description
-  background-color: clBlack
+  background-color: rgba(clBlack, .75)
   // padding: 10px
   // +above(breakmd)
+  padding: 20px
+
+.team-grid-item
+  // border: solid 3px clWhite
+  // width 100%
+  // padding-bottom 1%
+  display inline-block
+  // +above(breakxm)
+  width 100%
+  padding-left: 0
+  padding-right: 0
+  padding-bottom 20px
+  +above(breakxm)
+    width: 49%
+    &:nth-child(odd)
+      padding-right 1%
+      padding-right 1vw
+      &:last-child
+        padding-right 0
+    &:nth-child(even)
+      padding-left 1%
+      padding-left 1vw
+
+.team-box
+  display inline-flex
+  flex-direction column
+  +above(breaksm)
+    flex-direction row
+  width 100%
+
+
+.team-photo-holder
+  width 100%
+  +above(breakxs)
+    width (100/3)%
+.team-photo
+  padding-bottom: 100%
+  background-origin: center
+  background-position center
+  background-size cover
+.team-description
+  width 100%
+  +above(breakxs)
+    width ((100/3)*2)%
+  background-color: rgba(clBlack, .75)
   padding: 20px

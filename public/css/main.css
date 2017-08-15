@@ -519,6 +519,7 @@ a.rise:active {
   margin-bottom: 1em;
 }
 .grid-container {
+  width: 100%;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -576,6 +577,8 @@ a.rise:active {
   text-transform: uppercase;
   font-size: 42px;
   line-height: 46px;
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 @media only screen and (min-width: 590px) {
   .section h1 {
@@ -597,6 +600,12 @@ a.rise:active {
   padding-left: 0;
   padding-right: 0;
   padding-bottom: 40px;
+}
+.project-item p {
+  margin-bottom: 1em;
+}
+.project-item p:last-child {
+  margin-bottom: 0;
 }
 @media only screen and (min-width: 590px) {
   .project-item {
@@ -634,12 +643,77 @@ a.rise:active {
   }
 }
 .project-image {
-  padding-bottom: 50%;
+  padding-bottom: 66%;
   background-origin: center;
   background-position: center;
   background-size: cover;
 }
 .project-description {
-  background-color: #171412;
+  background-color: rgba(23,20,18,0.75);
   padding: 20px;
+}
+.team-grid-item {
+  display: inline-block;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 20px;
+}
+@media only screen and (min-width: 1000px) {
+  .team-grid-item {
+    width: 49%;
+  }
+  .team-grid-item:nth-child(odd) {
+    padding-right: 1%;
+    padding-right: 1vw;
+  }
+  .team-grid-item:nth-child(odd):last-child {
+    padding-right: 0;
+  }
+  .team-grid-item:nth-child(even) {
+    padding-left: 1%;
+    padding-left: 1vw;
+  }
+}
+.team-box {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+@media only screen and (min-width: 426px) {
+  .team-box {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+.team-photo-holder {
+  width: 100%;
+}
+@media only screen and (min-width: 590px) {
+  .team-photo-holder {
+    width: 33.333333333333336%;
+  }
+}
+.team-photo {
+  padding-bottom: 100%;
+  background-origin: center;
+  background-position: center;
+  background-size: cover;
+}
+.team-description {
+  width: 100%;
+  background-color: rgba(23,20,18,0.75);
+  padding: 20px;
+}
+@media only screen and (min-width: 590px) {
+  .team-description {
+    width: 66.66666666666667%;
+  }
 }
