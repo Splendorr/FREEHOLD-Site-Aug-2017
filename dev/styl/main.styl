@@ -185,8 +185,17 @@ a.rise
   width 100%
   // display: block
   +above(breakxs)
-    width 49%
+    width 50%
     // display inline-block
+
+.game-screens
+  padding-right: 0
+  +above(breakxs)
+    padding-right: 20px
+.game-description
+  padding-left: 0
+  +above(breakxs)
+    padding-left: 20px
 
 .grid-container
   display: inline-flex
@@ -214,4 +223,10 @@ a.rise
     img
       border: solid 3px clWhite
 
-  
+.qud
+  .game-description
+    font-size: 32px;
+    line-height: 40px
+    +above(breaklg)
+      font-size: 36px;
+      line-height: 44px

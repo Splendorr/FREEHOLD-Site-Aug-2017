@@ -491,7 +491,23 @@ a.rise:active {
 @media only screen and (min-width: 590px) {
   .game-screens,
   .game-description {
-    width: 49%;
+    width: 50%;
+  }
+}
+.game-screens {
+  padding-right: 0;
+}
+@media only screen and (min-width: 590px) {
+  .game-screens {
+    padding-right: 20px;
+  }
+}
+.game-description {
+  padding-left: 0;
+}
+@media only screen and (min-width: 590px) {
+  .game-description {
+    padding-left: 20px;
   }
 }
 .grid-container {
@@ -527,4 +543,14 @@ a.rise:active {
 }
 .grid-container .grid-item img {
   border: solid 3px #ebe8e7;
+}
+.qud .game-description {
+  font-size: 32px;
+  line-height: 40px;
+}
+@media only screen and (min-width: 1375px) {
+  .qud .game-description {
+    font-size: 36px;
+    line-height: 44px;
+  }
 }
