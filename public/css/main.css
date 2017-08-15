@@ -594,64 +594,43 @@ a.rise:active {
 }
 .project-item {
   width: 100%;
-  padding-bottom: 2%;
-  padding-bottom: 2vw;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 40px;
 }
-@media only screen and (min-width: 426px) {
+@media only screen and (min-width: 590px) {
   .project-item {
     width: 49%;
   }
   .project-item:nth-child(odd) {
-    padding-right: 1%;
-    padding-right: 1vw;
+    padding-right: 10px;
   }
   .project-item:nth-child(odd):last-child {
     padding-right: 0;
   }
   .project-item:nth-child(even) {
-    padding-left: 1%;
-    padding-left: 1vw;
+    padding-left: 10px;
   }
 }
-@media only screen and (min-width: 760px) {
+@media only screen and (min-width: 1000px) {
   .project-item {
     width: 33.333333333333336%;
   }
   .project-item:nth-child(odd) {
     padding-right: 0;
-  }
-  .project-item:nth-child(odd):last-child {
-    padding-right: 0;
+    padding-left: 0;
   }
   .project-item:nth-child(even) {
     padding-left: 0;
-  }
-  .project-item:nth-child(n+1),
-  .project-item:nth-child(4n+4) {
-    padding-right: 1%;
-    padding-right: 1vw;
-  }
-  .project-item:nth-child(2n+2) {
-    padding-right: 0.5%;
-    padding-right: 0.5vw;
-    padding-left: 0.5%;
-    padding-left: 0.5vw;
-  }
-  .project-item:nth-child(3n+3) {
     padding-right: 0;
-    padding-left: 1%;
-    padding-left: 1vw;
   }
-  .project-item:nth-child(4n+4) {
-    padding-left: 0;
-    padding-right: 1%;
-    padding-right: 1vw;
+  .project-item:nth-child(n) {
+    padding-left: 20px;
+    padding-right: 20px;
   }
-  .project-item:nth-child(5n+5) {
-    padding-right: 0.5%;
-    padding-right: 0.5vw;
-    padding-left: 0.5%;
-    padding-left: 0.5vw;
+  .project-item:nth-child(n):last-child {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 .project-image {
@@ -662,4 +641,5 @@ a.rise:active {
 }
 .project-description {
   background-color: #171412;
+  padding: 20px;
 }
