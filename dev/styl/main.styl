@@ -284,18 +284,35 @@ a.rise
       padding-left: 0
       // &:last-child
       //   padding-right 0
-    &:nth-child(n+1)
+    &:nth-child(n+1), &:nth-child(4n+4)
       padding-right 1%
       padding-right 1vw
     &:nth-child(2n+2)
-      padding-right 1%
-      padding-right 1vw
+      padding-right 0.5%
+      padding-right 0.5vw
+      padding-left 0.5%
+      padding-left 0.5vw
     &:nth-child(3n+3)
       padding-right: 0
       padding-left 1%
       padding-left 1vw
+    &:nth-child(4n+4)
+      padding-left: 0
+      padding-right 1%
+      padding-right 1vw
+    &:nth-child(5n+5) 
+      padding-right 0.5%
+      padding-right 0.5vw
+      padding-left 0.5%
+      padding-left 0.5vw
   padding-bottom 2%
   padding-bottom 2vw
 
-.project-info
+.project-image
+  padding-bottom: 50%
+  background-origin: center
+  background-position center
+  background-size cover
+
+.project-description
   background-color: clBlack

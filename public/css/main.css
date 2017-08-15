@@ -626,20 +626,40 @@ a.rise:active {
   .project-item:nth-child(even) {
     padding-left: 0;
   }
-  .project-item:nth-child(n+1) {
+  .project-item:nth-child(n+1),
+  .project-item:nth-child(4n+4) {
     padding-right: 1%;
     padding-right: 1vw;
   }
   .project-item:nth-child(2n+2) {
-    padding-right: 1%;
-    padding-right: 1vw;
+    padding-right: 0.5%;
+    padding-right: 0.5vw;
+    padding-left: 0.5%;
+    padding-left: 0.5vw;
   }
   .project-item:nth-child(3n+3) {
     padding-right: 0;
     padding-left: 1%;
     padding-left: 1vw;
   }
+  .project-item:nth-child(4n+4) {
+    padding-left: 0;
+    padding-right: 1%;
+    padding-right: 1vw;
+  }
+  .project-item:nth-child(5n+5) {
+    padding-right: 0.5%;
+    padding-right: 0.5vw;
+    padding-left: 0.5%;
+    padding-left: 0.5vw;
+  }
 }
-.project-info {
+.project-image {
+  padding-bottom: 50%;
+  background-origin: center;
+  background-position: center;
+  background-size: cover;
+}
+.project-description {
   background-color: #171412;
 }
