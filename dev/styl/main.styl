@@ -195,12 +195,14 @@ a.rise
   padding-right: 0
   margin-bottom: 20px
   +above(breakxs)
-    padding-right: 20px
+    padding-right: 10px
     margin-bottom: 0px
 .game-description
   padding-left: 0
   +above(breakxs)
-    padding-left: 20px
+    padding-left: 10px
+  p
+    margin-bottom: 1em
 
 .grid-container
   display: inline-flex
@@ -238,5 +240,62 @@ a.rise
     +above(breaklg)
       font-size: 36px;
       line-height: 44px
-    p
-      margin-bottom: 1em
+
+.section
+  margin-bottom: vertRhythm
+  h1
+    text-shadow: 0 2px 10px rgba(clBlack,0.50);
+    letter-spacing: 1.33px;
+    text-align center
+    text-transform uppercase
+    font-size: 42px;
+    line-height: 46px
+    +above(breakxs)
+      font-size: 48px;
+      line-height: 52px
+    +above(breakxm)
+      font-size: 64px;
+      line-height: 70px
+
+.projects-container
+  width 100%
+
+.project-item
+  display inline-block
+    // +above(breakxm)
+  width: 100%
+  +above(breaksm)
+    width: 49%
+    &:nth-child(odd)
+      padding-right 1%
+      padding-right 1vw
+      &:last-child
+        padding-right 0
+    &:nth-child(even)
+      padding-left 1%
+      padding-left 1vw
+  +above(breakmd)
+    width: 32%
+    &:nth-child(odd)
+      padding-right: 0
+      &:last-child
+        padding-right 0
+    &:nth-child(even)
+      padding-left: 0
+      // &:last-child
+      //   padding-right 0
+    &:nth-child(n+1)
+      padding-right 1%
+      padding-right 1vw
+    &:nth-child(2n+2)
+      padding-right 1%
+      padding-right 1vw
+    &:nth-child(3n+3)
+      padding-right: 0
+      padding-left 1%
+      padding-left 1vw
+  padding-bottom 2%
+  padding-bottom 2vw
+
+.project-info
+  background-color: clBlack
