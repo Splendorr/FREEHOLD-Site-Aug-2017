@@ -361,6 +361,14 @@ body {
   font-size: 18px;
   line-height: 22px;
 }
+::-moz-selection {
+  color: #171412;
+  background: #f15f22;
+}
+::selection {
+  color: #171412;
+  background: #f15f22;
+}
 a {
   display: inline-block;
   -webkit-transition: color 0.15s ease-out, -webkit-transform 0.15s ease-out;
@@ -774,4 +782,9 @@ a.rise:active {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
+}
+.contact-box {
+  width: 100%;
+  background-color: rgba(23,20,18,0.75);
+  padding: 40px;
 }
