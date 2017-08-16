@@ -665,6 +665,7 @@ a.rise:active {
   background-origin: center;
   background-position: center;
   background-size: cover;
+  background-color: #171412;
 }
 .project-description {
   background-color: rgba(23,20,18,0.75);
@@ -720,7 +721,7 @@ a.rise:active {
   }
 }
 .team-photo {
-  padding-bottom: 100%;
+  height: 100%;
   background-origin: center;
   background-position: center;
   background-size: cover;
@@ -734,4 +735,41 @@ a.rise:active {
   .team-description {
     width: 66.66666666666667%;
   }
+}
+.team-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 250px;
+}
+.team-name {
+  font-size: 28px;
+  line-height: 22px;
+  margin-bottom: 22px;
+}
+.team-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
 }
