@@ -181,10 +181,42 @@ html(xmlns:fb="http://ogp.me/ns/fb#")
       .contact.section
         h1 Contact
         .grid-container
-          .grid-item 
-            .contact-box.freeShadow contact info
-          .grid-item 
-            .contact-box.freeShadow newsletter
+          .contact-grid-item 
+            .contact-box.freeShadow
+              .contact-item
+                p General Inquiries
+                a(href="mailto:contact@freeholdgames.com", title="Email for General Inquiries") contact@freeholdgames.com
+              .contact-item
+                p Twitter
+                a(href="https://twitter.com/freeholdgames", title="Freehold Game Facebook Page") @freeholdgames
+              .contact-item
+                p Facebook
+                a(href="http://facebook.com/freeholdgames", title="Freehold Game Facebook Page") /freeholdgames
+          .contact-grid-item 
+            .mailing-box.freeShadow
+              p Sign up for infrequent email announcements
+              #mc_embed_signup.mailingList
+                form#mc-embedded-subscribe-form.validate(action='http://freeholdgames.us3.list-manage1.com/subscribe/post?u=51d94474d6ebc9e4fb65f9185&id=7d70ce3890', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
+                  .mc-field-group
+                    label.mc-label(for='mce-EMAIL') Email Address (required)
+                    br
+                    input#mce-EMAIL.required.email(type='email', value='', name='EMAIL')
+                  .mc-field-group
+                    label.mc-label(for='mce-FNAME') First Name 
+                    br
+                    input#mce-FNAME.mctext(type='text', value='', name='FNAME')
+                  .mc-field-group
+                    label.mc-label(for='mce-LNAME') Last Name 
+                    br
+                    input#mce-LNAME.mctext(type='text', value='', name='LNAME')
+                  #mce-responses.clear
+                    #mce-error-response.response(style='display:none')
+                    #mce-success-response.response(style='display:none')
+                  // real people should not fill this in and expect good things - do not remove this or risk form bot signups
+                  div(style='position: absolute; left: -5000px;')
+                    input(type='text', name='b_51d94474d6ebc9e4fb65f9185_7d70ce3890', tabindex='-1', value='')
+                  .clear
+                    input#mc-embedded-subscribe.button(type='submit', value='Subscribe', name='subscribe')
 
     script(src="js/master.js", type="text/javascript")
 
