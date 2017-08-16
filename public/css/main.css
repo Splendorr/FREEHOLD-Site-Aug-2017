@@ -771,10 +771,10 @@ a.rise:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -783,13 +783,27 @@ a.rise:active {
           justify-content: space-between;
   width: 100%;
 }
+@media only screen and (min-width: 760px) {
+  .team-contact {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
 .contact-box,
 .mailing-box {
   width: 100%;
   background-color: rgba(23,20,18,0.75);
-  padding: 40px;
-  font-size: 24px;
-  line-height: 24px;
+  padding: 20px;
+}
+@media only screen and (min-width: 760px) {
+  .contact-box,
+  .mailing-box {
+    padding: 40px;
+    font-size: 24px;
+    line-height: 24px;
+  }
 }
 .contact-grid-item {
   display: inline-block;
@@ -835,4 +849,8 @@ a.rise:active {
 }
 .mailingList input#mce-EMAIL {
   width: 100%;
+}
+.mailingList input#mc-embedded-subscribe {
+  background: #f15f22;
+  color: #171412;
 }

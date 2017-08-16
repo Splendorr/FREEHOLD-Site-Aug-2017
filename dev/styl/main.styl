@@ -411,7 +411,9 @@ a.rise
 
 .team-contact
   display flex
-  flex-direction: row
+  flex-direction: column
+  +above(breakmd)
+    flex-direction: row
   align-items: flex-start
   justify-content: space-between
   width 100%
@@ -419,9 +421,11 @@ a.rise
 .contact-box, .mailing-box
   width 100%
   background-color: rgba(clBlack, .75)
-  padding 40px
-  font-size: 24px
-  line-height: 24px
+  padding 20px
+  +above(breakmd)
+    padding 40px
+    font-size: 24px
+    line-height: 24px
 
 .contact-grid-item
   // border: solid 3px clWhite
@@ -464,5 +468,6 @@ a.rise
   input#mce-EMAIL
     width 100%
 
-// .mc-field-group
-//   width 100%
+  input#mc-embedded-subscribe
+    background: clOrange
+    color: clBlack
