@@ -842,15 +842,100 @@ a.rise:active {
 .contact-item:last-child {
   margin-bottom: 0;
 }
+.mailing-box .mailing-header {
+  margin-bottom: 20px;
+}
+.mailing-box .mc-field-group {
+  margin-bottom: 10px;
+}
 .mailingList input {
 /* Rectangle 4: */
   background: #302a26;
   border: 1px solid #f15f22;
+  padding: 10px;
 }
-.mailingList input#mce-EMAIL {
+.mailingList label {
+  font-size: 0.75em;
+}
+.mailingList input#mce-EMAIL,
+.mailingList input#mce-LNAME,
+.mailingList input#mce-FNAME,
+.mailingList .mc-field-group {
   width: 100%;
 }
+.mailingList .mailing-name-row {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media only screen and (min-width: 1000px) {
+  .mailingList .mailing-name-row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .mailingList .mailing-name-row .mc-field-group:first-child {
+    padding-right: 5px;
+  }
+  .mailingList .mailing-name-row .mc-field-group:last-child {
+    padding-left: 5px;
+  }
+}
+.mailingList .mailing-name-row > {
+  width: 100%;
+}
+@media only screen and (min-width: 1000px) {
+  .mailingList .mailing-name-row > {
+    width: 50%;
+  }
+}
+.mailingList input#mce-EMAIL,
+.mailingList input#mce-LNAME,
+.mailingList input#mce-FNAME {
+  -webkit-transition: border 0.15s ease;
+  transition: border 0.15s ease;
+  color: #ebe8e7;
+  outline: 0;
+  margin-top: 5px;
+}
+.mailingList input#mce-EMAIL:active,
+.mailingList input#mce-LNAME:active,
+.mailingList input#mce-FNAME:active,
+.mailingList input#mce-EMAIL:focus,
+.mailingList input#mce-LNAME:focus,
+.mailingList input#mce-FNAME:focus {
+  border-color: #ebe8e7;
+}
 .mailingList input#mc-embedded-subscribe {
-  background: #f15f22;
+  margin-top: 1em;
+  background-color: #f15f22;
+  -webkit-transition: background-color 0.15s ease, border 0.15s ease;
+  transition: background-color 0.15s ease, border 0.15s ease;
   color: #171412;
+/* Submit: */
+  font-size: 1em;
+  line-height: 1em;
+  width: 100%;
+  padding: 10px;
+  outline: 0;
+}
+.mailingList input#mc-embedded-subscribe:hover,
+.mailingList input#mc-embedded-subscribe:focus {
+  background-color: #f6976f;
+  border-color: #ebe8e7;
+}
+.mailingList input#mc-embedded-subscribe:active {
+  background-color: #ebe8e7;
 }

@@ -459,15 +459,70 @@ a.rise
   &:last-child
     margin-bottom: 0
 
+.mailing-box
+  .mailing-header
+    margin-bottom: 20px
+  .mc-field-group
+    margin-bottom: 10px
+    // &:last-child
+    //   margin-bottom 0
+
 .mailingList
+
+
   input
     /* Rectangle 4: */
     background: clBrown
     border: 1px solid clOrange;
+    padding: 10px
+
+  label
+    font-size: .75em
   
-  input#mce-EMAIL
+  input#mce-EMAIL, input#mce-LNAME, input#mce-FNAME, .mc-field-group
     width 100%
 
+  .mailing-name-row
+    width 100%
+    display inline-flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+    +above(breakxm)
+      flex-direction: row
+      .mc-field-group
+        &:first-child
+          padding-right: 5px
+        &:last-child
+          padding-left: 5px
+    >
+      width 100%
+      +above(breakxm)
+        width 50%
+
+  input#mce-EMAIL, input#mce-LNAME, input#mce-FNAME
+    transition border .15s ease
+    color clWhite
+    outline 0
+    margin-top 5px
+    &:active, &:focus
+      border-color clWhite
+
   input#mc-embedded-subscribe
-    background: clOrange
+    margin-top: 1em
+    background-color: clOrange
+    transition: background-color .15s ease, border .15s ease
     color: clBlack
+    /* Submit: */
+    font-size: 1em
+    line-height: 1em
+    width 100%
+    // +above(breakmd)
+    //   font-size: 24px;
+    padding 10px
+    outline 0
+    &:hover, &:focus
+      background-color: clOrange + 35%
+      border-color clWhite
+    &:active
+      background-color clWhite
