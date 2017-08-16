@@ -719,6 +719,9 @@ a.rise:active {
   background-position: center;
   background-size: cover;
   background-color: #171412;
+  min-height: 250px;
+  -ms-flex-negative: 2;
+      flex-shrink: 2;
 }
 @media only screen and (min-width: 590px) {
   .team-photo {
