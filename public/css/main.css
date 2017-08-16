@@ -712,19 +712,18 @@ a.rise:active {
             flex-direction: row;
   }
 }
-.team-photo-holder {
-  width: 100%;
-}
-@media only screen and (min-width: 590px) {
-  .team-photo-holder {
-    width: 33.333333333333336%;
-  }
-}
 .team-photo {
-  height: 100%;
+  width: 100%;
+  height: auto;
   background-origin: center;
   background-position: center;
   background-size: cover;
+  background-color: #171412;
+}
+@media only screen and (min-width: 590px) {
+  .team-photo {
+    width: 33.333333333333336%;
+  }
 }
 .team-description {
   width: 100%;
