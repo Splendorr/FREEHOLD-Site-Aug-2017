@@ -939,3 +939,10 @@ a.rise:active {
 .mailingList input#mc-embedded-subscribe:active {
   background-color: #ebe8e7;
 }
+.footer {
+  width: 100%;
+  background-color: rgba(23,20,18,0.9);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+}
