@@ -252,17 +252,44 @@ a.rise
     width: 49%
     padding-bottom 2%
     padding-bottom 2vw
-    &:nth-child(odd)
+    &:nth-child(even)
       padding-right 1%
       padding-right 1vw
       &:last-child
         padding-right 0
-    &:nth-child(even)
+    &:nth-child(odd)
       padding-left 1%
       padding-left 1vw
-    
+      // &:last-child
+      //   padding-left 0
+    &.trailer
+      width 100%
+      padding-right .5%
+      padding-left .5%
+      padding-right .5vw
+      padding-left .5vw
+      a
+        width 100%
     img
       border: solid 3px clWhite
+
+.trailer
+  position relative
+  &:hover
+    .game-page-play-button
+      opacity: 1
+.game-page-play-button
+  position: absolute;
+  align(both)
+  width: 100px
+  height 100px
+  // width 25%
+  // height 25%
+  // margin-top -10px
+  margin-top: -2%
+  opacity .75
+  transition: opacity .2s ease
+  border none !important
 
 .qud
   .game-description

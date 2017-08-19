@@ -586,19 +586,52 @@ a.rise:active {
   padding-bottom: 2%;
   padding-bottom: 2vw;
 }
-.grid-container .grid-item:nth-child(odd) {
+.grid-container .grid-item:nth-child(even) {
   padding-right: 1%;
   padding-right: 1vw;
 }
-.grid-container .grid-item:nth-child(odd):last-child {
+.grid-container .grid-item:nth-child(even):last-child {
   padding-right: 0;
 }
-.grid-container .grid-item:nth-child(even) {
+.grid-container .grid-item:nth-child(odd) {
   padding-left: 1%;
   padding-left: 1vw;
 }
+.grid-container .grid-item.trailer {
+  width: 100%;
+  padding-right: 0.5%;
+  padding-left: 0.5%;
+  padding-right: 0.5vw;
+  padding-left: 0.5vw;
+}
+.grid-container .grid-item.trailer a {
+  width: 100%;
+}
 .grid-container .grid-item img {
   border: solid 3px #ebe8e7;
+}
+.trailer {
+  position: relative;
+}
+.trailer:hover .game-page-play-button {
+  opacity: 1;
+}
+.game-page-play-button {
+  position: absolute;
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  margin-top: -2%;
+  opacity: 0.75;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+  border: none !important;
 }
 @media only screen and (min-width: 1000px) {
   .qud .game-description {

@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+  initSwipebox();
   setCurrentCopyrightYear();
   console.log('loaded');
   
@@ -16,4 +17,16 @@ function setCurrentCopyrightYear() {
   console.log('currentDate:', currentDate, 'dateElement:', dateElement);
   
   dateElement.textContent = currentDate;
+}
+
+// Swipebox Lightbox
+
+function initSwipebox() {
+  if ($('.swipebox').length) {
+    $('.swipebox').swipebox({
+      videoMaxWidth: 1920,
+      loopAtEnd: true
+    });
+    // console.log('loaded .swipebox swipebox');
+  }
 }
