@@ -135,6 +135,15 @@ a.rise
   &:active
     transform translateY(2px)
 
+.showSmall
+  display block
+  +above(breakmd)
+    display none
+.showLarge
+  display none
+  +above(breakmd)
+    display block
+
 .navBar
   percenter(100%, 20px)
   display: inline-flex
@@ -475,6 +484,7 @@ a.rise
     /* Rectangle 4: */
     background: clBrown
     border: 1px solid clOrange;
+    border-radius: 0px
     padding: 10px
 
   label

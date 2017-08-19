@@ -400,6 +400,22 @@ a.rise:active {
   -webkit-transform: translateY(2px);
           transform: translateY(2px);
 }
+.showSmall {
+  display: block;
+}
+@media only screen and (min-width: 760px) {
+  .showSmall {
+    display: none;
+  }
+}
+.showLarge {
+  display: none;
+}
+@media only screen and (min-width: 760px) {
+  .showLarge {
+    display: block;
+  }
+}
 .navBar {
   margin-left: auto;
   margin-right: auto;
@@ -856,6 +872,7 @@ a.rise:active {
 /* Rectangle 4: */
   background: #302a26;
   border: 1px solid #f15f22;
+  border-radius: 0px;
   padding: 10px;
 }
 .mailingList label {
