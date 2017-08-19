@@ -476,13 +476,16 @@ a.rise:active {
     margin-right: auto;
     width: 100%;
     float: none;
-    max-width: 100%;
+    max-width: 1200px;
     padding-left: 40px;
     padding-right: 40px;
   }
 }
 .game {
   margin-bottom: 80px;
+}
+.game:last-child {
+  margin-bottom: 0px;
 }
 .game-info {
   background-color: rgba(23,20,18,0.75);
