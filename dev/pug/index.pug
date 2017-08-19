@@ -89,24 +89,19 @@ html(xmlns:fb="http://ogp.me/ns/fb#")
             .game-screens
               .grid-container
                 .game-screen.grid-item.trailer
-                  a.swipebox.rise(href='https://www.youtube.com/watch?v=Qqz0p_kiDIQ')
+                  a.swipebox.rise(href='https://www.youtube.com/watch?v=Qqz0p_kiDIQ', onclick="this.blur();", rel='qud-gallery')
                     img.game-page-play-button(src="img/play_button.svg")
                     img(src!='http://i1.ytimg.com/vi/Qqz0p_kiDIQ/mqdefault.jpg')
-                .game-screen.grid-item
-                  a(href="img/screens-qud/game1.png", title="Screenshot", onclick="this.blur();").swipebox
-                    img(src="img/screens-qud/game1.png", alt="")
-                .game-screen.grid-item
-                  img(src="img/screens-qud/game3.png", alt="")
-                .game-screen.grid-item
-                  img(src="img/screens-qud/qud_barathrums-study.png", alt="")
-                .game-screen.grid-item
-                  img(src="img/screens-qud/qud_equipment-screen.png", alt="")
+                each shot in ['game1', 'game3', 'qud_barathrums-study', 'qud_equipment-screen']
+                  .game-screen.grid-item
+                    a(href="img/screens-qud/" + shot + ".png", title="Screenshot", onclick="this.blur();", rel='sproggi-gallery').swipebox.rise
+                      img(src="img/screens-qud/" + shot + ".png", alt="")
             .game-description
               p Caves of Qud is a science fantasy RPG & roguelike epic. It’s set in a far future that’s deeply simulated, richly cultured, and rife with sentient plants. 
 
-              p Available in Early Access on #[a(href="#", title="title") Steam] and #[a(href="#", title="title") Humble].
+              p Available in Early Access on #[a.rise(href="#", title="title") Steam] and #[a.rise(href="#", title="title") Humble].
 
-              p #[a(href="http://cavesofqud.com", title="title") Visit Site] • #[a(href="http://forums.freeholdentertainment.com/forumdisplay.php?7-CoQ-General", title="title") Join the Forum]
+              p #[a.rise(href="http://cavesofqud.com", title="title") Visit Site] • #[a.rise(href="http://forums.freeholdentertainment.com/forumdisplay.php?7-CoQ-General", title="title") Join the Forum]
 
         .game.sproggi.freeShadow
           .game-logo.freeShadow
@@ -116,17 +111,13 @@ html(xmlns:fb="http://ogp.me/ns/fb#")
             .game-screens
               .grid-container
                 .game-screen.grid-item.trailer
-                  a.swipebox.rise(href='https://www.youtube.com/watch?v=k4IGxuuMWG0')
+                  a.swipebox.rise(href='https://www.youtube.com/watch?v=k4IGxuuMWG0', onclick="this.blur();", rel='sproggi-gallery')
                     img.game-page-play-button(src="img/play_button.svg")
                     img(src!='http://i1.ytimg.com/vi/k4IGxuuMWG0/mqdefault.jpg')
-                .game-screen.grid-item
-                  img(src="img/screens-sproggiwood/Adventure1.png", alt="")
-                .game-screen.grid-item
-                  img(src="img/screens-sproggiwood/Adventure2.png", alt="")
-                .game-screen.grid-item
-                  img(src="img/screens-sproggiwood/Map.png", alt="")
-                .game-screen.grid-item
-                  img(src="img/screens-sproggiwood/Town.png", alt="")
+                each shot in ['Adventure1', 'Adventure2', 'Map', 'Town']
+                  .game-screen.grid-item
+                    a(href="img/screens-sproggiwood/" + shot + ".png", title="Screenshot", onclick="this.blur();", rel='sproggi-gallery').swipebox.rise
+                      img(src="img/screens-sproggiwood/" + shot + ".png", alt="")
             .game-description
               p Sproggiwood is a story-driven, turn-based roguelike set in a humorous world inspired by Finnish mythology. One moment, you're a simple farmer tending your grove -- the next, you’re lured through a mysterious portal by a talking sheep. Now you’re the prisoner of Sproggi, a mischievous forest spirit who tasks you with taming the monsters of its realm. But things go awry when you discover a new civilization -- will you befriend these curious newcomers, or will you crush them and claim Sproggiwood for your own?
 

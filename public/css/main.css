@@ -397,12 +397,12 @@ a.rise {
 }
 a.rise:hover,
 a.rise:focus {
-  -webkit-transform: translateY(-2px);
-          transform: translateY(-2px);
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
 }
 a.rise:active {
-  -webkit-transform: translateY(2px);
-          transform: translateY(2px);
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
 }
 .showSmall {
   display: block;
