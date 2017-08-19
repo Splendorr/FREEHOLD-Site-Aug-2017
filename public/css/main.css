@@ -391,6 +391,10 @@ a:focus {
 a:active {
   color: #a8390b;
 }
+a.rise {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
 a.rise:hover,
 a.rise:focus {
   -webkit-transform: translateY(-2px);
@@ -627,7 +631,6 @@ a.rise:active {
           transform: translate(-50%, -50%);
   width: 100px;
   height: 100px;
-  margin-top: -2%;
   opacity: 0.75;
   -webkit-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;
