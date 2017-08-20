@@ -216,12 +216,21 @@ a.rise
   +above(breakxm)
     padding 40px
 
-.game-screens, .game-description
+.game-screens
   width 100%
-  // display: block
   +above(breakxs)
     width 50%
-    // display inline-block
+  +above(breakxm)
+    width ((1/3)*100)%
+    // width ((100/7) * 3)%
+
+.game-description
+  width 100%
+  +above(breakxs)
+    width 50%
+  +above(breakxm)
+    width ((2/3)*100)%
+    // width ((100/7) * 4)%
 
 .game-screens
   padding-right: 0
@@ -242,33 +251,41 @@ a.rise
   flex-direction: row
   flex-wrap: wrap
   justify-content: center
-  margin-bottom -2%
-  margin-bottom -2vw
+  // margin-bottom -2%
+  // margin-bottom -2vw
+  margin-bottom: 20px
+  +above(breakxm)
+    margin-bottom: 0px
   .grid-item
     // border: solid 3px clWhite
     // width 100%
     // padding-bottom 1%
     display inline-block
     // +above(breakxm)
-    width: 49%
-    padding-bottom 2%
-    padding-bottom 2vw
+    width: 50%
+    // padding-bottom 2%
+    // padding-bottom 2vw
+    padding-bottom: 5px
     &:nth-child(even)
-      padding-right 1%
-      padding-right 1vw
+      // padding-right 1%
+      // padding-right 1vw
+      padding-right: 5px
       &:last-child
         padding-right 0
     &:nth-child(odd)
-      padding-left 1%
-      padding-left 1vw
+      // padding-left 1%
+      // padding-left 1vw
+      padding-left: 5px
       // &:last-child
       //   padding-left 0
     &.trailer
       width 100%
-      padding-right .5%
-      padding-left .5%
-      padding-right .5vw
-      padding-left .5vw
+      // padding-right .5%
+      // padding-left .5%
+      // padding-right .5vw
+      // padding-left .5vw
+      padding-right 0px
+      padding-left 0px
       a
         width 100%
     img
