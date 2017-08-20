@@ -536,38 +536,52 @@ a.rise:active {
     padding: 40px;
   }
 }
-.game-screens {
+.game-trailer {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
   width: 100%;
 }
-@media only screen and (min-width: 590px) {
-  .game-screens {
+@media only screen and (min-width: 760px) {
+  .game-trailer {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
     width: 50%;
   }
 }
-@media only screen and (min-width: 1000px) {
-  .game-screens {
-    width: 33.33333333333333%;
-  }
+.game-screens {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  width: 100%;
 }
 .game-description {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+-webkit-box-ordinal-group
+  width: 101;
+    -ms-flex-order
+  width: 100%;
+        order
   width: 100%;
 }
-@media only screen and (min-width: 590px) {
+@media only screen and (min-width: 760px) {
   .game-description {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
     width: 50%;
   }
 }
-@media only screen and (min-width: 1000px) {
-  .game-description {
-    width: 66.66666666666666%;
-  }
-}
-.game-screens {
+.game-trailer {
   padding-right: 0;
   margin-bottom: 20px;
 }
 @media only screen and (min-width: 590px) {
-  .game-screens {
+  .game-trailer {
+    padding-left: 5px;
     padding-right: 10px;
     margin-bottom: 0px;
   }
@@ -578,6 +592,7 @@ a.rise:active {
 @media only screen and (min-width: 590px) {
   .game-description {
     padding-left: 10px;
+    padding-right: 5px;
   }
 }
 .game-description p {
@@ -608,15 +623,13 @@ a.rise:active {
   display: inline-block;
   width: 50%;
   padding-bottom: 5px;
-}
-.grid-container .grid-item:nth-child(even) {
+  padding-left: 5px;
   padding-right: 5px;
 }
-.grid-container .grid-item:nth-child(even):last-child {
-  padding-right: 0;
-}
-.grid-container .grid-item:nth-child(odd) {
-  padding-left: 5px;
+@media only screen and (min-width: 760px) {
+  .grid-container .grid-item {
+    width: 25%;
+  }
 }
 .grid-container .grid-item.trailer {
   width: 100%;
