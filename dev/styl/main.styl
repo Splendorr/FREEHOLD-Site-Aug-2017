@@ -210,11 +210,15 @@ a.rise
   flex-direction: column
   flex-wrap: wrap
   justify-content: space-between
-  padding: 20px
+  padding: 15px
+  padding-top: 20px
+  padding-bottom: 5px
   +above(breakxs)
     flex-direction: row
   +above(breakxm)
-    padding 40px
+    padding 35px
+    padding-top: 40px
+    padding-bottom: 30px
 
 .game-trailer
   order 2
@@ -243,17 +247,20 @@ a.rise
   // width ((100/7) * 4)%
 
 .game-trailer
-  padding-right: 0
+  // padding-right: 0
   margin-bottom: 20px
-  +above(breakxs)
+  padding-left: 5px
+  padding-right: 5px
+  +above(breakmd)
     padding-left: 5px
     padding-right: 10px
     margin-bottom: 0px
 .game-description
-  padding-left: 0
-  +above(breakxs)
+  // padding-left: 0
+  padding-left: 5px
+  padding-right: 5px
+  +above(breakmd)
     padding-left: 10px
-    padding-right: 5px
   p
     margin-bottom: 1em
 
@@ -265,7 +272,7 @@ a.rise
   justify-content: center
   // margin-bottom -2%
   // margin-bottom -2vw
-  margin-bottom: 20px
+  margin-bottom: 5px
   +above(breakxm)
     margin-bottom: 0px
   .grid-item
@@ -286,6 +293,7 @@ a.rise
       width 100%
       padding-right 0px
       padding-left 0px
+      margin-bottom 0 !important
       a
         width 100%
     img

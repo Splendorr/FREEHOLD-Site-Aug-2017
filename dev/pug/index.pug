@@ -86,22 +86,29 @@ html(xmlns:fb="http://ogp.me/ns/fb#")
             img(src="img/QUD-logo-square-optim.png", alt="").showSmall
             img(src="img/QUD-logo-horiz-1920-optim.png", alt="").showLarge
           .game-info
-            .game-screens
+            .game-trailer
               .grid-container
                 .game-screen.grid-item.trailer
                   a.swipebox.rise(href='https://www.youtube.com/watch?v=Qqz0p_kiDIQ', onclick="this.blur();", rel='qud-gallery')
                     img.game-page-play-button(src="img/play_button.svg")
                     img(src!='http://i1.ytimg.com/vi/Qqz0p_kiDIQ/mqdefault.jpg')
-                each shot in ['game1', 'game3', 'qud_barathrums-study', 'qud_equipment-screen']
-                  .game-screen.grid-item
-                    a(href="img/screens-qud/" + shot + ".png", title="", onclick="this.blur();", rel='qud-gallery').swipebox.rise
-                      img(src="img/screens-qud/" + shot + ".png", alt="")
+                //- each shot in ['game1', 'game3', 'qud_barathrums-study', 'qud_equipment-screen']
+                //-   .game-screen.grid-item
+                //-     a(href="img/screens-qud/" + shot + ".png", title="", onclick="this.blur();", rel='qud-gallery').swipebox.rise
+                //-       img(src="img/screens-qud/" + shot + ".png", alt="")
             .game-description
               p Caves of Qud is a science fantasy RPG & roguelike epic. It’s set in a far future that’s deeply simulated, richly cultured, and rife with sentient plants. 
 
               p Available in Early Access on #[a.rise(href="#", title="title") Steam] and #[a.rise(href="#", title="title") Humble].
 
               p #[a.rise(href="http://cavesofqud.com", title="title") Learn More] • #[a.rise(href="http://forums.freeholdentertainment.com/forumdisplay.php?7-CoQ-General", title="title") Join the Forum]
+            .game-screens
+              .grid-container
+                each shot in ['game1', 'game3', 'qud_barathrums-study', 'qud_equipment-screen']
+                  .game-screen.grid-item
+                    a(href="img/screens-qud/" + shot + ".png", title="", onclick="this.blur();", rel='qud-gallery').swipebox.rise
+                      img(src="img/screens-qud/" + shot + ".png", alt="")
+
 
         .game.sproggi.freeShadow
           .game-logo.freeShadow

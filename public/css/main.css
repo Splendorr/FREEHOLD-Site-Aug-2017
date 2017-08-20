@@ -521,7 +521,9 @@ a.rise:active {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 20px;
+  padding: 15px;
+  padding-top: 20px;
+  padding-bottom: 5px;
 }
 @media only screen and (min-width: 590px) {
   .game-info {
@@ -533,7 +535,9 @@ a.rise:active {
 }
 @media only screen and (min-width: 1000px) {
   .game-info {
-    padding: 40px;
+    padding: 35px;
+    padding-top: 40px;
+    padding-bottom: 30px;
   }
 }
 .game-trailer {
@@ -576,10 +580,11 @@ a.rise:active {
   }
 }
 .game-trailer {
-  padding-right: 0;
   margin-bottom: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
-@media only screen and (min-width: 590px) {
+@media only screen and (min-width: 760px) {
   .game-trailer {
     padding-left: 5px;
     padding-right: 10px;
@@ -587,12 +592,12 @@ a.rise:active {
   }
 }
 .game-description {
-  padding-left: 0;
+  padding-left: 5px;
+  padding-right: 5px;
 }
-@media only screen and (min-width: 590px) {
+@media only screen and (min-width: 760px) {
   .game-description {
     padding-left: 10px;
-    padding-right: 5px;
   }
 }
 .game-description p {
@@ -612,7 +617,7 @@ a.rise:active {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 @media only screen and (min-width: 1000px) {
   .grid-container {
@@ -635,6 +640,7 @@ a.rise:active {
   width: 100%;
   padding-right: 0px;
   padding-left: 0px;
+  margin-bottom: 0 !important;
 }
 .grid-container .grid-item.trailer a {
   width: 100%;
