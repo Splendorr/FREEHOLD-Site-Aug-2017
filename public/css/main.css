@@ -386,10 +386,10 @@ a:visited {
 }
 a:hover,
 a:focus {
-  color: #f6976f;
+  color: #f4b64e;
 }
 a:active {
-  color: #a8390b;
+  color: #f1222a;
 }
 a.rise {
   -webkit-transform: translateY(0px);
