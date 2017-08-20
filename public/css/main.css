@@ -651,6 +651,15 @@ a.rise:active {
   transition: opacity 0.2s ease;
   border: none !important;
 }
+#swipebox-overlay {
+  background-color: rgba(23,20,18,0.95) !important;
+}
+.swipebox-video-container {
+  padding-top: 12px !important;
+  padding-bottom: 0px !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+}
 @media only screen and (min-width: 1000px) {
   .qud .game-description {
     font-size: 32px;
