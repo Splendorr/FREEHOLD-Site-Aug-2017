@@ -99,15 +99,16 @@ html(xmlns:fb="http://ogp.me/ns/fb#")
             .game-description
               p Caves of Qud is a science fantasy RPG & roguelike epic. It’s set in a far future that’s deeply simulated, richly cultured, and rife with sentient plants. 
 
-              p Available in Early Access on #[a.rise(href="#", title="title") Steam] and #[a.rise(href="#", title="title") Humble].
-
-              p #[a.rise(href="http://cavesofqud.com", title="title") Learn More] • #[a.rise(href="http://forums.freeholdentertainment.com/forumdisplay.php?7-CoQ-General", title="title") Join the Forum]
             .game-screens
               .grid-container
                 each shot in ['game1', 'game3', 'qud_barathrums-study', 'qud_equipment-screen']
                   .game-screen.grid-item
                     a(href="img/screens-qud/" + shot + ".png", title="", onclick="this.blur();", rel='qud-gallery').swipebox.rise
                       img(src="img/screens-qud/" + shot + ".png", alt="")
+            .game-action
+              p Available in Early Access on #[a.rise(href="#", title="title") Steam] and #[a.rise(href="#", title="title") Humble].
+
+              p #[a.rise(href="http://cavesofqud.com", title="title") Learn More] • #[a.rise(href="http://forums.freeholdentertainment.com/forumdisplay.php?7-CoQ-General", title="title") Join the Forum]
 
 
         .game.sproggi.freeShadow
@@ -128,16 +129,17 @@ html(xmlns:fb="http://ogp.me/ns/fb#")
             .game-description
               p Sproggiwood is a story-driven, turn-based roguelike set in a humorous world inspired by Finnish mythology. One moment, you're a simple farmer tending your grove -- the next, you’re lured through a mysterious portal by a talking sheep. Now you’re the prisoner of Sproggi, a mischievous forest spirit who tasks you with taming the monsters of its realm. But things go awry when you discover a new civilization -- will you befriend these curious newcomers, or will you crush them and claim Sproggiwood for your own?
 
-              p Available on #[a(href="#", title="title") iOS], #[a(href="#", title="title") Google Play], #[a(href="#", title="title") Steam], and #[a(href="#", title="title") Humble].
-
-              p #[a(href="http://forums.freeholdentertainment.com/forumdisplay.php?12-Beta-Feedback", title="title") Join the Forum]
-
             .game-screens
               .grid-container
                 each shot in ['Adventure1', 'Adventure2', 'Map', 'Town']
                   .game-screen.grid-item
                     a(href="img/screens-sproggiwood/" + shot + ".png", title="", onclick="this.blur();", rel='sproggi-gallery').swipebox.rise
                       img(src="img/screens-sproggiwood/" + shot + ".png", alt="")
+            
+            .game-action
+              p Available on #[a(href="#", title="title") iOS], #[a(href="#", title="title") Google Play], #[a(href="#", title="title") Steam], and #[a(href="#", title="title") Humble].
+
+              p #[a(href="http://forums.freeholdentertainment.com/forumdisplay.php?12-Beta-Feedback", title="title") Join the Forum]
 
       //- .other.section
       //-   h1 Related Projects

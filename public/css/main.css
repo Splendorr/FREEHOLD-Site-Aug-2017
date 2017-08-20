@@ -533,6 +533,11 @@ a.rise:active {
             flex-direction: row;
   }
 }
+@media only screen and (min-width: 760px) {
+  .game-info {
+    padding-bottom: 20px;
+  }
+}
 @media only screen and (min-width: 1000px) {
   .game-info {
     padding: 35px;
@@ -548,16 +553,16 @@ a.rise:active {
 }
 @media only screen and (min-width: 760px) {
   .game-trailer {
+    width: 50%;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-    width: 50%;
   }
 }
 .game-screens {
-  -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3;
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
   width: 100%;
 }
 .game-description {
@@ -579,29 +584,66 @@ a.rise:active {
     width: 50%;
   }
 }
-.game-trailer {
-  margin-bottom: 20px;
-  padding-left: 5px;
-  padding-right: 5px;
+.game-action {
+  width: 100%;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
 }
 @media only screen and (min-width: 760px) {
-  .game-trailer {
-    padding-left: 5px;
-    padding-right: 10px;
-    margin-bottom: 0px;
+  .game-action {
+    margin-top: 15px;
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
   }
 }
-.game-description {
+.game-trailer {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.game-description,
+.game-action {
   padding-left: 5px;
   padding-right: 5px;
 }
 @media only screen and (min-width: 760px) {
-  .game-description {
+  .game-description,
+  .game-action {
     padding-left: 10px;
   }
 }
-.game-description p {
+.game-description p,
+.game-action p {
   margin-bottom: 1em;
+}
+.game-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.game-action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media only screen and (min-width: 760px) {
+  .game-action p:last-child {
+    margin-bottom: 0;
+  }
 }
 .grid-container {
   width: 100%;
@@ -648,6 +690,13 @@ a.rise:active {
 .grid-container .grid-item img {
   border: solid 3px #ebe8e7;
 }
+.grid-container .grid-item img:hover,
+.grid-container .grid-item img:focus {
+  border-color: #f4b64e;
+}
+.grid-container .grid-item img:active {
+  border-color: #f1222a;
+}
 .trailer {
   position: relative;
 }
@@ -655,6 +704,7 @@ a.rise:active {
   opacity: 1;
 }
 .game-page-play-button {
+  pointer-events: none;
   position: absolute;
   position: absolute;
   -webkit-transform-style: preserve-3d;
@@ -679,16 +729,32 @@ a.rise:active {
   padding-left: 24px !important;
   padding-right: 24px !important;
 }
-@media only screen and (min-width: 1000px) {
-  .qud .game-description {
+@media only screen and (min-width: 590px) {
+  .qud .game-description,
+  .qud .game-action {
+    font-size: 28px;
+    line-height: 32px;
+  }
+}
+@media only screen and (min-width: 760px) {
+  .qud .game-description,
+  .qud .game-action {
     font-size: 32px;
     line-height: 40px;
   }
 }
-@media only screen and (min-width: 1375px) {
-  .qud .game-description {
-    font-size: 36px;
-    line-height: 44px;
+@media only screen and (min-width: 590px) {
+  .sproggi .game-description,
+  .sproggi .game-action {
+    font-size: 22px;
+    line-height: 26px;
+  }
+}
+@media only screen and (min-width: 760px) {
+  .sproggi .game-description,
+  .sproggi .game-action {
+    font-size: 24px;
+    line-height: 28px;
   }
 }
 .section {
