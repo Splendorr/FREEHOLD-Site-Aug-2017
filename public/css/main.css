@@ -695,14 +695,64 @@ a:active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .game-action p {
-  margin-bottom: 0.5em;
+  margin-bottom: 10px;
 }
 @media only screen and (min-width: 760px) {
+  .game-action {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .game-action p {
+    margin-bottom: 20px;
+  }
   .game-action p:last-child {
     margin-bottom: 0;
   }
+}
+.store-buttons {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.store-buttons a {
+  margin-bottom: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: 3px solid #f15f22;
+  background-color: #f15f22;
+  color: #171412;
+}
+@media only screen and (min-width: 760px) {
+  .store-buttons a {
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+  }
+}
+.store-buttons a:hover,
+.store-buttons a:focus {
+  border-color: #f47f4e;
+  background-color: #f47f4e;
+}
+.store-buttons a:active {
+  border-color: #cf460d;
+  background-color: #cf460d;
 }
 .grid-container {
   width: 100%;
@@ -832,46 +882,6 @@ a:active {
     font-size: 24px;
     line-height: 28px;
   }
-}
-.store-buttons {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-.store-buttons a {
-  margin-bottom: 10px;
-  margin-right: 5px;
-  margin-left: 5px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 15px;
-  padding-right: 15px;
-  border: 3px solid #f15f22;
-  background-color: #f15f22;
-  color: #171412;
-}
-@media only screen and (min-width: 760px) {
-  .store-buttons a {
-    margin-right: 10px;
-    margin-left: 10px;
-  }
-}
-.store-buttons a:hover,
-.store-buttons a:focus {
-  border-color: #f47f4e;
-  background-color: #f47f4e;
-}
-.store-buttons a:active {
-  border-color: #cf460d;
-  background-color: #cf460d;
 }
 .section {
   padding-top: 40px;
