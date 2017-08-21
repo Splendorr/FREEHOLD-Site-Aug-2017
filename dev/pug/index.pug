@@ -190,6 +190,7 @@ html(xmlns:fb="http://ogp.me/ns/fb#")
               .team-description
                 .team-text
                   .team-name Brian Bucklew
+                  .team-role
                   .team-bio A semi-sentient colony of self-assembling, cooperative, biological nano-units. Still somewhat functional, despite its age.
                 .team-contact
                   .team-social
@@ -202,24 +203,32 @@ html(xmlns:fb="http://ogp.me/ns/fb#")
               .team-description
                 .team-text
                   .team-name Jason Grinblat
+                  .team-role
                   .team-bio Caves of Qud & Sproggiwood. also: generated histories, hidden monasteries, sentient plants.
                 .team-contact
                   .team-social
                     a(href="https://twitter.com/ptychomancer", title="title") @ptychomancer
                   .team-url
                     //- a(href="#", title="title") webpage.com 
-          .team-grid-item
-            .team-box.freeShadow
-              .team-photo(style="background-image: url('img/jaana.png');")
-              .team-description
-                .team-text
-                  .team-name Jaana Heiska
-                  .team-bio Illustrator and Artist on Sproggiwood and Mad Ball.
-                .team-contact
-                  .team-social
-                    a(href="https://twitter.com/JaanaHeiska", title="title") @JaanaHeiska
-                  .team-url
-                    a(href="#", title="title") jaanaheiska.com 
+        .contributors
+          h2 Contributors
+          .grid-container
+            //- .team-grid-item
+            //-   .team-box.freeShadow
+            each person in [{'name': 'Jaana Heiska',  'role': 'Art', 'twitter':'JaanaHeiska', 'site': 'jaanaheiska.com'}, {'name': 'Sam Wilson', 'role': 'Art',  'twitter': '', 'site': ''}, {'name': 'Nick DeCapua', 'role': 'QA',  'twitter': 'nickdecapua', 'site': ''}, {'name': 'Craigory Ham', 'role': 'Sounds & Music',  'twitter': 'craigoryham', 'site': ''}, {'name': 'Brandon Tanner', 'role': 'Music',  'twitter': '', 'site': ''}]
+              .contributor-grid-item
+                .team-box.freeShadow
+                  .contributor-description
+                    .team-text
+                      .team-name= person.name
+                      .team-role= person.role
+                    .team-contact
+                      if person.twitter
+                        .team-social
+                          a(href="https://twitter.com/" + person.twitter)= "@" + person.twitter
+                      if person.site
+                        .team-url
+                          a(href='http://' + person.site)= person.site
 
       #contact.contact.section
         h1 Contact

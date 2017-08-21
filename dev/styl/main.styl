@@ -483,22 +483,37 @@ a
   +above(breakmd)
     padding-top: vertRhythm
   //   // margin-bottom: vertRhythm - 40px
-  h1
+  h1, h2
+    width 100%
     text-shadow: 0 2px 10px rgba(clBlack,0.50);
     font-weight: bold;
     letter-spacing: 1.33px;
     text-align center
     text-transform uppercase
-    font-size: 42px;
-    line-height: 46px
     margin-top: 0
     margin-bottom: 20px
+  h1
+    font-size: 42px;
+    line-height: 46px
     +above(breakxs)
       font-size: 48px;
       line-height: 52px
     +above(breakxm)
       font-size: 64px;
       line-height: 70px
+  h2
+    // margin-bottom: 10px
+    font-size: 28px;
+    line-height: 34px
+    +above(breakxs)
+      font-size: 32px;
+      line-height: 38px
+    +above(breakxm)
+      font-size: 36px;
+      line-height: 40px
+
+.contributors
+  padding-top: 40px
 
 .projects-container
   width 100%
@@ -572,15 +587,17 @@ a
   padding-right: 0
   padding-bottom 20px
   +above(breakxm)
-    width: 49%
+    width: 50%
     &:nth-child(odd)
-      padding-right 1%
-      padding-right 1vw
+      // padding-right 1%
+      // padding-right 1vw
+      padding-right: 10px
       &:last-child
         padding-right 0
     &:nth-child(even)
-      padding-left 1%
-      padding-left 1vw
+      // padding-left 1%
+      // padding-left 1vw
+      padding-left: 10px
 
 .team-box
   display inline-flex
@@ -624,19 +641,55 @@ a
 .team-name
   font-size: 28px;
   // letter-spacing: 0.58px;
-  line-height: 22px;
+  line-height: 28px;
+.team-role
   margin-bottom: 22px
-
 // .team-bio
 
 .team-contact
   display flex
   flex-direction: column
-  +above(breakmd)
+  +above(breakxm)
     flex-direction: row
   align-items: flex-start
   justify-content: space-between
   width 100%
+
+.contributor-grid-item
+  // border: solid 3px clWhite
+  // width 100%
+  // padding-bottom 1%
+  display inline-block
+  // +above(breakxm)
+  width 100%
+  padding-left: 0
+  padding-right: 0
+  padding-bottom 20px
+  +above(breakmd)
+    // width: 49%
+    width (100/2)%
+    padding-left: 10px 
+    padding-right: 10px 
+  +above(breakxm)
+    // width: 49%
+    width (100/3)%
+    // &:nth-child(odd)
+    //   // padding-right 1%
+    //   // padding-right 1vw
+    //   padding-right: 10px
+    //   &:last-child
+    //     padding-right 0
+    // &:nth-child(even)
+    //   // padding-left 1%
+    //   // padding-left 1vw
+    //   padding-left: 10px
+
+.contributor-description
+  width 100%
+  // +above(breakxs)
+  //   width ((100/3)*2)%
+  background-color: rgba(clBlack, .75)
+  padding: 20px
 
 .contact-box, .mailing-box
   width 100%
