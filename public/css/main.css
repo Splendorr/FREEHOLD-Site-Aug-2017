@@ -1142,7 +1142,11 @@ a.rise:active {
 .footer {
   width: 100%;
   background-color: rgba(23,20,18,0.9);
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding: 20px;
   text-align: center;
+}
+@media only screen and (min-width: 760px) {
+  .footer {
+    padding: 40px;
+  }
 }
