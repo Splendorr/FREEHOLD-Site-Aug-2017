@@ -194,7 +194,7 @@ html(xmlns:fb="http://ogp.me/ns/fb#")
                   .team-bio A semi-sentient colony of self-assembling, cooperative, biological nano-units. Still somewhat functional, despite its age.
                 .team-contact
                   .team-social
-                    a(href="https://twitter.com/unormal", title="title") @unormal
+                    a.rise(href="https://twitter.com/unormal", title="title") @unormal
                   .team-url
                     //- a(href="#", title="title") webpage.com 
           .team-grid-item
@@ -207,7 +207,7 @@ html(xmlns:fb="http://ogp.me/ns/fb#")
                   .team-bio Caves of Qud & Sproggiwood. also: generated histories, hidden monasteries, sentient plants.
                 .team-contact
                   .team-social
-                    a(href="https://twitter.com/ptychomancer", title="title") @ptychomancer
+                    a.rise(href="https://twitter.com/ptychomancer", title="title") @ptychomancer
                   .team-url
                     //- a(href="#", title="title") webpage.com 
         .contributors
@@ -225,10 +225,10 @@ html(xmlns:fb="http://ogp.me/ns/fb#")
                     .team-contact
                       if person.twitter
                         .team-social
-                          a(href="https://twitter.com/" + person.twitter)= "@" + person.twitter
+                          a(href="https://twitter.com/" + person.twitter).rise= "@" + person.twitter
                       if person.site
                         .team-url
-                          a(href='http://' + person.site)= person.site
+                          a(href='http://' + person.site).rise= person.site
 
       #contact.contact.section
         h1 Contact
@@ -237,13 +237,13 @@ html(xmlns:fb="http://ogp.me/ns/fb#")
             .contact-box.freeShadow
               .contact-item
                 p Email
-                a(href="mailto:contact@freeholdgames.com", title="Email for General Inquiries") contact@freeholdgames.com
+                a(href="mailto:contact@freeholdgames.com", title="Email for General Inquiries").rise contact@freeholdgames.com
               .contact-item
                 p Twitter
-                a(href="https://twitter.com/freeholdgames", title="Freehold Game Facebook Page") @freeholdgames
+                a(href="https://twitter.com/freeholdgames", title="Freehold Game Facebook Page").rise @freeholdgames
               .contact-item
                 p Facebook
-                a(href="http://facebook.com/freeholdgames", title="Freehold Game Facebook Page") /freeholdgames
+                a(href="http://facebook.com/freeholdgames", title="Freehold Game Facebook Page").rise/freeholdgames
           .contact-grid-item 
             .mailing-box.freeShadow
               .mailing-header Sign up for infrequent email announcements
