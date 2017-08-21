@@ -147,15 +147,18 @@ a.rise
     display block
 
 .navBar
-  percenter(100%, 20px)
+  percenter(100%, 5px)
+  +above(breakiPhone5)
+    percenter(100%, 20px)
   position: fixed
+  bottom 0
   display: inline-flex
   align-items: center
   justify-content: center
   // flex-wrap wrap
   padding-top: 15px
   padding-bottom: 15px
-  background-color: rgba(clBlack, .95)
+  background-color: rgba(clBlack, 1)
   z-index: 100
   // freeBoxShadow()
   // margin-bottom: vertRhythm * 1.5
@@ -173,8 +176,11 @@ a.rise
   // margin auto 0
   a
     font-size: 14px
-    margin-left: 10px
-    margin-right 10px
+    margin-left: 8px
+    margin-right 8px
+    +above(breakiPhone5)
+      margin-left: 10px
+      margin-right 10px
     +above(breakxm)
       font-size: 18px
       margin-left 20px
@@ -190,11 +196,13 @@ a.rise
 
 .headerLogo
   margin 0 auto
-  width 80%
+  // width 80%
+  percenter(80%)
   +above(breakxm)
-    width 50%
-  padding-top: vertRhythm * 2.5
-  padding-bottom: vertRhythm * .5
+    // width 50%
+    percenter(600px)
+  padding-top: vertRhythm * 2
+  padding-bottom: vertRhythm * 1
   // padding-bottom: vertRhythm * 3
   // +above(breakmd)
   //   margin-bottom: vertRhythm
