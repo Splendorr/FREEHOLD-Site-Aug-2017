@@ -1,28 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
   initSwipebox();
-  // initScrollLinks();
   createMoveTo();
   touchDetect();
   blurLinks();
   setCurrentCopyrightYear();
-
-  // var anchorLinks = document.getElementsByTagName("nav")[0];
-  // console.log(anchorLinks);
-  
-  // if (window.scrollTo) {
-  //   console.log('yes window.scrollTo');
-    
-  //   anchorLinks.addEventListener("click",
-  //     function (e) {
-  //       let dest = document.getElementById(e.target.href.split("#")[1]);
-  //       // window.scroll({ top: dest.offsetTop, behavior: 'smooth' });
-  //       window.scroll(0, dest.offsetTop);
-        
-  //     });
-  // }
-
   console.log('loaded');
-  
 }); // End DOMContentLoaded / onready
 
 // window.addEventListener("load", function (event) {
@@ -57,8 +39,6 @@ function createMoveTo() {
     duration: 800,
     easing: 'easeOutQuart'
   });
-  // const trigger = document.getElementsByClassName('js-trigger')[0];
-  // moveTo.registerTrigger(trigger);
   const triggers = document.getElementsByClassName('js-trigger');
   // console.log('triggers', triggers);
   
@@ -68,24 +48,7 @@ function createMoveTo() {
     // console.log('registered', element);
     
   }
-
-  // triggers.forEach(function(e) {
-  //   moveTo.registerTrigger(e);
-  //   console.log('registered', this);
-    
-  // }, this);
 };
-
-// function initScrollLinks() {
-//   var anchorLinks = document.getElementsByTagName("nav")[0];
-//   if (window.scrollTo) {
-//     anchorLinks.addEventListener("click",
-//       function (e) {
-//         dest = document.getElementById(e.target.href.split("#")[1]);
-//         window.scroll({ top: dest.offsetTop, behavior: 'smooth' });
-//       });
-//   }
-// }
 
 function blurLinks() {
   let links = document.getElementsByTagName("a");
