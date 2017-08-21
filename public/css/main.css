@@ -391,6 +391,10 @@ a:focus {
 a:active {
   color: #cf460d;
 }
+.can-touch a:hover,
+.can-touch a:focus {
+  color: #f15f22;
+}
 a.rise {
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
@@ -403,6 +407,15 @@ a.rise:focus {
 a.rise:active {
   -webkit-transform: translateY(1px);
           transform: translateY(1px);
+}
+.can-touch a.rise:hover,
+.can-touch a.rise:focus {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+.can-touch a.rise:active {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
 }
 .showSmall {
   display: block;

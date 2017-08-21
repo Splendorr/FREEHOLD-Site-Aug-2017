@@ -129,6 +129,9 @@ a
     // text-shadow 0px 3px 0px (clOrange - 55%)
   &:active
     color: clActive
+  .can-touch &
+    &:hover, &:focus
+      color: clOrange
 a.rise
   transform translateY(0px)
   &:hover, &:focus
@@ -136,6 +139,12 @@ a.rise
     // transform scale(1.05)
   &:active
     transform translateY(1px)
+  .can-touch &
+    &:hover, &:focus
+      transform translateY(0px)
+    &:active
+      transform translateY(0px)
+
 
 .showSmall
   display block
