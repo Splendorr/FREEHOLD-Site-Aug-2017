@@ -438,9 +438,10 @@ a.rise:active {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color: rgba(23,20,18,0.5);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: rgba(23,20,18,0.95);
+  z-index: 100;
 }
 .navLinks {
   display: -webkit-box;
@@ -475,6 +476,7 @@ a.rise:active {
   margin: 0 auto;
   width: 80%;
   padding-top: 200px;
+  padding-bottom: 40px;
 }
 @media only screen and (min-width: 1000px) {
   .headerLogo {
