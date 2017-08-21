@@ -117,7 +117,7 @@ html, body
 
 a
   display: inline-block
-  transition transform .15s ease-out, color .15s ease-out, text-shadow .15s ease, border-color .15s ease
+  transition transform .15s ease-out, color .15s ease-out, text-shadow .15s ease, border-color .15s ease, background-color .15s ease
   text-decoration: none
   color: clOrange
   &:link
@@ -305,18 +305,20 @@ a
   padding-right: 5px
   +above(breakmd)
     padding-left: 10px
-  p
-    margin-bottom: 1em
 
 .game-description
   display: flex
   align-items: center
+  p
+    margin-bottom: 1em
 
 .game-action
   display: flex
   flex-direction: column
   justify-content: center
   align-items: center
+  p
+    margin-bottom: .5em
   +above(breakmd)
     p
       &:last-child
@@ -430,19 +432,29 @@ a
   display: inline-flex
   align-items: center
   justify-content: center
+  flex-wrap: wrap
   a
+    margin-bottom: 10px
+    margin-right: 5px
+    margin-left: @margin-right
+    +above(breakmd)
+      margin-right: 10px
+      margin-left: @margin-right
+    // &:last-child
+    //   margin-right: 0
     padding-top 5px
     padding-bottom: @padding-top
     padding-left: 15px
     padding-right: @padding-left
     border 3px solid clOrange
-    margin-right: 20px
-    &:last-child
-      margin-right: 0
+    background-color clOrange
+    color clBlack
     &:hover, &:focus
       border-color clHover
+      background-color clHover
     &:active
       border-color clActive
+      background-color clActive
 
 
 .section

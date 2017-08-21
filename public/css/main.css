@@ -371,10 +371,10 @@ body {
 }
 a {
   display: inline-block;
-  -webkit-transition: color 0.15s ease-out, text-shadow 0.15s ease, border-color 0.15s ease, -webkit-transform 0.15s ease-out;
-  transition: color 0.15s ease-out, text-shadow 0.15s ease, border-color 0.15s ease, -webkit-transform 0.15s ease-out;
-  transition: transform 0.15s ease-out, color 0.15s ease-out, text-shadow 0.15s ease, border-color 0.15s ease;
-  transition: transform 0.15s ease-out, color 0.15s ease-out, text-shadow 0.15s ease, border-color 0.15s ease, -webkit-transform 0.15s ease-out;
+  -webkit-transition: color 0.15s ease-out, text-shadow 0.15s ease, border-color 0.15s ease, background-color 0.15s ease, -webkit-transform 0.15s ease-out;
+  transition: color 0.15s ease-out, text-shadow 0.15s ease, border-color 0.15s ease, background-color 0.15s ease, -webkit-transform 0.15s ease-out;
+  transition: transform 0.15s ease-out, color 0.15s ease-out, text-shadow 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+  transition: transform 0.15s ease-out, color 0.15s ease-out, text-shadow 0.15s ease, border-color 0.15s ease, background-color 0.15s ease, -webkit-transform 0.15s ease-out;
   text-decoration: none;
   color: #f15f22;
 }
@@ -670,10 +670,6 @@ a:active {
     padding-left: 10px;
   }
 }
-.game-description p,
-.game-action p {
-  margin-bottom: 1em;
-}
 .game-description {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -681,6 +677,9 @@ a:active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.game-description p {
+  margin-bottom: 1em;
 }
 .game-action {
   display: -webkit-box;
@@ -696,6 +695,9 @@ a:active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.game-action p {
+  margin-bottom: 0.5em;
 }
 @media only screen and (min-width: 760px) {
   .game-action p:last-child {
@@ -841,24 +843,35 @@ a:active {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .store-buttons a {
+  margin-bottom: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 15px;
   padding-right: 15px;
   border: 3px solid #f15f22;
-  margin-right: 20px;
+  background-color: #f15f22;
+  color: #171412;
 }
-.store-buttons a:last-child {
-  margin-right: 0;
+@media only screen and (min-width: 760px) {
+  .store-buttons a {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
 }
 .store-buttons a:hover,
 .store-buttons a:focus {
   border-color: #f47f4e;
+  background-color: #f47f4e;
 }
 .store-buttons a:active {
   border-color: #cf460d;
+  background-color: #cf460d;
 }
 .section {
   padding-top: 40px;
