@@ -371,10 +371,10 @@ body {
 }
 a {
   display: inline-block;
-  -webkit-transition: color 0.15s ease-out, -webkit-transform 0.15s ease-out;
-  transition: color 0.15s ease-out, -webkit-transform 0.15s ease-out;
-  transition: transform 0.15s ease-out, color 0.15s ease-out;
-  transition: transform 0.15s ease-out, color 0.15s ease-out, -webkit-transform 0.15s ease-out;
+  -webkit-transition: color 0.15s ease-out, text-shadow 0.15s ease, -webkit-transform 0.15s ease-out;
+  transition: color 0.15s ease-out, text-shadow 0.15s ease, -webkit-transform 0.15s ease-out;
+  transition: transform 0.15s ease-out, color 0.15s ease-out, text-shadow 0.15s ease;
+  transition: transform 0.15s ease-out, color 0.15s ease-out, text-shadow 0.15s ease, -webkit-transform 0.15s ease-out;
   text-decoration: none;
   color: #f15f22;
 }

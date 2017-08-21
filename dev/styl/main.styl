@@ -117,7 +117,7 @@ html, body
 
 a
   display: inline-block
-  transition transform .15s ease-out, color .15s ease-out
+  transition transform .15s ease-out, color .15s ease-out, text-shadow .15s ease
   text-decoration: none
   color: clOrange
   &:link
@@ -126,6 +126,7 @@ a
     color: clOrange
   &:hover, &:focus
     color: clHover
+    // text-shadow 0px 3px 0px (clOrange - 55%)
   &:active
     color: clActive
 a.rise
