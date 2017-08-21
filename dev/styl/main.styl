@@ -169,8 +169,8 @@ a
   align-items: center
   justify-content: center
   // flex-wrap wrap
-  padding-top: 15px
-  padding-bottom: 15px
+  // padding-top: 15px
+  // padding-bottom: 15px
   background-color: rgba(clBlack, 1)
   z-index: 100
   // freeBoxShadow()
@@ -179,7 +179,7 @@ a
   //   margin-bottom: vertRhythm
 
 .navLinks
-  display: flex
+  display: inline-flex
   align-items: center
   justify-content: center
   flex-wrap wrap
@@ -189,18 +189,28 @@ a
   // margin auto 0
   a
     font-size: 14px
-    margin-left: 8px
-    margin-right 8px
+    line-height: 14px
+    padding-left: 6px
+    padding-right 6px
+    padding-top: 15px
+    padding-bottom: 15px
     +above(breakiPhone5)
-      margin-left: 10px
-      margin-right 10px
+      padding-left: 10px
+      padding-right 10px
     +above(breakxm)
       font-size: 18px
-      margin-left 20px
-      margin-right 20px
+      line-height: 18px
+      padding-left 20px
+      padding-right 20px
     // &:last-child
     //   margin-right: 0px
 
+.navMark
+  height 16px
+  margin-top: -2px
+  +above(breaksm)
+    height 18px
+  width auto
 // .navSocial
 //   float: right
 
@@ -465,7 +475,8 @@ a
       line-height: 28px
 
 .section
-  padding-top: vertRhythm * .5
+  // padding-top: vertRhythm * .5
+  padding-top: vertRhythm
   // margin-bottom: vertRhythm
   +above(breakmd)
     padding-top: vertRhythm

@@ -452,8 +452,6 @@ a:active {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 15px;
-  padding-bottom: 15px;
   background-color: #171412;
   z-index: 100;
 }
@@ -469,9 +467,9 @@ a:active {
   }
 }
 .navLinks {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -483,20 +481,34 @@ a:active {
 }
 .navLinks a {
   font-size: 14px;
-  margin-left: 8px;
-  margin-right: 8px;
+  line-height: 14px;
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 @media only screen and (min-width: 350px) {
   .navLinks a {
-    margin-left: 10px;
-    margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 @media only screen and (min-width: 1000px) {
   .navLinks a {
     font-size: 18px;
-    margin-left: 20px;
-    margin-right: 20px;
+    line-height: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.navMark {
+  height: 16px;
+  margin-top: -2px;
+  width: auto;
+}
+@media only screen and (min-width: 426px) {
+  .navMark {
+    height: 18px;
   }
 }
 .freeShadow {
@@ -878,7 +890,7 @@ a:active {
   }
 }
 .section {
-  padding-top: 40px;
+  padding-top: 80px;
 }
 @media only screen and (min-width: 760px) {
   .section {

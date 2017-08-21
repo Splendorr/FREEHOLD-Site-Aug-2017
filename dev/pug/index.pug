@@ -68,6 +68,8 @@ html(xmlns:fb="http://ogp.me/ns/fb#")
     .navBar
       //- .navLeft
       nav.navLinks
+        a(href="#top", title="Return to Top").js-trigger.rise
+          img(src="img/FREEHOLD_Mark.svg", alt="").navMark
         a(href="#games", title="Games").js-trigger.rise Games
         //- a(href="#projects", title="Projects") Projects
         a(href="#team", title="Team").js-trigger.rise Team
@@ -77,7 +79,7 @@ html(xmlns:fb="http://ogp.me/ns/fb#")
       //- .navSocial
       //-   p twitter
       //-   p facebook
-    .headerLogo
+    #top.headerLogo
       img(src="img/FREEHOLD_Logo.svg", alt="")
     
     .mainContent.cf
