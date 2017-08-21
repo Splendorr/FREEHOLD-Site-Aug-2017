@@ -428,6 +428,7 @@ a.rise:active {
   max-width: 100%;
   padding-left: 20px;
   padding-right: 20px;
+  position: fixed;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -440,7 +441,6 @@ a.rise:active {
   padding-top: 20px;
   padding-bottom: 20px;
   background-color: rgba(23,20,18,0.5);
-  margin-bottom: 120px;
 }
 .navLinks {
   display: -webkit-box;
@@ -474,7 +474,7 @@ a.rise:active {
 .headerLogo {
   margin: 0 auto;
   width: 80%;
-  margin-bottom: 120px;
+  padding-top: 200px;
 }
 @media only screen and (min-width: 1000px) {
   .headerLogo {
@@ -774,13 +774,11 @@ a.rise:active {
   }
 }
 .section {
-  padding-top: 20px;
-  margin-bottom: 60px;
+  padding-top: 80px;
 }
 @media only screen and (min-width: 760px) {
   .section {
-    padding-top: 40px;
-    margin-bottom: 40px;
+    padding-top: 80px;
   }
 }
 .section h1 {
@@ -991,6 +989,14 @@ a.rise:active {
     padding: 40px;
     font-size: 24px;
     line-height: 24px;
+  }
+}
+.contact-box {
+  margin-bottom: 20px;
+}
+@media only screen and (min-width: 760px) {
+  .contact-box {
+    margin-bottom: 0;
   }
 }
 .contact-grid-item {

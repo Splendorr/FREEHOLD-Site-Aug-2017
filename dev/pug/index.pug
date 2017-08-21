@@ -68,12 +68,12 @@ html(xmlns:fb="http://ogp.me/ns/fb#")
     .navBar
       //- .navLeft
       nav.navLinks
-        a(href="#games", title="Games").js-trigger.rise Games
+        a(href="#games", title="Games", onclick="this.blur();").js-trigger.rise Games
         //- a(href="#projects", title="Projects") Projects
-        a(href="#team", title="Team").rise Team
-        a(href="http://freeholdgames.com/Press/", title="Press").rise Press
-        a(href="#contact", title="Contact").rise Contact
-        a(href="http://forums.freeholdentertainment.com/forumdisplay.php?7-CoQ-General", title="Forums").rise Forums
+        a(href="#team", title="Team", onclick="this.blur();").js-trigger.rise Team
+        a(href="#contact", title="Contact", onclick="this.blur();").js-trigger.rise Contact
+        a(href="http://freeholdgames.com/Press/", title="Press", target="_blank", onclick="this.blur();").rise Press
+        a(href="http://forums.freeholdentertainment.com/forumdisplay.php?7-CoQ-General", title="Forums", target="_blank", onclick="this.blur();").rise Forums
       //- .navSocial
       //-   p twitter
       //-   p facebook
@@ -147,7 +147,7 @@ html(xmlns:fb="http://ogp.me/ns/fb#")
 
               p #[a(href="http://forums.freeholdentertainment.com/forumdisplay.php?12-Beta-Feedback", title="title") Join the Forum]
 
-      //- .other.section
+      //- #projects.other.section
       //-   h1 Related Projects
       //-   .grid-container.projects-container
       //-     .project-item
@@ -169,7 +169,7 @@ html(xmlns:fb="http://ogp.me/ns/fb#")
       //-         .project-description 
       //-           p Project Description
 
-      .team.section
+      #team.team.section
         h1 The Team
         .grid-container
           .team-grid-item
@@ -209,7 +209,7 @@ html(xmlns:fb="http://ogp.me/ns/fb#")
                   .team-url
                     a(href="#", title="title") jaanaheiska.com 
 
-      .contact.section
+      #contact.contact.section
         h1 Contact
         .grid-container
           .contact-grid-item 

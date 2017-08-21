@@ -148,6 +148,7 @@ a.rise
 
 .navBar
   percenter(100%, 20px)
+  position: fixed
   display: inline-flex
   align-items: center
   justify-content: center
@@ -156,7 +157,7 @@ a.rise
   padding-bottom: 20px
   background-color: rgba(clBlack, .5)
   // freeBoxShadow()
-  margin-bottom: vertRhythm * 1.5
+  // margin-bottom: vertRhythm * 1.5
   // +above(breakmd)
   //   margin-bottom: vertRhythm
 
@@ -191,7 +192,8 @@ a.rise
   width 80%
   +above(breakxm)
     width 50%
-  margin-bottom: vertRhythm * 1.5
+  padding-top: vertRhythm * 2.5
+  // padding-bottom: vertRhythm * 3
   // +above(breakmd)
   //   margin-bottom: vertRhythm
 
@@ -397,11 +399,11 @@ a.rise
       line-height: 28px
 
 .section
-  padding-top: 20px
-  margin-bottom: vertRhythm - 20px
+  padding-top: vertRhythm
+  // margin-bottom: vertRhythm
   +above(breakmd)
-    padding-top: 40px
-    margin-bottom: vertRhythm - 40px
+    padding-top: vertRhythm
+    // margin-bottom: vertRhythm - 40px
   h1
     text-shadow: 0 2px 10px rgba(clBlack,0.50);
     font-weight: bold;
@@ -565,6 +567,11 @@ a.rise
     padding 40px
     font-size: 24px
     line-height: 24px
+
+.contact-box
+  margin-bottom: 20px
+  +above(breakmd)
+    margin-bottom: 0
 
 .contact-grid-item
   // border: solid 3px clWhite

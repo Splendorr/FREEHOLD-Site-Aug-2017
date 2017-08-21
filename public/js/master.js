@@ -56,9 +56,22 @@ function createMoveTo() {
     duration: 800,
     easing: 'easeOutQuart'
   });
-  var trigger = document.getElementsByClassName('js-trigger')[0];
+  // const trigger = document.getElementsByClassName('js-trigger')[0];
+  // moveTo.registerTrigger(trigger);
+  var triggers = document.getElementsByClassName('js-trigger');
+  // console.log('triggers', triggers);
 
-  moveTo.registerTrigger(trigger);
+  for (var index = 0; index < triggers.length; index++) {
+    var element = triggers[index];
+    moveTo.registerTrigger(element);
+    // console.log('registered', element);
+  }
+
+  // triggers.forEach(function(e) {
+  //   moveTo.registerTrigger(e);
+  //   console.log('registered', this);
+
+  // }, this);
 };
 
 // function initScrollLinks() {
