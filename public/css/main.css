@@ -455,6 +455,12 @@ a.rise:active {
     padding-right: 20px;
   }
 }
+@media only screen and (min-width: 760px) {
+  .navBar {
+    bottom: auto;
+    top: 0;
+  }
+}
 .navLinks {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -497,7 +503,7 @@ a.rise:active {
   width: 100%;
   float: none;
   max-width: 80%;
-  height: 95vh;
+  height: 85vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -512,6 +518,11 @@ a.rise:active {
     width: 100%;
     float: none;
     max-width: 600px;
+  }
+}
+@media only screen and (min-width: 760px) {
+  .headerLogo {
+    height: 105vh;
   }
 }
 .mainContent {

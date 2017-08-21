@@ -152,6 +152,9 @@ a.rise
     percenter(100%, 20px)
   position: fixed
   bottom 0
+  +above(breakmd)
+    bottom auto
+    top 0
   display: inline-flex
   align-items: center
   justify-content: center
@@ -203,7 +206,9 @@ a.rise
     percenter(600px)
   // padding-top: vertRhythm * 2
   // padding-bottom: vertRhythm * 1
-  height 95vh
+  height 85vh
+  +above(breakmd)
+    height 105vh
   display: flex
   align-items: center
   // padding-bottom: vertRhythm * 3
