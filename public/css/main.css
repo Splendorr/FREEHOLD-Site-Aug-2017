@@ -371,10 +371,10 @@ body {
 }
 a {
   display: inline-block;
-  -webkit-transition: color 0.15s ease-out, text-shadow 0.15s ease, -webkit-transform 0.15s ease-out;
-  transition: color 0.15s ease-out, text-shadow 0.15s ease, -webkit-transform 0.15s ease-out;
-  transition: transform 0.15s ease-out, color 0.15s ease-out, text-shadow 0.15s ease;
-  transition: transform 0.15s ease-out, color 0.15s ease-out, text-shadow 0.15s ease, -webkit-transform 0.15s ease-out;
+  -webkit-transition: color 0.15s ease-out, text-shadow 0.15s ease, border-color 0.15s ease, -webkit-transform 0.15s ease-out;
+  transition: color 0.15s ease-out, text-shadow 0.15s ease, border-color 0.15s ease, -webkit-transform 0.15s ease-out;
+  transition: transform 0.15s ease-out, color 0.15s ease-out, text-shadow 0.15s ease, border-color 0.15s ease;
+  transition: transform 0.15s ease-out, color 0.15s ease-out, text-shadow 0.15s ease, border-color 0.15s ease, -webkit-transform 0.15s ease-out;
   text-decoration: none;
   color: #f15f22;
 }
@@ -395,27 +395,27 @@ a:active {
 .can-touch a:focus {
   color: #f15f22;
 }
-a.rise {
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
+.rise {
+  -webkit-transform: translateY(0px) !important;
+          transform: translateY(0px) !important;
 }
-a.rise:hover,
-a.rise:focus {
-  -webkit-transform: translateY(-3px);
-          transform: translateY(-3px);
+.rise:hover,
+.rise:focus {
+  -webkit-transform: translateY(-3px) !important;
+          transform: translateY(-3px) !important;
 }
-a.rise:active {
-  -webkit-transform: translateY(1px);
-          transform: translateY(1px);
+.rise:active {
+  -webkit-transform: translateY(1px) !important;
+          transform: translateY(1px) !important;
 }
-.can-touch a.rise:hover,
-.can-touch a.rise:focus {
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
+.can-touch .rise:hover,
+.can-touch .rise:focus {
+  -webkit-transform: translateY(0px) !important;
+          transform: translateY(0px) !important;
 }
-.can-touch a.rise:active {
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
+.can-touch .rise:active {
+  -webkit-transform: translateY(0px) !important;
+          transform: translateY(0px) !important;
 }
 .showSmall {
   display: block;
@@ -831,6 +831,35 @@ a.rise:active {
     line-height: 28px;
   }
 }
+.store-buttons {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.store-buttons a {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: 3px solid #f15f22;
+  margin-right: 20px;
+}
+.store-buttons a:last-child {
+  margin-right: 0;
+}
+.store-buttons a:hover,
+.store-buttons a:focus {
+  border-color: #f47f4e;
+}
+.store-buttons a:active {
+  border-color: #cf460d;
+}
 .section {
   padding-top: 40px;
 }
@@ -1103,7 +1132,7 @@ a.rise:active {
 .mailingList input {
 /* Rectangle 4: */
   background: #302a26;
-  border: 1px solid #f15f22;
+  border: 3px solid #f15f22;
   border-radius: 0px;
   padding: 10px;
 }
@@ -1177,10 +1206,13 @@ a.rise:active {
   border-color: #ebe8e7;
 }
 .mailingList input#mc-embedded-subscribe {
+  display: inline-block !important;
   margin-top: 1em;
   background-color: #f15f22;
-  -webkit-transition: background-color 0.15s ease, border 0.15s ease;
-  transition: background-color 0.15s ease, border 0.15s ease;
+  -webkit-transition: background-color 0.15s ease, border 0.15s ease, -webkit-transform 0.15s ease;
+  transition: background-color 0.15s ease, border 0.15s ease, -webkit-transform 0.15s ease;
+  transition: background-color 0.15s ease, border 0.15s ease, transform 0.15s ease;
+  transition: background-color 0.15s ease, border 0.15s ease, transform 0.15s ease, -webkit-transform 0.15s ease;
   color: #171412;
 /* Submit: */
   font-size: 1em;
@@ -1192,7 +1224,7 @@ a.rise:active {
 .mailingList input#mc-embedded-subscribe:hover,
 .mailingList input#mc-embedded-subscribe:focus {
   background-color: #f47f4e;
-  border-color: #ebe8e7;
+  border-color: #f47f4e;
 }
 .mailingList input#mc-embedded-subscribe:active {
   background-color: #cf460d;

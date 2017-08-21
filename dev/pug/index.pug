@@ -110,7 +110,11 @@ html(xmlns:fb="http://ogp.me/ns/fb#")
                     a(href="img/screenshots/qud-" + shot + ".png", title="", rel='qud-gallery').swipebox.rise
                       img(src="img/screenshots/qud-" + shot + "-thumb.png", alt="")
             .game-action
-              p Available in Early Access on #[a.rise(href="#", title="title") Steam] and #[a.rise(href="#", title="title") Humble].
+              p Available in Early Access. 
+              
+              p.store-buttons
+                a.rise(href="#", title="title") Steam
+                a.rise(href="#", title="title") Humble
 
               p #[a.rise(href="http://cavesofqud.com", title="title") Learn More] • #[a.rise(href="http://forums.freeholdentertainment.com/forumdisplay.php?7-CoQ-General", title="title") Join the Forum]
 
@@ -248,7 +252,7 @@ html(xmlns:fb="http://ogp.me/ns/fb#")
                   div(style='position: absolute; left: -5000px;')
                     input(type='text', name='b_51d94474d6ebc9e4fb65f9185_7d70ce3890', tabindex='-1', value='')
                   .clear
-                    input#mc-embedded-subscribe.button(type='submit', value='Subscribe', name='subscribe')
+                    input#mc-embedded-subscribe.button.rise(type='submit', value='Subscribe', name='subscribe')
 
     .section
       .footer.freeShadow

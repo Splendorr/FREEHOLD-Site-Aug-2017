@@ -117,7 +117,7 @@ html, body
 
 a
   display: inline-block
-  transition transform .15s ease-out, color .15s ease-out, text-shadow .15s ease
+  transition transform .15s ease-out, color .15s ease-out, text-shadow .15s ease, border-color .15s ease
   text-decoration: none
   color: clOrange
   &:link
@@ -132,18 +132,18 @@ a
   .can-touch &
     &:hover, &:focus
       color: clOrange
-a.rise
-  transform translateY(0px)
+.rise
+  transform translateY(0px) !important
   &:hover, &:focus
-    transform translateY(-3px)
+    transform translateY(-3px) !important
     // transform scale(1.05)
   &:active
-    transform translateY(1px)
+    transform translateY(1px) !important
   .can-touch &
     &:hover, &:focus
-      transform translateY(0px)
+      transform translateY(0px) !important
     &:active
-      transform translateY(0px)
+      transform translateY(0px) !important
 
 
 .showSmall
@@ -426,6 +426,25 @@ a.rise
       font-size: 24px;
       line-height: 28px
 
+.store-buttons
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  a
+    padding-top 5px
+    padding-bottom: @padding-top
+    padding-left: 15px
+    padding-right: @padding-left
+    border 3px solid clOrange
+    margin-right: 20px
+    &:last-child
+      margin-right: 0
+    &:hover, &:focus
+      border-color clHover
+    &:active
+      border-color clActive
+
+
 .section
   padding-top: vertRhythm * .5
   // margin-bottom: vertRhythm
@@ -645,7 +664,7 @@ a.rise
   input
     /* Rectangle 4: */
     background: clBrown
-    border: 1px solid clOrange;
+    border: 3px solid clOrange;
     border-radius: 0px
     padding: 10px
 
@@ -684,9 +703,11 @@ a.rise
       border-color clWhite
 
   input#mc-embedded-subscribe
+    display inline-block !important
+    // transform translateY(0px)
     margin-top: 1em
     background-color: clOrange
-    transition: background-color .15s ease, border .15s ease
+    transition: background-color .15s ease, border .15s ease, transform .15s ease
     color: clBlack
     /* Submit: */
     font-size: 1em
@@ -698,7 +719,7 @@ a.rise
     outline 0
     &:hover, &:focus
       background-color: clHover
-      border-color clWhite
+      border-color clHover
     &:active
       background-color clActive
 
