@@ -386,7 +386,7 @@ a:visited {
 }
 a:hover,
 a:focus {
-  color: #f4b64e;
+  color: #f15f22;
 }
 a:active {
   color: #f1222a;
@@ -688,20 +688,16 @@ a.rise:active {
   width: 100%;
 }
 .grid-container .grid-item img {
+  -webkit-transition: border 0.15s ease;
+  transition: border 0.15s ease;
   border: solid 3px #ebe8e7;
 }
 .grid-container .grid-item img:hover,
 .grid-container .grid-item img:focus {
-  border-color: #f4b64e;
+  border-color: #f15f22;
 }
 .grid-container .grid-item img:active {
   border-color: #f1222a;
-}
-.trailer {
-  position: relative;
-}
-.trailer:hover .game-page-play-button {
-  opacity: 1;
 }
 .game-page-play-button {
   pointer-events: none;
@@ -719,6 +715,26 @@ a.rise:active {
   -webkit-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;
   border: none !important;
+}
+.game-page-play-button svg circle,
+.game-page-play-button svg polygon {
+  -webkit-transition: stroke 0.15s ease, fill 0.15s ease;
+  transition: stroke 0.15s ease, fill 0.15s ease;
+}
+.game-page-play-button svg circle {
+  fill: #171412;
+}
+.trailer {
+  position: relative;
+}
+.trailer:hover .game-page-play-button {
+  opacity: 1;
+}
+.trailer:hover .game-page-play-button svg circle {
+  stroke: #f15f22;
+}
+.trailer:hover .game-page-play-button svg polygon {
+  fill: #f15f22;
 }
 #swipebox-overlay {
   background-color: rgba(23,20,18,0.95) !important;

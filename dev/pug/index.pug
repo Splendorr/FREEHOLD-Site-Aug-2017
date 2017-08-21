@@ -90,7 +90,9 @@ html(xmlns:fb="http://ogp.me/ns/fb#")
               .grid-container
                 .game-screen.grid-item.trailer
                   a.swipebox.rise(href='https://www.youtube.com/watch?v=Qqz0p_kiDIQ', onclick="this.blur();", rel='qud-gallery')
-                    img.game-page-play-button(src="img/play_button.svg")
+                    //- img.game-page-play-button(src="img/play_button.svg")
+                    .game-page-play-button
+                      include ../img/play_button.svg
                     img(src!='http://i1.ytimg.com/vi/Qqz0p_kiDIQ/mqdefault.jpg')
                 //- each shot in ['game1', 'game3', 'qud_barathrums-study', 'qud_equipment-screen']
                 //-   .game-screen.grid-item
@@ -120,7 +122,9 @@ html(xmlns:fb="http://ogp.me/ns/fb#")
               .grid-container
                 .game-screen.grid-item.trailer
                   a.swipebox.rise(href='https://www.youtube.com/watch?v=k4IGxuuMWG0', onclick="this.blur();", rel='sproggi-gallery')
-                    img.game-page-play-button(src="img/play_button.svg")
+                    //- img.game-page-play-button(src="img/play_button.svg")
+                    .game-page-play-button
+                      include ../img/play_button.svg
                     img(src!='http://i1.ytimg.com/vi/k4IGxuuMWG0/mqdefault.jpg')
                 //- each shot in ['Adventure1', 'Adventure2', 'Map', 'Town']
                 //-   .game-screen.grid-item
