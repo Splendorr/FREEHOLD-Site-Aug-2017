@@ -397,7 +397,11 @@ a.rise
       line-height: 28px
 
 .section
-  margin-bottom: vertRhythm
+  padding-top: 20px
+  margin-bottom: vertRhythm - 20px
+  +above(breakmd)
+    padding-top: 40px
+    margin-bottom: vertRhythm - 40px
   h1
     text-shadow: 0 2px 10px rgba(clBlack,0.50);
     font-weight: bold;

@@ -1,6 +1,24 @@
 document.addEventListener('DOMContentLoaded', function () {
   initSwipebox();
+  // initScrollLinks();
+  createMoveTo();
   setCurrentCopyrightYear();
+
+  // var anchorLinks = document.getElementsByTagName("nav")[0];
+  // console.log(anchorLinks);
+  
+  // if (window.scrollTo) {
+  //   console.log('yes window.scrollTo');
+    
+  //   anchorLinks.addEventListener("click",
+  //     function (e) {
+  //       let dest = document.getElementById(e.target.href.split("#")[1]);
+  //       // window.scroll({ top: dest.offsetTop, behavior: 'smooth' });
+  //       window.scroll(0, dest.offsetTop);
+        
+  //     });
+  // }
+
   console.log('loaded');
   
 }); // End DOMContentLoaded / onready
@@ -30,3 +48,25 @@ function initSwipebox() {
     // console.log('loaded .swipebox swipebox');
   }
 }
+
+function createMoveTo() {
+  const moveTo = new MoveTo({
+    tolerance: 0,
+    duration: 800,
+    easing: 'easeOutQuart'
+  });
+  const trigger = document.getElementsByClassName('js-trigger')[0];
+
+  moveTo.registerTrigger(trigger);
+};
+
+// function initScrollLinks() {
+//   var anchorLinks = document.getElementsByTagName("nav")[0];
+//   if (window.scrollTo) {
+//     anchorLinks.addEventListener("click",
+//       function (e) {
+//         dest = document.getElementById(e.target.href.split("#")[1]);
+//         window.scroll({ top: dest.offsetTop, behavior: 'smooth' });
+//       });
+//   }
+// }

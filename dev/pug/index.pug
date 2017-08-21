@@ -67,13 +67,13 @@ html(xmlns:fb="http://ogp.me/ns/fb#")
 
     .navBar
       //- .navLeft
-      .navLinks
-        a(href="#games", title="Games", onclick="this.blur();").rise Games
+      nav.navLinks
+        a(href="#games", title="Games").js-trigger.rise Games
         //- a(href="#projects", title="Projects") Projects
-        a(href="#team", title="Team", onclick="this.blur();").rise Team
-        a(href="http://freeholdgames.com/Press/", title="Press", onclick="this.blur();").rise Press
-        a(href="#contact", title="Contact", onclick="this.blur();").rise Contact
-        a(href="http://forums.freeholdentertainment.com/forumdisplay.php?7-CoQ-General", title="Forums", onclick="this.blur();").rise Forums
+        a(href="#team", title="Team").rise Team
+        a(href="http://freeholdgames.com/Press/", title="Press").rise Press
+        a(href="#contact", title="Contact").rise Contact
+        a(href="http://forums.freeholdentertainment.com/forumdisplay.php?7-CoQ-General", title="Forums").rise Forums
       //- .navSocial
       //-   p twitter
       //-   p facebook
@@ -81,7 +81,7 @@ html(xmlns:fb="http://ogp.me/ns/fb#")
       img(src="img/FREEHOLD_Logo.svg", alt="")
     
     .mainContent.cf
-      .games.section
+      #games.games.section
         //- h1 Games
         .game.qud.freeShadow
           .game-logo.freeShadow
