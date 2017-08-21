@@ -135,7 +135,7 @@ a.rise
     transform translateY(-3px)
     // transform scale(1.05)
   &:active
-    transform translateY(3px)
+    transform translateY(1px)
 
 .showSmall
   display block
@@ -639,6 +639,8 @@ a.rise
     color clWhite
     outline 0
     margin-top 5px
+    &:hover
+      border-color clHover
     &:active, &:focus
       border-color clWhite
 
@@ -656,10 +658,10 @@ a.rise
     padding 10px
     outline 0
     &:hover, &:focus
-      background-color: clOrange + 35%
+      background-color: clHover
       border-color clWhite
     &:active
-      background-color clWhite
+      background-color clActive
 
 .footer
   width 100%

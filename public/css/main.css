@@ -386,10 +386,10 @@ a:visited {
 }
 a:hover,
 a:focus {
-  color: #f15f22;
+  color: #f47f4e;
 }
 a:active {
-  color: #f1222a;
+  color: #cf460d;
 }
 a.rise {
   -webkit-transform: translateY(0px);
@@ -401,8 +401,8 @@ a.rise:focus {
           transform: translateY(-3px);
 }
 a.rise:active {
-  -webkit-transform: translateY(3px);
-          transform: translateY(3px);
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
 }
 .showSmall {
   display: block;
@@ -694,10 +694,10 @@ a.rise:active {
 }
 .grid-container .grid-item img:hover,
 .grid-container .grid-item img:focus {
-  border-color: #f15f22;
+  border-color: #f47f4e;
 }
 .grid-container .grid-item img:active {
-  border-color: #f1222a;
+  border-color: #cf460d;
 }
 .game-page-play-button {
   pointer-events: none;
@@ -731,10 +731,10 @@ a.rise:active {
   opacity: 1;
 }
 .trailer:hover .game-page-play-button svg circle {
-  stroke: #f15f22;
+  stroke: #f47f4e;
 }
 .trailer:hover .game-page-play-button svg polygon {
-  fill: #f15f22;
+  fill: #f47f4e;
 }
 #swipebox-overlay {
   background-color: rgba(23,20,18,0.95) !important;
@@ -1092,6 +1092,11 @@ a.rise:active {
   outline: 0;
   margin-top: 5px;
 }
+.mailingList input#mce-EMAIL:hover,
+.mailingList input#mce-LNAME:hover,
+.mailingList input#mce-FNAME:hover {
+  border-color: #f47f4e;
+}
 .mailingList input#mce-EMAIL:active,
 .mailingList input#mce-LNAME:active,
 .mailingList input#mce-FNAME:active,
@@ -1115,11 +1120,11 @@ a.rise:active {
 }
 .mailingList input#mc-embedded-subscribe:hover,
 .mailingList input#mc-embedded-subscribe:focus {
-  background-color: #f6976f;
+  background-color: #f47f4e;
   border-color: #ebe8e7;
 }
 .mailingList input#mc-embedded-subscribe:active {
-  background-color: #ebe8e7;
+  background-color: #cf460d;
 }
 .footer {
   width: 100%;
