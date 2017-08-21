@@ -745,6 +745,7 @@ a.rise:active {
   width: 100%;
 }
 .grid-container .grid-item img {
+  width: 100%;
   -webkit-transition: border 0.15s ease;
   transition: border 0.15s ease;
   border: solid 3px #ebe8e7;

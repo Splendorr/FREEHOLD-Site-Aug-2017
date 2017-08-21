@@ -105,10 +105,10 @@ html(xmlns:fb="http://ogp.me/ns/fb#")
 
             .game-screens
               .grid-container
-                each shot in ['game1', 'game3', 'qud_barathrums-study', 'qud_equipment-screen']
+                each shot in ['game1', 'game3', 'barathrums-study', 'equipment-screen']
                   .game-screen.grid-item
-                    a(href="img/screens-qud/" + shot + ".png", title="", rel='qud-gallery').swipebox.rise
-                      img(src="img/screens-qud/" + shot + ".png", alt="")
+                    a(href="img/screenshots/qud-" + shot + ".png", title="", rel='qud-gallery').swipebox.rise
+                      img(src="img/screenshots/qud-" + shot + "-thumb.png", alt="")
             .game-action
               p Available in Early Access on #[a.rise(href="#", title="title") Steam] and #[a.rise(href="#", title="title") Humble].
 
@@ -139,8 +139,8 @@ html(xmlns:fb="http://ogp.me/ns/fb#")
               .grid-container
                 each shot in ['Adventure1', 'Adventure2', 'Map', 'Town']
                   .game-screen.grid-item
-                    a(href="img/screens-sproggiwood/" + shot + ".png", title="", rel='sproggi-gallery').swipebox.rise
-                      img(src="img/screens-sproggiwood/" + shot + ".png", alt="")
+                    a(href="img/screenshots/sproggi-" + shot + ".png", title="", rel='sproggi-gallery').swipebox.rise
+                      img(src="img/screenshots/sproggi-" + shot + "-thumb.png", alt="")
             
             .game-action
               p Available on #[a(href="#", title="title") iOS], #[a(href="#", title="title") Google Play], #[a(href="#", title="title") Steam], and #[a(href="#", title="title") Humble].

@@ -154,7 +154,7 @@ gulp.task('images', function() {
 gulp.task('screenshot_thumbs', function() {
   gulp.src([dev_path.screenshots + '**/*'])
     .pipe(changed(build_path.screenshots))
-    .pipe(imageResize({ percentage: 50 }))
+    .pipe(imageResize({ percentage: 40 }))
     .pipe(rename(function (path) { path.basename += "-thumb"; }))
     // .pipe(imagemin())
     .pipe(gulp.dest(build_path.screenshots))
@@ -218,6 +218,6 @@ gulp.task('default', ['vendor', 'stylus', 'images', 'js'
 // gulp.task('localdev', ['hb_iframes', 'vendor', 'pug', 'templates', 'stylus', 'images', 'js', 'browsersync-server', 'watch'
 
 // gulp.task('localdev', ['vendor', 'pug', 'stylus', 'images', 'screenshot_thumbs', 'js', 'browsersync-server', 'watch'
-gulp.task('localdev', ['vendor', 'pug', 'stylus', 'images', 'js', 'browsersync-server', 'watch'
+gulp.task('localdev', ['vendor', 'pug', 'stylus', 'images', 'screenshot_thumbs', 'js', 'browsersync-server', 'watch'
   // 'vendor', 'pug', 'stylus', 'js', 'connect-sync', 'watch',
 ]);
