@@ -544,6 +544,9 @@ a:active {
     height: 105vh;
   }
 }
+.headerLogo img {
+  max-height: 70%;
+}
 .mainContent {
   margin-left: auto;
   margin-right: auto;
@@ -1141,6 +1144,9 @@ a:active {
   padding-left: 0;
   padding-right: 0;
   padding-bottom: 20px;
+}
+.contributor-grid-item .team-box {
+  height: 100%;
 }
 @media only screen and (min-width: 760px) {
   .contributor-grid-item {

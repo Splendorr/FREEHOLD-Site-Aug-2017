@@ -220,6 +220,8 @@ a
 .headerLogo
   margin 0 auto
   // width 80%
+  // percenter(40%)
+  // +above(breakxs)
   percenter(80%)
   +above(breakxm)
     // width 50%
@@ -228,10 +230,16 @@ a
   // padding-bottom: vertRhythm * 1
   // height 85vh
   height 95vh
+  +below(breakmd)
+    @media all and (orientation: landscape)
+      height 80vh
+      margin-top: 15vh
   +above(breakmd)
     height 105vh
   display: flex
   align-items: center
+  img
+    max-height 70%
   // padding-bottom: vertRhythm * 3
   // +above(breakmd)
   //   margin-bottom: vertRhythm
@@ -673,6 +681,8 @@ a
   padding-left: 0
   padding-right: 0
   padding-bottom 20px
+  .team-box
+    height 100%
   +above(breakmd)
     // width: 49%
     width (100/2)%
