@@ -214,6 +214,31 @@ a
 // .navSocial
 //   float: right
 
+.navSocial
+  // position absolute
+  // right 0
+  display none
+  +above(500px)
+    display: flex
+  align-items: center
+  padding-left: 10px
+  padding-right: 10px
+  a
+    padding-left: 10px
+    padding-right: 10px
+    &:hover
+      path
+        fill clHover
+  svg
+    height 16px
+    padding-top: 1px
+    +above(breakxm)
+      height 20px
+      padding-top: 3px
+    path
+      transition fill .15s ease
+      fill clOrange
+
 .freeShadow
   freeBoxShadow()
 

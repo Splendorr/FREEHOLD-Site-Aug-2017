@@ -511,6 +511,43 @@ a:active {
     height: 18px;
   }
 }
+.navSocial {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+@media only screen and (min-width: 500px) {
+  .navSocial {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.navSocial a {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.navSocial a:hover path {
+  fill: #f47f4e;
+}
+.navSocial svg {
+  height: 16px;
+  padding-top: 1px;
+}
+@media only screen and (min-width: 1000px) {
+  .navSocial svg {
+    height: 20px;
+    padding-top: 3px;
+  }
+}
+.navSocial svg path {
+  -webkit-transition: fill 0.15s ease;
+  transition: fill 0.15s ease;
+  fill: #f15f22;
+}
 .freeShadow {
   -webkit-box-shadow: 0px 2px 10px rgba(23,20,18,0.5);
           box-shadow: 0px 2px 10px rgba(23,20,18,0.5);
