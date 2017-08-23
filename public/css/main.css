@@ -476,6 +476,10 @@ a:active {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -513,22 +517,40 @@ a:active {
 }
 .navSocial {
   display: none;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-left: 10px;
-  padding-right: 10px;
 }
 @media only screen and (min-width: 500px) {
   .navSocial {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    max-width: 80px;
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .navSocial {
+    max-width: 160px;
   }
 }
 .navSocial a {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+@media only screen and (min-width: 760px) {
+  .navSocial a {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 .navSocial a:hover path {
   fill: #f47f4e;
