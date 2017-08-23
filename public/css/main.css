@@ -747,22 +747,48 @@ a:active {
       flex-wrap: wrap;
 }
 .store-buttons a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-bottom: 10px;
   margin-right: 5px;
   margin-left: 5px;
   padding-top: 5px;
   padding-bottom: 5px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
   border: 3px solid #f15f22;
   background-color: #f15f22;
   color: #171412;
+}
+.store-buttons a img {
+  max-width: 25px;
+  margin-right: 5px;
+}
+@media only screen and (min-width: 760px) {
+  .store-buttons a img {
+    max-width: 40px;
+    margin-right: 8px;
+  }
+}
+.store-buttons a span {
+  margin-top: 2px;
 }
 @media only screen and (min-width: 760px) {
   .store-buttons a {
     margin-right: 10px;
     margin-left: 10px;
     margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 .store-buttons a:hover,
