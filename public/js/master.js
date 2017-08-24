@@ -111,17 +111,25 @@ function animateLogo(params) {
     targets: '#freehold-mark-outline path, #freehold-mark-outline polygon, #freehold-text-outline path, #freehold-text-outline polygon, #freehold-games-outline path, #freehold-games-outline polygon',
     strokeDashoffset: [anime.setDashoffset, 0],
     easing: 'easeInOutSine',
-    duration: 1000,
+    duration: 900,
     delay: function delay(el, i) {
-      return i * 250;
+      return i * 100;
     },
     offset: 500
   }).add({
     targets: '#freehold-mark, #freehold-text, #freehold-games',
     easing: 'easeInOutSine',
     duration: 500,
-    opacity: [0, 1]
-    // offset: 0
+    delay: function delay(el, i) {
+      return i * 100;
+    },
+    opacity: [0, 1],
+    offset: '-=500'
+  }).add({
+    targets: '#freehold-outlines',
+    opacity: 0,
+    duration: 1000
+    // offset: '-=250'
   });
 
   // let lineDrawing = anime({
