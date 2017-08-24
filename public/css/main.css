@@ -658,6 +658,17 @@ a:active {
 .headerLogo svg {
   max-height: 70%;
 }
+svg#freehold-logo.no-fill path,
+svg#freehold-logo.no-fill polygon {
+  fill: none;
+  stroke-width: 1px;
+  stroke: #fff;
+}
+svg#freehold-logo path,
+svg#freehold-logo polygon {
+  stroke-width: 0px;
+  stroke: none;
+}
 .mainContent {
   margin-left: auto;
   margin-right: auto;

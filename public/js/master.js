@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
   touchDetect();
   blurLinks();
   setCurrentCopyrightYear();
+  animateLogo();
   console.log('loaded');
 }); // End DOMContentLoaded / onready
 
@@ -14,6 +15,10 @@ document.addEventListener('DOMContentLoaded', function () {
 //   console.log("All resources finished loading!");
 
 // });
+
+var logoID = document.getElementById('freehold-logo');
+console.log(logoID);
+logoID.classList.add('no-fill');
 
 function setCurrentCopyrightYear() {
   var currentDate = new Date().getFullYear().toString();
@@ -93,3 +98,14 @@ function touchDetect() {
   document.addEventListener('touchstart', addtouchclass, false); //this event only gets called when input type is touch
   document.addEventListener('mouseover', removetouchclass, false); //this event gets called when input type is everything from touch to mouse/ trackpad
 };
+
+var logoVivus = void 0;
+
+function animateLogo(params) {
+  logoVivus = new Vivus('freehold-logo', { duration: 100 });
+  logoVivus.play();
+}
+
+// function removeClass(elem, class) {
+//   document.getElementById(elem).classList.remove(class);
+// }
