@@ -744,23 +744,34 @@ a:active {
 .game-action {
   padding-left: 5px;
   padding-right: 5px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 @media only screen and (min-width: 760px) {
   .game-description,
   .game-action {
     padding-left: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 }
 .game-description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 .game-description p {
   margin-bottom: 1em;
+}
+@media only screen and (min-width: 760px) {
+  .game-description-text {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+.firstSentence {
+  line-height: 100%;
+  font-size: 150%;
 }
 .game-action {
   display: -webkit-box;
@@ -776,17 +787,11 @@ a:active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
 .game-action p {
   margin-bottom: 10px;
 }
 @media only screen and (min-width: 760px) {
-  .game-action {
-    padding-top: 0px;
-    padding-bottom: 0px;
-  }
   .game-action p {
     margin-bottom: 20px;
   }
@@ -962,6 +967,10 @@ a:active {
   padding-left: 24px !important;
   padding-right: 24px !important;
 }
+.qud .game-description {
+  font-size: 24px;
+  line-height: 28px;
+}
 @media only screen and (min-width: 590px) {
   .qud .game-description {
     font-size: 28px;
@@ -973,6 +982,10 @@ a:active {
     font-size: 32px;
     line-height: 40px;
   }
+}
+.sproggi .game-description {
+  font-size: 20px;
+  line-height: 24px;
 }
 @media only screen and (min-width: 590px) {
   .sproggi .game-description {
