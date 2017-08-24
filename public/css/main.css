@@ -488,8 +488,8 @@ a:active {
   line-height: 14px;
   padding-left: 6px;
   padding-right: 6px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 18px;
+  padding-bottom: 18px;
 }
 @media only screen and (min-width: 374px) {
   .navLinks a {
@@ -503,6 +503,8 @@ a:active {
     line-height: 18px;
     padding-left: 20px;
     padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 }
 .navMark {
