@@ -662,16 +662,41 @@ svg#freehold-logo {
   -webkit-transition: stroke 0.5s ease, fill 0.5s ease;
   transition: stroke 0.5s ease, fill 0.5s ease;
 }
-svg#freehold-logo path,
-svg#freehold-logo polygon {
-  stroke-width: 0px;
-  stroke: none;
+svg#freehold-logo #freehold-mark,
+svg#freehold-logo #freehold-text,
+svg#freehold-logo #freehold-games {
+  opacity: 0;
 }
-svg#freehold-logo.no-fill path,
-svg#freehold-logo.no-fill polygon {
-  fill: none;
+svg#freehold-logo #freehold-outlines {
+  opacity: 0;
+}
+svg#freehold-logo #freehold-outlines #flame-bottom path {
+  stroke: #f15f22;
   stroke-width: 1px;
-  stroke: #fff;
+  fill: none;
+}
+svg#freehold-logo #freehold-outlines #freehold-mark-outline #flame-bottom path,
+svg#freehold-logo #freehold-outlines #freehold-mark-outline #flame-top path {
+  stroke: #f15f22;
+  stroke-width: 1px;
+  fill: none;
+}
+svg#freehold-logo #freehold-outlines #freehold-mark-outline #castle path {
+  stroke: #988e8a;
+  stroke-width: 1px;
+  fill: none;
+}
+svg#freehold-logo #freehold-outlines #freehold-text-outline path,
+svg#freehold-logo #freehold-outlines #freehold-text-outline polygon {
+  stroke: #e7e5e4;
+  stroke-width: 1px;
+  fill: none;
+}
+svg#freehold-logo #freehold-outlines #freehold-games-outline path,
+svg#freehold-logo #freehold-outlines #freehold-games-outline polygon {
+  stroke: #f15f22;
+  stroke-width: 1px;
+  fill: none;
 }
 .mainContent {
   margin-left: auto;

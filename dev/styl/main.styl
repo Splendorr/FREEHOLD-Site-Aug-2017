@@ -324,16 +324,48 @@ a
   //   margin-bottom: vertRhythm
 
 svg#freehold-logo
+
   transition stroke .5s ease, fill .5s ease
-  path, polygon
-    // fill none
-    stroke-width 0px
-    stroke none
-  &.no-fill
-    path, polygon
-      fill none
-      stroke-width 1px
-      stroke white
+  #freehold-mark, #freehold-text, #freehold-games
+    opacity 0
+
+  #freehold-outlines
+    opacity 0
+    #flame-bottom
+      path
+        stroke #F15F22
+        stroke-width 1px
+        fill none
+    #freehold-mark-outline
+      #flame-bottom, #flame-top
+        path
+          stroke #F15F22
+          stroke-width 1px
+          fill none
+      #castle
+        path
+          stroke #988E8A
+          stroke-width 1px
+          fill none
+    #freehold-text-outline
+      path, polygon
+        stroke #E7E5E4
+        stroke-width 1px
+        fill none
+    #freehold-games-outline
+      path, polygon
+        stroke #F15F22
+        stroke-width 1px
+        fill none
+  // path, polygon
+  //   // fill none
+  //   // stroke-width 0px
+  //   // stroke none
+  //   // &.no-fill
+  //   //   path, polygon
+  //   // fill none
+  //   // stroke-width 1px
+  //   // stroke white
 
 .mainContent
   percenter(100%, 10px)

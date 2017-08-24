@@ -100,22 +100,44 @@ var logoVivus = void 0;
 function animateLogo(params) {
   // logoVivus = new Vivus('freehold-logo', { duration: 100 });
   // logoVivus.play();
-  var lineDrawing = anime({
-    targets: '#freehold-logo path, #freehold-logo polygon',
+  var logoTimeline = anime.timeline();
+
+  logoTimeline.add({
+    targets: '#freehold-outlines',
+    duration: 10,
+    opacity: 1,
+    offset: 0
+  }).add({
+    targets: '#freehold-mark-outline path, #freehold-mark-outline polygon, #freehold-text-outline path, #freehold-text-outline polygon, #freehold-games-outline path, #freehold-games-outline polygon',
     strokeDashoffset: [anime.setDashoffset, 0],
     easing: 'easeInOutSine',
-    duration: 1500,
+    duration: 1000,
     delay: function delay(el, i) {
       return i * 250;
     },
-    // direction: 'alternate',
-    // loop: true
-    complete: function complete(anim) {
-      console.log('animation completed');
-
-      removeClass('freehold-logo', 'no-fill');
-    }
+    offset: 500
+  }).add({
+    targets: '#freehold-mark, #freehold-text, #freehold-games',
+    easing: 'easeInOutSine',
+    duration: 500,
+    opacity: [0, 1]
+    // offset: 0
   });
+
+  // let lineDrawing = anime({
+  //   targets: '#freehold-logo path, #freehold-logo polygon',
+  //   strokeDashoffset: [anime.setDashoffset, 0],
+  //   easing: 'easeInOutSine',
+  //   duration: 1500,
+  //   delay: function (el, i) { return i * 250 },
+  //   // direction: 'alternate',
+  //   // loop: true
+  //   complete: function(anim) {
+  //     console.log('animation completed');
+
+  //     removeClass('freehold-logo', 'no-fill');
+  //   }
+  // });
 }
 
 function removeClass(elem, cl) {
