@@ -17,8 +17,8 @@ fluid-media()
 // }
 
 @font-face
-  font-family 'questrial-regular'
-  src url('../fonts/questrial-regular-webfont.eot'); 
+  font-family: 'questrial-regular';
+  src: url('../fonts/questrial-regular-webfont.eot'); 
   /* IE9 Compat Modes */
   src: url('../fonts/questrial-regular-webfont.eot?#iefix') format('embedded-opentype'), 
   url('../fonts/questrial-regular-webfont.woff') format('woff'), 
@@ -324,15 +324,16 @@ a
   //   margin-bottom: vertRhythm
 
 svg#freehold-logo
+  transition stroke .5s ease, fill .5s ease
+  path, polygon
+    // fill none
+    stroke-width 0px
+    stroke none
   &.no-fill
     path, polygon
       fill none
       stroke-width 1px
       stroke white
-  path, polygon
-    // fill none
-    stroke-width 0px
-    stroke none
 
 .mainContent
   percenter(100%, 10px)

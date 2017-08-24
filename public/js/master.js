@@ -16,10 +16,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // });
 
-var logoID = document.getElementById('freehold-logo');
-console.log(logoID);
-logoID.classList.add('no-fill');
-
 function setCurrentCopyrightYear() {
   var currentDate = new Date().getFullYear().toString();
   var dateElement = document.getElementById('currentYear');
@@ -102,10 +98,26 @@ function touchDetect() {
 var logoVivus = void 0;
 
 function animateLogo(params) {
-  logoVivus = new Vivus('freehold-logo', { duration: 100 });
-  logoVivus.play();
+  // logoVivus = new Vivus('freehold-logo', { duration: 100 });
+  // logoVivus.play();
+  var lineDrawing = anime({
+    targets: '#freehold-logo path, #freehold-logo polygon',
+    strokeDashoffset: [anime.setDashoffset, 0],
+    easing: 'easeInOutSine',
+    duration: 1500,
+    delay: function delay(el, i) {
+      return i * 250;
+    },
+    // direction: 'alternate',
+    // loop: true
+    complete: function complete(anim) {
+      console.log('animation completed');
+
+      removeClass('freehold-logo', 'no-fill');
+    }
+  });
 }
 
-// function removeClass(elem, class) {
-//   document.getElementById(elem).classList.remove(class);
-// }
+function removeClass(elem, cl) {
+  var id = document.getElementById(elem);id.classList.remove(cl);
+};
