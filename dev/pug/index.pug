@@ -213,7 +213,9 @@ html(xmlns:fb="http://ogp.me/ns/fb#")
                   .team-bio A semi-sentient colony of self-assembling, cooperative, biological nano-units. Still somewhat functional, despite its age.
                 .team-contact
                   .team-social
-                    a.rise(href="https://twitter.com/unormal", title="title") @unormal
+                    a.rise.socialIcon(href="https://twitter.com/unormal", title="title") 
+                      span: include ../img/social-twitter.svg
+                      span @unormal
                   .team-url
                     //- a(href="#", title="title") webpage.com 
           .team-grid-item
@@ -226,7 +228,9 @@ html(xmlns:fb="http://ogp.me/ns/fb#")
                   .team-bio Caves of Qud & Sproggiwood. also: generated histories, hidden monasteries, sentient plants.
                 .team-contact
                   .team-social
-                    a.rise(href="https://twitter.com/ptychomancer", title="title") @ptychomancer
+                    a.rise.socialIcon(href="https://twitter.com/ptychomancer", title="title") 
+                      span: include ../img/social-twitter.svg
+                      span @ptychomancer
                   .team-url
                     //- a(href="#", title="title") webpage.com 
         .contributors
@@ -256,13 +260,19 @@ html(xmlns:fb="http://ogp.me/ns/fb#")
             .contact-box.freeShadow
               .contact-item
                 p Email
-                a(href="mailto:contact@freeholdgames.com", title="Email for General Inquiries").rise contact@freeholdgames.com
+                a.socialIcon(href="mailto:contact@freeholdgames.com", title="Email for General Inquiries").rise 
+                  span: include ../img/social-envelope.svg
+                  span contact@freeholdgames.com
               .contact-item
                 p Twitter
-                a(href="https://twitter.com/freeholdgames", title="Freehold Game Facebook Page").rise @freeholdgames
+                a.socialIcon(href="https://twitter.com/freeholdgames", title="Freehold Game Facebook Page").rise
+                  span: include ../img/social-twitter.svg
+                  span @freeholdgames
               .contact-item
                 p Facebook
-                a(href="http://facebook.com/freeholdgames", title="Freehold Game Facebook Page").rise /freeholdgames
+                a.socialIcon(href="http://facebook.com/freeholdgames", title="Freehold Game Facebook Page").rise 
+                  span: include ../img/social-facebook.svg
+                  span /freeholdgames
           .contact-grid-item 
             .mailing-box.freeShadow
               .mailing-header Sign up for infrequent email announcements

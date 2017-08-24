@@ -554,8 +554,13 @@ a:active {
     padding-right: 10px;
   }
 }
-.navSocial a:hover path {
+.navSocial a:hover path,
+.navSocial a:focus path {
   fill: #f47f4e;
+}
+.can-touch .navSocial a:hover path,
+.can-touch .navSocial a:focus path {
+  fill: #f15f22;
 }
 .navSocial svg {
   height: 16px;
@@ -570,6 +575,50 @@ a:active {
 .navSocial svg path {
   -webkit-transition: fill 0.15s ease;
   transition: fill 0.15s ease;
+  fill: #f15f22;
+}
+.socialIcon {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.socialIcon span {
+  margin-right: 2px;
+}
+.socialIcon svg {
+  -ms-flex-negative: none;
+      flex-shrink: none;
+  width: 1.25em;
+  padding-top: 2px;
+  padding-right: 2px;
+}
+@media only screen and (min-width: 1000px) {
+  .socialIcon svg {
+    padding-top: 4px;
+    padding-right: 4px;
+  }
+}
+.socialIcon svg path {
+  -webkit-transition: fill 0.15s ease;
+  transition: fill 0.15s ease;
+  fill: #f15f22;
+}
+.socialIcon:hover path,
+.socialIcon:focus path {
+  fill: #f47f4e;
+}
+.can-touch .socialIcon:hover path,
+.can-touch .socialIcon:focus path {
   fill: #f15f22;
 }
 .freeShadow {
