@@ -821,6 +821,7 @@ a:active {
 .firstSentence {
   line-height: 100%;
   font-size: 150%;
+  font-weight: bold;
 }
 .game-action {
   display: -webkit-box;
@@ -1285,6 +1286,8 @@ a:active {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 .contributor-grid-item {
@@ -1294,8 +1297,8 @@ a:active {
   padding-right: 0;
   padding-bottom: 20px;
 }
-.contributor-grid-item .team-box {
-  height: 100%;
+.contributor-grid-item .team-role:last-child {
+  margin: 0;
 }
 @media only screen and (min-width: 760px) {
   .contributor-grid-item {

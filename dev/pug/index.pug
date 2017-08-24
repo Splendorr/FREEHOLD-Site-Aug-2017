@@ -109,7 +109,12 @@ html(xmlns:fb="http://ogp.me/ns/fb#")
                 //-       img(src="img/screens-qud/" + shot + ".png", alt="")
             .game-description
               .game-description-text
-                p #[span.firstSentence Caves of Qud is a science fantasy RPG & roguelike epic.] It’s set in a far future that’s deeply simulated, richly cultured, and rife with sentient plants. 
+                p #[span.firstSentence Caves of Qud] 
+                p A science fantasy RPG & roguelike epic set in a far future that’s deeply simulated, richly cultured, and rife with sentient plants. 
+                p 
+                  a.rise.socialIcon(href='http://cavesofqud.com')
+                    span: include ../img/social-globe.svg
+                    span Visit Site
 
             .game-screens
               .grid-container
@@ -128,7 +133,8 @@ html(xmlns:fb="http://ogp.me/ns/fb#")
                   img(src="img/store-humble_80.png", alt="Humble logo")
                   span Humble
 
-              p #[a.rise(href="http://cavesofqud.com", title="title") Learn More] • #[a.rise(href="http://forums.freeholdentertainment.com/forumdisplay.php?7-CoQ-General", title="title") Join the Forum]
+              //- p #[a.rise(href="http://cavesofqud.com") Learn More] • #[a.rise(href="http://forums.freeholdentertainment.com/forumdisplay.php?7-CoQ-General") Join the Forum]
+              p #[a.rise(href="http://forums.freeholdentertainment.com/forumdisplay.php?7-CoQ-General") Join the Forum]
 
 
         .game.sproggi.freeShadow
@@ -150,7 +156,8 @@ html(xmlns:fb="http://ogp.me/ns/fb#")
                 //-       img(src="img/screens-sproggiwood/" + shot + ".png", alt="")
             .game-description
               .game-description-text
-                p #[span.firstSentence Sproggiwood is a story-driven, turn-based roguelike set in a humorous world inspired by Finnish mythology.] One moment, you're a simple farmer tending your grove — the next, you’re lured through a mysterious portal by a talking sheep. Now you’re the prisoner of Sproggi, a mischievous forest spirit who tasks you with taming the monsters of its realm. But things go awry when you discover a new civilization — will you befriend these curious newcomers, or will you crush them and claim Sproggiwood for your own?
+                p #[span.firstSentence Sproggiwood] 
+                p A story-driven, turn-based roguelike set in a humorous world inspired by Finnish mythology. One moment, you're a simple farmer tending your grove — the next, you’re lured through a mysterious portal by a talking sheep. Now you’re the prisoner of Sproggi, a mischievous forest spirit who tasks you with taming the monsters of its realm. But things go awry when you discover a new civilization — will you befriend these curious newcomers, or will you crush them and claim Sproggiwood for your own?
 
             .game-screens
               .grid-container
@@ -242,16 +249,21 @@ html(xmlns:fb="http://ogp.me/ns/fb#")
               .contributor-grid-item
                 .team-box.freeShadow
                   .contributor-description
-                    .team-text
-                      .team-name= person.name
-                      .team-role= person.role
-                    .team-contact
-                      if person.twitter
-                        .team-social
-                          a(href="https://twitter.com/" + person.twitter).rise= "@" + person.twitter
-                      if person.site
-                        .team-url
-                          a(href='http://' + person.site).rise= person.site
+                    //- .team-text
+                    .team-name= person.name
+                    .team-role= person.role
+                    if person.twitter || person.site
+                      .team-contact
+                        if person.twitter
+                          .team-social
+                            a(href="https://twitter.com/" + person.twitter).rise.socialIcon
+                              span: include ../img/social-twitter.svg
+                              span= "@" + person.twitter
+                        if person.site
+                          .team-url
+                            a(href='http://' + person.site).rise.socialIcon
+                              span: include ../img/social-globe.svg
+                              span= person.site
 
       #contact.contact.section
         h1 Contact
