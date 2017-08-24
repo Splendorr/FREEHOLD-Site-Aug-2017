@@ -809,9 +809,18 @@ a:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 20px;
 }
 .game-description p {
   margin-bottom: 1em;
+}
+.game-description p:last-child {
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 760px) {
+  .game-description {
+    margin-bottom: 40px;
+  }
 }
 @media only screen and (min-width: 760px) {
   .game-description-text {

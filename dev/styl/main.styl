@@ -418,12 +418,13 @@ a
 .game-description
   display: flex
   // align-items: center
+  margin-bottom: 20px
   p
     margin-bottom: 1em
-  // +above(breakmd)
-  //   p
-  //     &:last-child
-  //       margin-bottom: 0
+    &:last-child
+      margin-bottom: 0
+  +above(breakmd)
+    margin-bottom: 40px
 
 
 .game-description-text
