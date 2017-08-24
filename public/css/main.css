@@ -921,10 +921,12 @@ a:active {
 .store-buttons a:focus {
   border-color: #f47f4e;
   background-color: #f47f4e;
+  color: #171412;
 }
 .store-buttons a:active {
   border-color: #cf460d;
   background-color: #cf460d;
+  color: #171412;
 }
 .grid-container {
   width: 100%;
@@ -1398,6 +1400,10 @@ a:active {
   border: 3px solid #f15f22;
   border-radius: 0px;
   padding: 10px;
+  -webkit-transition: background-color 0.15s ease, border 0.15s ease, -webkit-transform 0.15s ease;
+  transition: background-color 0.15s ease, border 0.15s ease, -webkit-transform 0.15s ease;
+  transition: background-color 0.15s ease, border 0.15s ease, transform 0.15s ease;
+  transition: background-color 0.15s ease, border 0.15s ease, transform 0.15s ease, -webkit-transform 0.15s ease;
 }
 .mailingList label {
   font-size: 0.75em;
@@ -1449,8 +1455,6 @@ a:active {
 .mailingList input#mce-EMAIL,
 .mailingList input#mce-LNAME,
 .mailingList input#mce-FNAME {
-  -webkit-transition: border 0.15s ease;
-  transition: border 0.15s ease;
   color: #ebe8e7;
   outline: 0;
   margin-top: 5px;
@@ -1472,10 +1476,6 @@ a:active {
   display: inline-block !important;
   margin-top: 1em;
   background-color: #f15f22;
-  -webkit-transition: background-color 0.15s ease, border 0.15s ease, -webkit-transform 0.15s ease;
-  transition: background-color 0.15s ease, border 0.15s ease, -webkit-transform 0.15s ease;
-  transition: background-color 0.15s ease, border 0.15s ease, transform 0.15s ease;
-  transition: background-color 0.15s ease, border 0.15s ease, transform 0.15s ease, -webkit-transform 0.15s ease;
   color: #171412;
 /* Submit: */
   font-size: 1em;

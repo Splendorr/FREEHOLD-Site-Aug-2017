@@ -499,9 +499,11 @@ a
     &:hover, &:focus
       border-color clHover
       background-color clHover
+      color clBlack
     &:active
       border-color clActive
       background-color clActive
+      color clBlack
 
 
 .grid-container
@@ -902,10 +904,11 @@ a
     border: 3px solid clOrange;
     border-radius: 0px
     padding: 10px
+    transition: background-color .15s ease, border .15s ease, transform .15s ease
 
   label
     font-size: .75em
-  
+
   input#mce-EMAIL, input#mce-LNAME, input#mce-FNAME, .mc-field-group
     width 100%
 
@@ -928,7 +931,7 @@ a
         width 50%
 
   input#mce-EMAIL, input#mce-LNAME, input#mce-FNAME
-    transition border .15s ease
+    // transition border .15s ease
     color clWhite
     outline 0
     margin-top 5px
@@ -942,7 +945,7 @@ a
     // transform translateY(0px)
     margin-top: 1em
     background-color: clOrange
-    transition: background-color .15s ease, border .15s ease, transform .15s ease
+    // transition: background-color .15s ease, border .15s ease, transform .15s ease
     color: clBlack
     /* Submit: */
     font-size: 1em
