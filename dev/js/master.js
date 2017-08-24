@@ -85,16 +85,18 @@ function touchDetect() {
     }
   }
 
-  document.addEventListener('touchstart', addtouchclass, false) //this event only gets called when input type is touch
-  document.addEventListener('mouseover', removetouchclass, false) //this event gets called when input type is everything from touch to mouse/ trackpad
+  document.addEventListener('touchstart', addtouchclass, false); // this event only gets called when input type is touch
+  document.addEventListener('mouseover', removetouchclass, false); // this event gets called when input type is everything from touch to mouse/ trackpad
 };
 
-let logoVivus;
+// let logoVivus;
 
-function animateLogo(params) {
+let logoTimeline; 
+
+function animateLogo() {
   // logoVivus = new Vivus('freehold-logo', { duration: 100 });
   // logoVivus.play();
-  let logoTimeline = anime.timeline();
+  logoTimeline = anime.timeline();
 
   logoTimeline
     .add({
@@ -106,16 +108,21 @@ function animateLogo(params) {
     .add({
       targets: '#freehold-mark-outline path, #freehold-mark-outline polygon, #freehold-text-outline path, #freehold-text-outline polygon, #freehold-games-outline path, #freehold-games-outline polygon',
       strokeDashoffset: [anime.setDashoffset, 0],
+      // strokeDashoffset: function (el) {
+      //   return [el.getAttribute('stroke-dasharray'), 0];
+      // },
       easing: 'easeInOutSine',
       duration: 900,
-      delay: function (el, i) { return i * 100 },
+      delay: function(el, i) {
+        return i * 100;
+      },
       offset: 500
     })
     .add({
       targets: '#freehold-mark, #freehold-text, #freehold-games',
       easing: 'easeInOutSine',
       duration: 500,
-      delay: function (el, i) {
+      delay: function(el, i) {
         return i * 100;
       },
       opacity: [0, 1],
@@ -145,6 +152,6 @@ function animateLogo(params) {
   // });
 }
 
-function removeClass(elem, cl) {
-  let id = document.getElementById(elem);id.classList.remove(cl);
-};
+// function removeClass(elem, cl) {
+//   let id = document.getElementById(elem);id.classList.remove(cl);
+// };

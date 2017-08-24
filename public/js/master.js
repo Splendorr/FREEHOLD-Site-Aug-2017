@@ -91,16 +91,18 @@ function touchDetect() {
     }
   }
 
-  document.addEventListener('touchstart', addtouchclass, false); //this event only gets called when input type is touch
-  document.addEventListener('mouseover', removetouchclass, false); //this event gets called when input type is everything from touch to mouse/ trackpad
+  document.addEventListener('touchstart', addtouchclass, false); // this event only gets called when input type is touch
+  document.addEventListener('mouseover', removetouchclass, false); // this event gets called when input type is everything from touch to mouse/ trackpad
 };
 
-var logoVivus = void 0;
+// let logoVivus;
 
-function animateLogo(params) {
+var logoTimeline = void 0;
+
+function animateLogo() {
   // logoVivus = new Vivus('freehold-logo', { duration: 100 });
   // logoVivus.play();
-  var logoTimeline = anime.timeline();
+  logoTimeline = anime.timeline();
 
   logoTimeline.add({
     targets: '#freehold-outlines',
@@ -110,6 +112,9 @@ function animateLogo(params) {
   }).add({
     targets: '#freehold-mark-outline path, #freehold-mark-outline polygon, #freehold-text-outline path, #freehold-text-outline polygon, #freehold-games-outline path, #freehold-games-outline polygon',
     strokeDashoffset: [anime.setDashoffset, 0],
+    // strokeDashoffset: function (el) {
+    //   return [el.getAttribute('stroke-dasharray'), 0];
+    // },
     easing: 'easeInOutSine',
     duration: 900,
     delay: function delay(el, i) {
@@ -148,6 +153,6 @@ function animateLogo(params) {
   // });
 }
 
-function removeClass(elem, cl) {
-  var id = document.getElementById(elem);id.classList.remove(cl);
-};
+// function removeClass(elem, cl) {
+//   let id = document.getElementById(elem);id.classList.remove(cl);
+// };
