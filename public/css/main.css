@@ -654,7 +654,8 @@ a:active {
     height: 105vh;
   }
 }
-.headerLogo img {
+.headerLogo img,
+.headerLogo svg {
   max-height: 70%;
 }
 .mainContent {
