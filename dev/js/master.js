@@ -149,14 +149,14 @@ function animateLogo() {
     })
     .add({
       targets: '#freehold-text g',
-      easing: 'easeInOutElastic',
-      elasticity: 5,
+      // easing: 'easeInOutElastic',
+      elasticity: 10,
       duration: 750,
       delay: function(el, i) {
         return i * 100;
       },
       // opacity: [0, 1],
-      translateY: [1000, 0],
+      translateY: [200, 0],
       offset: '-=800'
       // offset: 700
     })
