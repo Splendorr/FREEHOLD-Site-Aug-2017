@@ -148,15 +148,16 @@ function animateLogo() {
       // loop: true
     })
     .add({
-      targets: '#freehold-text g',
+      targets: '#freehold-text path, #freehold-text polygon',
       // easing: 'easeInOutElastic',
       elasticity: 10,
       duration: 750,
       delay: function(el, i) {
-        return i * 100;
+        return i * 50;
       },
       // opacity: [0, 1],
-      translateY: [200, 0],
+      // translateY: [200, 0],
+      scaleX: [0, 1],
       offset: '-=800'
       // offset: 700
     })
@@ -165,7 +166,8 @@ function animateLogo() {
       // easing: 'easeInOutSine',
       elasticity: 10,
       opacity: {value: 1, duration: 10},
-      translateY: [200, 0],
+      // translateY: [200, 0],
+      scaleX: [0, 1],
       duration: 700,
       offset: '-=750',
       complete: function (anim) {
