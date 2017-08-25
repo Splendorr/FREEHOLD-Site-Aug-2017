@@ -104,38 +104,49 @@ function animateLogo() {
   // logoVivus.play();
   logoTimeline = anime.timeline();
 
-  logoTimeline.add({
-    targets: '#freehold-outlines',
-    duration: 10,
+  logoTimeline
+  // .add({
+  //   targets: '#freehold-outlines',
+  //   duration: 10,
+  //   opacity: 1,
+  //   offset: 0
+  // })
+  // .add({
+  //   targets: '#freehold-mark-outline path, #freehold-mark-outline polygon, #freehold-text-outline path, #freehold-text-outline polygon, #freehold-games-outline path, #freehold-games-outline polygon',
+  //   strokeDashoffset: [anime.setDashoffset, 0],
+  //   // strokeDashoffset: function (el) {
+  //   //   return [el.getAttribute('stroke-dasharray'), 0];
+  //   // },
+  //   easing: 'easeInOutSine',
+  //   duration: 900,
+  //   delay: function(el, i) {
+  //     return i * 100;
+  //   },
+  //   offset: 500
+  // })
+  .add({
+    targets: '#freehold-text path, #freehold-text polygon',
+    easing: 'easeInOutSine',
+    duration: 1000,
+    delay: function delay(el, i) {
+      return i * 100;
+    },
+    // opacity: [0, 1],
+    translateY: [1000, 0]
+    // offset: '-=500'
+  }).add({
+    targets: '#freehold-games',
+    easing: 'easeInOutSine',
     opacity: 1,
-    offset: 0
-  }).add({
-    targets: '#freehold-mark-outline path, #freehold-mark-outline polygon, #freehold-text-outline path, #freehold-text-outline polygon, #freehold-games-outline path, #freehold-games-outline polygon',
-    strokeDashoffset: [anime.setDashoffset, 0],
-    // strokeDashoffset: function (el) {
-    //   return [el.getAttribute('stroke-dasharray'), 0];
-    // },
-    easing: 'easeInOutSine',
-    duration: 900,
-    delay: function delay(el, i) {
-      return i * 100;
-    },
-    offset: 500
-  }).add({
-    targets: '#freehold-mark, #freehold-text, #freehold-games',
-    easing: 'easeInOutSine',
-    duration: 500,
-    delay: function delay(el, i) {
-      return i * 100;
-    },
-    opacity: [0, 1],
-    offset: '-=500'
-  }).add({
-    targets: '#freehold-outlines',
-    opacity: 0,
-    duration: 1000
-    // offset: '-=250'
-  });
+    duration: 500
+  })
+  // .add({
+  //   targets: '#freehold-outlines',
+  //   opacity: 0,
+  //   duration: 1000
+  //   // offset: '-=250'
+  // })
+  ;
 
   // let lineDrawing = anime({
   //   targets: '#freehold-logo path, #freehold-logo polygon',

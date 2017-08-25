@@ -665,6 +665,9 @@ svg#freehold-logo {
 svg#freehold-logo #freehold-mark,
 svg#freehold-logo #freehold-text,
 svg#freehold-logo #freehold-games {
+  opacity: 1;
+}
+svg#freehold-logo #freehold-games {
   opacity: 0;
 }
 svg#freehold-logo #freehold-outlines {
