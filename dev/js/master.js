@@ -162,10 +162,10 @@ function animateLogo() {
     })
     .add({
       targets: '#freehold-games',
-      easing: 'easeInOutSine',
-      // elasticity: 200,
+      // easing: 'easeInOutSine',
+      elasticity: 10,
       opacity: {value: 1, duration: 10},
-      translateY: [1000, 0],
+      translateY: [200, 0],
       duration: 700,
       offset: '-=750',
       complete: function (anim) {
