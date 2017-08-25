@@ -1331,20 +1331,10 @@ svg#freehold-logo #freehold-outlines #freehold-games-outline polygon {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   width: 100%;
-}
-@media only screen and (min-width: 1000px) {
-  .team-contact {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
 }
 .contributor-grid-item {
   display: inline-block;
@@ -1353,8 +1343,8 @@ svg#freehold-logo #freehold-outlines #freehold-games-outline polygon {
   padding-right: 0;
   padding-bottom: 20px;
 }
-.contributor-grid-item .team-role:last-child {
-  margin: 0;
+.contributor-grid-item .team-box {
+  height: 100%;
 }
 @media only screen and (min-width: 760px) {
   .contributor-grid-item {
@@ -1372,6 +1362,16 @@ svg#freehold-logo #freehold-outlines #freehold-games-outline polygon {
   width: 100%;
   background-color: rgba(23,20,18,0.75);
   padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .contact-box,
 .mailing-box {

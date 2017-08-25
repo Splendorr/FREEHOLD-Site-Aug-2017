@@ -842,11 +842,11 @@ svg#freehold-logo
 .team-contact
   display flex
   flex-direction: column
-  +above(breakxm)
-    flex-direction: row
-    flex-wrap wrap
+  // +above(breakxm)
+  //   flex-direction: row
+  //   flex-wrap wrap
   align-items: flex-start
-  justify-content: space-between
+  justify-content: flex-end
   width 100%
 
 .contributor-grid-item
@@ -859,11 +859,11 @@ svg#freehold-logo
   padding-left: 0
   padding-right: 0
   padding-bottom 20px
-  // .team-box
-  //   height 100%
-  .team-role
-    &:last-child
-      margin: 0
+  .team-box
+    height 100%
+  // .team-role
+  //   &:last-child
+  //     margin: 0
   +above(breakmd)
     // width: 49%
     width (100/2)%
@@ -889,6 +889,9 @@ svg#freehold-logo
   //   width ((100/3)*2)%
   background-color: rgba(clBlack, .75)
   padding: 20px
+  display: flex
+  flex-direction: column
+  justify-content: space-between
 
 .contact-box, .mailing-box
   width 100%

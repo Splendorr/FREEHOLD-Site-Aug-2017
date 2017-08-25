@@ -250,9 +250,9 @@ html(xmlns:fb="http://ogp.me/ns/fb#")
               .contributor-grid-item
                 .team-box.freeShadow
                   .contributor-description
-                    //- .team-text
-                    .team-name= person.name
-                    .team-role= person.role
+                    .team-text
+                      .team-name= person.name
+                      .team-role= person.role
                     if person.twitter || person.site
                       .team-contact
                         if person.twitter
