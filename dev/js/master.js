@@ -129,7 +129,7 @@ function animateLogo() {
     })
     .add({
       targets: '#castle_1_',
-      duration: 1000,
+      duration: 750,
       scale: [3, 1],
       // easing: 'easeInSine',
       elasticity: 200,
@@ -149,19 +149,21 @@ function animateLogo() {
     })
     .add({
       targets: '#freehold-text g',
-      easing: 'easeInOutSine',
-      duration: 1000,
+      easing: 'easeInOutElastic',
+      elasticity: 5,
+      duration: 750,
       delay: function(el, i) {
         return i * 100;
       },
       // opacity: [0, 1],
       translateY: [1000, 0],
-      offset: '-=1200'
+      offset: '-=800'
       // offset: 700
     })
     .add({
       targets: '#freehold-games',
       easing: 'easeInOutSine',
+      // elasticity: 200,
       opacity: {value: 1, duration: 10},
       translateY: [1000, 0],
       duration: 700,
