@@ -4,15 +4,15 @@ document.addEventListener('DOMContentLoaded', function () {
   touchDetect();
   blurLinks();
   setCurrentCopyrightYear();
-  animateLogo();
   console.log('loaded');
 }); // End DOMContentLoaded / onready
 
-// window.addEventListener("load", function (event) {
+window.addEventListener("load", function (event) {
+  
+  console.log("All resources finished loading!");
+  animateLogo();
 
-//   console.log("All resources finished loading!");
-
-// });
+});
 
 function setCurrentCopyrightYear() {
   let currentDate = new Date().getFullYear().toString();
