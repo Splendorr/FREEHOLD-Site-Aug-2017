@@ -91,7 +91,7 @@ gulp.task('stylus', function() {
     }))
     .pipe(stylus({
       use: [axis(), jeet(), rupture(), autoprefixer()],
-      compress: false
+      compress: true
       //
       // TK this isn't right, isn't building properly
       // sourcemap: {
@@ -119,7 +119,7 @@ gulp.task('js', function(cb) {
   pump([
     gulp.src(dev_path.js + '*.js'),
     babel(),
-    // uglify(),
+    uglify(),
     gulp.dest(build_path.js),
     browsersync.reload({stream: true})
   ],
