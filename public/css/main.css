@@ -670,6 +670,22 @@ svg#freehold-logo #freehold-games {
 svg#freehold-logo #freehold-games {
   opacity: 0;
 }
+svg#freehold-logo #freehold-text {
+  opacity: 0;
+}
+svg#freehold-logo #freehold-mark #castle_1_ {
+  -webkit-transform: scale(3);
+          transform: scale(3);
+  will-change: transform;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+svg#freehold-logo #freehold-mark #flame-bottom_1_,
+svg#freehold-logo #freehold-mark #flame-top_1_ {
+  opacity: 0;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
 svg#freehold-logo #freehold-outlines {
   opacity: 0;
 }
@@ -1274,17 +1290,18 @@ svg#freehold-logo #freehold-outlines #freehold-games-outline polygon {
 .team-photo {
   width: 100%;
   height: auto;
+  min-height: 300px;
   background-origin: center;
   background-position: center;
   background-size: cover;
   background-color: #171412;
-  min-height: 250px;
   -ms-flex-negative: 2;
       flex-shrink: 2;
 }
 @media only screen and (min-width: 590px) {
   .team-photo {
     width: 33.333333333333336%;
+    min-height: 250px;
   }
 }
 .team-description {

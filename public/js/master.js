@@ -125,20 +125,51 @@ function animateLogo() {
   //   offset: 500
   // })
   .add({
-    targets: '#freehold-text path, #freehold-text polygon',
+    targets: '#freehold-text',
+    duration: 10,
+    opacity: 1,
+    // offset: '+=300'
+    offset: 100
+  }).add({
+    targets: '#castle_1_',
+    duration: 1000,
+    scale: [3, 1],
+    // easing: 'easeInSine',
+    elasticity: 200,
+    offset: 500
+  }).add({
+    targets: '#flame-bottom_1_, #flame-top_1_',
+    duration: 500,
+    // opacity: { value: 1, duration: 250 },
+    delay: function delay(el, i) {
+      return i * 150;
+    },
+    opacity: 1,
+    scaleX: [0, 1],
+    offset: '-=400'
+    // loop: true
+  }).add({
+    targets: '#freehold-text g',
     easing: 'easeInOutSine',
     duration: 1000,
     delay: function delay(el, i) {
       return i * 100;
     },
     // opacity: [0, 1],
-    translateY: [1000, 0]
-    // offset: '-=500'
+    translateY: [1000, 0],
+    offset: '-=1200'
+    // offset: 700
   }).add({
     targets: '#freehold-games',
     easing: 'easeInOutSine',
-    opacity: 1,
-    duration: 500
+    opacity: { value: 1, duration: 10 },
+    translateY: [1000, 0],
+    duration: 700,
+    offset: '-=750',
+    complete: function complete(anim) {
+      console.log(anim.completed);
+      flameRepeat();
+    }
   })
   // .add({
   //   targets: '#freehold-outlines',
@@ -163,6 +194,23 @@ function animateLogo() {
   //   }
   // });
 }
+
+function flameRepeat() {
+  var flames = anime({
+    targets: '#flame-bottom_1_, #flame-top_1_',
+    duration: 1500,
+    // opacity: { value: 1, duration: 250 },
+    delay: function delay(el, i) {
+      return i * 250;
+    },
+    easing: 'easeInOutSine',
+    // elasticity: 500,
+    scaleX: 1.15,
+    scaleY: { value: 1.05, duration: 1000 },
+    direction: 'alternate',
+    loop: true
+  });
+};
 
 // function removeClass(elem, cl) {
 //   let id = document.getElementById(elem);id.classList.remove(cl);

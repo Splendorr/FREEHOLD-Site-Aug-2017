@@ -328,9 +328,22 @@ svg#freehold-logo
   transition stroke .5s ease, fill .5s ease
   #freehold-mark, #freehold-text, #freehold-games
     opacity 1
-
+  
   #freehold-games
     opacity 0
+  #freehold-text
+    opacity 0
+
+  #freehold-mark
+    #castle_1_
+      // opacity 0
+      transform scale(3)
+      will-change transform
+      transform-origin: center
+    #flame-bottom_1_
+    #flame-top_1_
+      opacity 0
+      transform-origin bottom left
 
   #freehold-outlines
     opacity 0
@@ -802,14 +815,15 @@ svg#freehold-logo
 
 .team-photo
   width 100%
+  height auto
+  min-height 300px
   +above(breakxs)
     width (100/3)%
-  height auto
+    min-height 250px
   background-origin: center
   background-position center
   background-size cover
   background-color: clBlack
-  min-height 250px
   flex-shrink: 2
 // .team-photo
 //   // padding-bottom: 100%
