@@ -129,10 +129,10 @@ function animateLogo() {
     })
     .add({
       targets: '#castle_1_',
-      duration: 750,
+      duration: 650,
       scale: [3, 1],
       // easing: 'easeInSine',
-      elasticity: 200,
+      elasticity: 400,
       offset: 1000
     })
     .add({
@@ -140,36 +140,36 @@ function animateLogo() {
       duration: 500,
       // opacity: { value: 1, duration: 250 },
       delay: function(el, i) {
-        return i * 150;
+        return i * 100;
       },
       opacity: 1,
       scaleX: [0, 1],
-      offset: '-=400'
+      offset: '-=300'
       // loop: true
     })
     .add({
       targets: '#freehold-text path, #freehold-text polygon',
       // easing: 'easeInOutElastic',
-      elasticity: 10,
-      duration: 750,
+      elasticity: 50,
+      duration: 500,
       delay: function(el, i) {
         return i * 50;
       },
       // opacity: [0, 1],
       // translateY: [200, 0],
       scaleX: [0, 1],
-      offset: '-=800'
+      offset: '-=750'
       // offset: 700
     })
     .add({
       targets: '#freehold-games',
       // easing: 'easeInOutSine',
-      elasticity: 10,
+      elasticity: 50,
       opacity: {value: 1, duration: 10},
       // translateY: [200, 0],
       scaleX: [0, 1],
       duration: 700,
-      offset: '-=750',
+      offset: '-=500',
       complete: function (anim) {
         console.log(anim.completed);
         flameRepeat();
