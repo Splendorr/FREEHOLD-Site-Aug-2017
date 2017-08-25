@@ -6,13 +6,13 @@ document.addEventListener('DOMContentLoaded', function () {
   touchDetect();
   blurLinks();
   setCurrentCopyrightYear();
+  animateLogo();
   console.log('loaded');
 }); // End DOMContentLoaded / onready
 
 window.addEventListener("load", function (event) {
 
   console.log("All resources finished loading!");
-  animateLogo();
 });
 
 function setCurrentCopyrightYear() {
@@ -101,7 +101,9 @@ var logoTimeline = void 0;
 function animateLogo() {
   // logoVivus = new Vivus('freehold-logo', { duration: 100 });
   // logoVivus.play();
-  logoTimeline = anime.timeline();
+  logoTimeline = anime.timeline({
+    // delay: 3000
+  });
 
   logoTimeline
   // .add({
@@ -135,7 +137,7 @@ function animateLogo() {
     scale: [3, 1],
     // easing: 'easeInSine',
     elasticity: 200,
-    offset: 500
+    offset: 1000
   }).add({
     targets: '#flame-bottom_1_, #flame-top_1_',
     duration: 500,

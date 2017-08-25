@@ -497,7 +497,7 @@ a:active {
     padding-right: 10px;
   }
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 760px) {
   .navLinks a {
     font-size: 18px;
     line-height: 18px;
@@ -1044,6 +1044,7 @@ svg#freehold-logo #freehold-outlines #freehold-games-outline polygon {
   border-color: #cf460d;
 }
 .game-page-play-button {
+  z-index: 75;
   pointer-events: none;
   position: absolute;
   position: absolute;
@@ -1562,5 +1563,31 @@ svg#freehold-logo #freehold-outlines #freehold-games-outline polygon {
 @media only screen and (min-width: 760px) {
   .footer {
     padding: 40px;
+  }
+}
+.fade-in {
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+  -webkit-animation-duration: 1.3s;
+          animation-duration: 1.3s;
+  -webkit-animation-timing-function: cubic-bezier(0, 0, 0.4, 1);
+          animation-timing-function: cubic-bezier(0, 0, 0.4, 1);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

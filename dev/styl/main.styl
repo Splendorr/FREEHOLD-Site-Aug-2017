@@ -198,7 +198,7 @@ a
     +above(breakiPhone6)
       padding-left: 10px
       padding-right 10px
-    +above(breakxm)
+    +above(breakmd)
       font-size: 18px
       line-height: 18px
       padding-left 20px
@@ -609,6 +609,7 @@ svg#freehold-logo
         border-color clActive
 
 .game-page-play-button
+  z-index: 75
   pointer-events: none
   position: absolute;
   align(both)
@@ -1032,3 +1033,22 @@ svg#freehold-logo
   +above(breakmd)
     padding 40px
   text-align center
+
+.fade-in {
+    animation-name: fadeIn;
+    animation-duration: 1.3s;
+    animation-timing-function: cubic-bezier(0, 0, 0.4, 1);
+    animation-fill-mode: forwards;
+  }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// .js-lazy-image
+//   min-width 100%
+//   min-height 100%
