@@ -331,61 +331,76 @@ svg#freehold-logo
   
   #freehold-games
     opacity 0
-    transform-origin bottom left
+    // transform-origin bottom left
+    transform-origin: 106px 257px
   #freehold-text
     opacity 0
-    path, polygon
-      // position relative
-      transform-origin bottom left
+    // path, polygon
+    //   // position relative
+    //   transform-origin bottom left
+    #text-f
+      transform-origin: 6px 208px
+    #text-r
+      transform-origin: 45px 208px
+    #text-e1
+      transform-origin: 89px 208px
+    #text-e2
+      transform-origin: 129px 208px
+    #text-h
+      transform-origin: 169px 208px
+    #text-o
+      transform-origin: 213px 208px
+    #text-l
+      transform-origin: 266px 208px
+    #text-d
+      transform-origin: 301px 208px
 
   #freehold-mark
-    #castle_1_
+    #castle
       // opacity 0
       transform scale(3)
       will-change transform
-      transform-origin: center
-    #flame-bottom_1_
-    #flame-top_1_
-      opacity 0
-      transform-origin bottom left
-
-  #freehold-outlines
-    opacity 0
+      // transform-origin: center
+      transform-origin 168px 108px
     #flame-bottom
-      path
-        stroke #F15F22
-        stroke-width 1px
-        fill none
-    #freehold-mark-outline
-      #flame-bottom, #flame-top
-        path
-          stroke #F15F22
-          stroke-width 1px
-          fill none
-      #castle
-        path
-          stroke #988E8A
-          stroke-width 1px
-          fill none
-    #freehold-text-outline
-      path, polygon
-        stroke #E7E5E4
-        stroke-width 1px
-        fill none
-    #freehold-games-outline
-      path, polygon
-        stroke #F15F22
-        stroke-width 1px
-        fill none
-  // path, polygon
-  //   // fill none
-  //   // stroke-width 0px
-  //   // stroke none
-  //   // &.no-fill
-  //   //   path, polygon
-  //   // fill none
-  //   // stroke-width 1px
-  //   // stroke white
+      position relative
+      opacity 0
+      will-change transform
+      transform-origin 156px 72px
+    #flame-top
+      position relative
+      opacity 0
+      will-change transform
+      transform-origin 149px 65px
+
+  // #freehold-outlines
+  //   opacity 0
+  //   #flame-bottom
+  //     path
+  //       stroke #F15F22
+  //       stroke-width 1px
+  //       fill none
+  //   #freehold-mark-outline
+  //     #flame-bottom, #flame-top
+  //       path
+  //         stroke #F15F22
+  //         stroke-width 1px
+  //         fill none
+  //     #castle
+  //       path
+  //         stroke #988E8A
+  //         stroke-width 1px
+  //         fill none
+  //   #freehold-text-outline
+  //     path, polygon
+  //       stroke #E7E5E4
+  //       stroke-width 1px
+  //       fill none
+  //   #freehold-games-outline
+  //     path, polygon
+  //       stroke #F15F22
+  //       stroke-width 1px
+  //       fill none
 
 .mainContent
   percenter(100%, 10px)

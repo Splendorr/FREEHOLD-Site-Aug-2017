@@ -128,7 +128,7 @@ function animateLogo() {
       offset: 100
     })
     .add({
-      targets: '#castle_1_',
+      targets: '#castle',
       duration: 650,
       scale: [3, 1],
       // easing: 'easeInSine',
@@ -136,7 +136,7 @@ function animateLogo() {
       offset: 1000
     })
     .add({
-      targets: '#flame-bottom_1_, #flame-top_1_',
+      targets: '#flame-bottom, #flame-top',
       duration: 500,
       // opacity: { value: 1, duration: 250 },
       delay: function(el, i) {

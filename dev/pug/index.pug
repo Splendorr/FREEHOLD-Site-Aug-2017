@@ -45,15 +45,17 @@ html(xmlns:fb="http://ogp.me/ns/fb#")
     meta(name="twitter:image" content=shareThumb + "-twitter-optim.png")
     meta(name="twitter:image:alt" content=shareAlt)
     meta(name='twitter:url' content=shareUrl)
-    meta(name='twitter:label1' content='Now Available')
+    meta(name='twitter:label1' content='Now Available') 
     meta(name='twitter:data1' content='Steam and PS VR')
 
 
     link(rel="stylesheet", href="css/main.css")
 
-    <script   src="https://code.jquery.com/jquery-1.12.4.min.js"   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   crossorigin="anonymous" ></script>
+    script(src="js/jquery-1.11.3.min.js", type="text/javascript")
+    //- <script   src="https://code.jquery.com/jquery-1.12.4.min.js"   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   crossorigin="anonymous" ></script>
     <script src="swipebox/js/jquery.swipebox.js"></script>
     <link rel="stylesheet" href="swipebox/css/swipebox.css">
+    
     //- script(src="js/parallax.js", type="text/javascript")
     //- script(src="js/parallax.min.js", type="text/javascript")
     //- script(src="js/moveTo.js", type="text/javascript")
@@ -72,7 +74,7 @@ html(xmlns:fb="http://ogp.me/ns/fb#")
           img(src="img/FREEHOLD_Mark.svg", alt="").navMark
         a(href="#games", title="Games").js-trigger.rise Games
         //- a(href="#projects", title="Projects") Projects
-        a(href="#team", title="Team").js-trigger.rise Team
+        a(href="#team", title="Team").js-trigger.rise Team 
         a(href="#contact", title="Contact").js-trigger.rise Contact
         a(href="http://freeholdgames.com/Press/", title="Press", target="_blank").rise Press
         a(href="http://forums.freeholdentertainment.com/forumdisplay.php?7-CoQ-General", title="Forums", target="_blank").rise Forums
