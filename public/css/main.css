@@ -1402,6 +1402,11 @@ svg#freehold-logo #freehold-mark #flame-top {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+@media only screen and (min-width: 590px) {
+  .contributor-description {
+    min-height: 175px;
+  }
+}
 .contact-box,
 .mailing-box {
   width: 100%;
