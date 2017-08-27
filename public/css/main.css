@@ -708,8 +708,8 @@ svg#freehold-logo #freehold-text #text-d {
           transform-origin: 301px 208px;
 }
 svg#freehold-logo #freehold-mark #castle {
-  -webkit-transform: scale(3);
-          transform: scale(3);
+  -webkit-transform: scale(0);
+          transform: scale(0);
   will-change: transform;
   -webkit-transform-origin: 168px 108px;
           transform-origin: 168px 108px;

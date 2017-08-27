@@ -130,35 +130,35 @@ function animateLogo() {
     .add({
       targets: '#castle',
       duration: 650,
-      scale: [3, 1],
+      scale: [0, 1],
       // easing: 'easeInSine',
       elasticity: 400,
-      offset: 1000
+      offset: 1500
     })
     .add({
       targets: '#flame-bottom, #flame-top',
-      duration: 500,
+      duration: 650,
       // opacity: { value: 1, duration: 250 },
       delay: function(el, i) {
         return i * 100;
       },
       opacity: 1,
       scaleX: [0, 1],
-      offset: '-=300'
+      offset: '-=325'
       // loop: true
     })
     .add({
       targets: '#freehold-text path, #freehold-text polygon',
       // easing: 'easeInOutElastic',
       elasticity: 50,
-      duration: 500,
+      duration: 650,
       delay: function(el, i) {
         return i * 50;
       },
       // opacity: [0, 1],
       // translateY: [200, 0],
       scaleX: [0, 1],
-      offset: '-=750'
+      offset: '-=325'
       // offset: 700
     })
     .add({
@@ -168,8 +168,8 @@ function animateLogo() {
       opacity: {value: 1, duration: 10},
       // translateY: [200, 0],
       scaleX: [0, 1],
-      duration: 700,
-      offset: '-=500',
+      duration: 650,
+      offset: '-=487',
       complete: function (anim) {
         console.log(anim.completed);
         flameRepeat();
@@ -202,7 +202,7 @@ function animateLogo() {
     
 function flameRepeat() {
   let flames = anime({
-    targets: '#flame-bottom_1_, #flame-top_1_',
+    targets: '#flame-bottom, #flame-top',
     duration: 1500,
     // opacity: { value: 1, duration: 250 },
     delay: function(el, i) {
@@ -210,8 +210,8 @@ function flameRepeat() {
     },
     easing: 'easeInOutSine',
     // elasticity: 500,
-    scaleX: 1.15,
-    scaleY: {value: 1.05, duration: 1000},
+    scaleX: 1.10,
+    scaleY: {value: 1.05, duration: 1500},
     direction: 'alternate',
     loop: true
   });
