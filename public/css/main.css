@@ -539,12 +539,10 @@ a:active {
     margin: 0;
   }
 }
-@media only screen and (min-width: 1000px) {
-  .navSocial {
-    max-width: 160px;
-  }
-}
 .navSocial a {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
   padding-left: 5px;
   padding-right: 5px;
 }
