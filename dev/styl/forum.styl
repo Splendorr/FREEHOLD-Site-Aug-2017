@@ -1,17 +1,49 @@
+a
+  transition color .2s ease
+
 .category-caves-of-qud
   color: #C1D3D6;
-  // .d-header
-  //   // background-color: #163C33;
-  //   background-color: #061C17;
   #main
     background-color: #061C17;
+  #topic-title h1 a
+    color: #C1D3D6;
+  .extra-info-wrapper .badge-wrapper.bullet span.badge-category
+    color: #C1D3D6;
+  
+  a
+    color: #bb3234
+    &:link
+      color: #bb3234
+    &:hover, &:focus
+      color: #bb3234 + 30%
+    &:active
+      color: #bb3234 - 30%
+    &:visited
+      color: #bb3234
+  .nav-pills
+    a
+      color: #bb3234
+      &:link
+        color: #bb3234
+      &:hover, &:focus
+        color: #bb3234 + 30%
+        background-color: rgba(#bb3234, .3)
+      &:active
+        color: #bb3234 - 30%
+      &:visited
+        color: #bb3234
   .nav-pills>li.active>a, .nav-pills>li>a.active
-    background-color: #C0342E
+    color #061C17
+    background-color: #bb3234
 
 .category-sproggiwood
   color: #fdfae8;
   #main
     background-color: #28120b - 30%
+  #topic-title h1 a
+    color: #fdfae8;
+  .extra-info-wrapper .badge-wrapper.bullet span.badge-category
+    color: #fdfae8;
   a
     color: #abb55d
     &:link
@@ -22,5 +54,18 @@
       color: #abb55d - 30%
     &:visited
       color: #abb55d
+  .nav-pills
+    a
+      color: #abb55d
+      &:link
+        color: #abb55d
+      &:hover, &:focus
+        color: #abb55d + 30%
+        background-color: rgba(#abb55d, .3)
+      &:active
+        color: #abb55d - 30%
+      &:visited
+        color: #abb55d
   .nav-pills>li.active>a, .nav-pills>li>a.active
+    color #061C17
     background-color: #abb55d

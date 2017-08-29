@@ -1,18 +1,68 @@
+a {
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
 .category-caves-of-qud {
   color: #c1d3d6;
 }
 .category-caves-of-qud #main {
   background-color: #061c17;
 }
+.category-caves-of-qud #topic-title h1 a {
+  color: #c1d3d6;
+}
+.category-caves-of-qud .extra-info-wrapper .badge-wrapper.bullet span.badge-category {
+  color: #c1d3d6;
+}
+.category-caves-of-qud a {
+  color: #bb3234;
+}
+.category-caves-of-qud a:link {
+  color: #bb3234;
+}
+.category-caves-of-qud a:hover,
+.category-caves-of-qud a:focus {
+  color: #d7686a;
+}
+.category-caves-of-qud a:active {
+  color: #832324;
+}
+.category-caves-of-qud a:visited {
+  color: #bb3234;
+}
+.category-caves-of-qud .nav-pills a {
+  color: #bb3234;
+}
+.category-caves-of-qud .nav-pills a:link {
+  color: #bb3234;
+}
+.category-caves-of-qud .nav-pills a:hover,
+.category-caves-of-qud .nav-pills a:focus {
+  color: #d7686a;
+  background-color: rgba(187,50,52,0.3);
+}
+.category-caves-of-qud .nav-pills a:active {
+  color: #832324;
+}
+.category-caves-of-qud .nav-pills a:visited {
+  color: #bb3234;
+}
 .category-caves-of-qud .nav-pills>li.active>a,
 .category-caves-of-qud .nav-pills>li>a.active {
-  background-color: #c0342e;
+  color: #061c17;
+  background-color: #bb3234;
 }
 .category-sproggiwood {
   color: #fdfae8;
 }
 .category-sproggiwood #main {
   background-color: #1c0d08;
+}
+.category-sproggiwood #topic-title h1 a {
+  color: #fdfae8;
+}
+.category-sproggiwood .extra-info-wrapper .badge-wrapper.bullet span.badge-category {
+  color: #fdfae8;
 }
 .category-sproggiwood a {
   color: #abb55d;
@@ -30,7 +80,25 @@
 .category-sproggiwood a:visited {
   color: #abb55d;
 }
+.category-sproggiwood .nav-pills a {
+  color: #abb55d;
+}
+.category-sproggiwood .nav-pills a:link {
+  color: #abb55d;
+}
+.category-sproggiwood .nav-pills a:hover,
+.category-sproggiwood .nav-pills a:focus {
+  color: #c4cb8e;
+  background-color: rgba(171,181,93,0.3);
+}
+.category-sproggiwood .nav-pills a:active {
+  color: #7c843c;
+}
+.category-sproggiwood .nav-pills a:visited {
+  color: #abb55d;
+}
 .category-sproggiwood .nav-pills>li.active>a,
 .category-sproggiwood .nav-pills>li>a.active {
+  color: #061c17;
   background-color: #abb55d;
 }
