@@ -1,0 +1,10 @@
+.category-caves-of-qud {
+  color: #c1d3d6;
+}
+.category-caves-of-qud #main {
+  background-color: #061c17;
+}
+.category-caves-of-qud .nav-pills>li.active>a,
+.category-caves-of-qud .nav-pills>li>a.active {
+  background-color: #c0342e;
+}
