@@ -8,3 +8,29 @@
 .category-caves-of-qud .nav-pills>li>a.active {
   background-color: #c0342e;
 }
+.category-sproggiwood {
+  color: #fdfae8;
+}
+.category-sproggiwood #main {
+  background-color: #1c0d08;
+}
+.category-sproggiwood a {
+  color: #abb55d;
+}
+.category-sproggiwood a:link {
+  color: #abb55d;
+}
+.category-sproggiwood a:hover,
+.category-sproggiwood a:focus {
+  color: #c4cb8e;
+}
+.category-sproggiwood a:active {
+  color: #7c843c;
+}
+.category-sproggiwood a:visited {
+  color: #abb55d;
+}
+.category-sproggiwood .nav-pills>li.active>a,
+.category-sproggiwood .nav-pills>li>a.active {
+  background-color: #abb55d;
+}
