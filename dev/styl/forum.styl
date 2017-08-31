@@ -1,6 +1,22 @@
 a
   transition color .2s ease
 
+freeholdOrange = #F15F22
+
+a
+  color: freeholdOrange
+  &:link
+    color: freeholdOrange
+  &:hover, &:focus
+    color: freeholdOrange + 30%
+  &:active
+    color: freeholdOrange - 30%
+  &:visited
+    color: freeholdOrange
+
+.alert.alert-info
+  background-color rgba(freeholdOrange, .2)
+
 .category-caves-of-qud
   color: #C1D3D6;
   #main

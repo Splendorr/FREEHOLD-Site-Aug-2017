@@ -2,6 +2,25 @@ a {
   -webkit-transition: color 0.2s ease;
   transition: color 0.2s ease;
 }
+a {
+  color: #f15f22;
+}
+a:link {
+  color: #f15f22;
+}
+a:hover,
+a:focus {
+  color: #f58f64;
+}
+a:active {
+  color: #b53d0b;
+}
+a:visited {
+  color: #f15f22;
+}
+.alert.alert-info {
+  background-color: rgba(241,95,34,0.2);
+}
 .category-caves-of-qud {
   color: #c1d3d6;
 }
