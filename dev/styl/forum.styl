@@ -1,87 +1,158 @@
 a
   transition color .2s ease
 
-freeholdOrange = #F15F22
+qud()
+  .category-caves-of-qud &
+    {block}
+sprog()
+  .category-sproggiwood &
+    {block}
+
+freeWhite = #EBE8E7
+freeLink = #F15F22
+freeBG = #111
+qudWhite = #C1D3D6
+qudLink = #bb3234
+qudBG = #061C17
+sproggiWhite = #fdfae8
+sprogLink = #abb55d
+sproggiBG = #28120b
+
+@keyframes background-fade-highlight{
+  0%{background-color: rgba(freeLink, .2) }
+  100%{background-color:transparent}
+}
+@keyframes background-fade-highlight-qud{
+  0%{background-color: rgba(qudLink, .2) }
+  100%{background-color:transparent}
+}
+@keyframes background-fade-highlight-sprog{
+  0%{background-color: rgba(qudLink, .2) }
+  100%{background-color:transparent}
+}
 
 a
-  color: freeholdOrange
+  color: freeLink
   &:link
-    color: freeholdOrange
+    color: freeLink
   &:hover, &:focus
-    color: freeholdOrange + 30%
+    color: freeLink + 30%
   &:active
-    color: freeholdOrange - 30%
+    color: freeLink - 30%
   &:visited
-    color: freeholdOrange
+    color: freeLink
+  +qud()
+    color: qudLink
+    &:link
+      color: qudLink
+    &:hover, &:focus
+      color: qudLink + 30%
+    &:active
+      color: qudLink - 30%
+    &:visited
+      color: qudLink
+  +sprog()
+    color: sprogLink
+    &:link
+      color: sprogLink
+    &:hover, &:focus
+      color: sprogLink + 30%
+    &:active
+      color: sprogLink - 30%
+    &:visited
+      color: sprogLink
+
 
 .alert.alert-info
-  background-color rgba(freeholdOrange, .2)
+  background-color rgba(freeLink, .2)
+  +qud()
+    background-color rgba(qudLink, .2)
+  +sprog()
+    background-color rgba(sprogLink, .2)
 
-.category-caves-of-qud
-  color: #C1D3D6;
+.topic-body.highlighted
+  +qud()
+    animation background-fade-highlight-qud 2.5s ease-out
+
+#topic-progress
+  color freeLink
+  border-color rgba(freeLink, .4)
+  .bg
+    background-color: rgba(freeLink, .2)
+
+
+// CAVES OF QUD /////////////////
+
++qud()
+  color: qudWhite;
   #main
-    background-color: #061C17;
+    background-color: qudBG;
   #topic-title h1 a
-    color: #C1D3D6;
+    color: qudWhite;
   .extra-info-wrapper .badge-wrapper.bullet span.badge-category
-    color: #C1D3D6;
+    color: qudWhite;
+  .alert.alert-info
+    background-color rgba(qudLink, .2)
+
+  // .topic-body.highlighted
+  //  animation background-fade-highlight-qud 2.5s ease-out
   
-  a
-    color: #bb3234
-    &:link
-      color: #bb3234
-    &:hover, &:focus
-      color: #bb3234 + 30%
-    &:active
-      color: #bb3234 - 30%
-    &:visited
-      color: #bb3234
+  // a
+  //   color: qudLink
+  //   &:link
+  //     color: qudLink
+  //   &:hover, &:focus
+  //     color: qudLink + 30%
+  //   &:active
+  //     color: qudLink - 30%
+  //   &:visited
+  //     color: qudLink
   .nav-pills
     a
-      color: #bb3234
+      color: qudLink
       &:link
-        color: #bb3234
+        color: qudLink
       &:hover, &:focus
-        color: #bb3234 + 30%
-        background-color: rgba(#bb3234, .3)
+        color: qudLink + 30%
+        background-color: rgba(qudLink, .3)
       &:active
-        color: #bb3234 - 30%
+        color: qudLink - 30%
       &:visited
-        color: #bb3234
+        color: qudLink
   .nav-pills>li.active>a, .nav-pills>li>a.active
-    color #061C17
-    background-color: #bb3234
+    color qudBG
+    background-color: qudLink
 
 .category-sproggiwood
-  color: #fdfae8;
+  color: sproggiWhite;
   #main
-    background-color: #28120b - 30%
+    background-color: sproggiBG - 30%
   #topic-title h1 a
-    color: #fdfae8;
+    color: sproggiWhite;
   .extra-info-wrapper .badge-wrapper.bullet span.badge-category
-    color: #fdfae8;
-  a
-    color: #abb55d
-    &:link
-      color: #abb55d
-    &:hover, &:focus
-      color: #abb55d + 30%
-    &:active
-      color: #abb55d - 30%
-    &:visited
-      color: #abb55d
+    color: sproggiWhite;
+  // a
+  //   color: sprogLink
+  //   &:link
+  //     color: sprogLink
+  //   &:hover, &:focus
+  //     color: sprogLink + 30%
+  //   &:active
+  //     color: sprogLink - 30%
+  //   &:visited
+  //     color: sprogLink
   .nav-pills
     a
-      color: #abb55d
+      color: sprogLink
       &:link
-        color: #abb55d
+        color: sprogLink
       &:hover, &:focus
-        color: #abb55d + 30%
-        background-color: rgba(#abb55d, .3)
+        color: sprogLink + 30%
+        background-color: rgba(sprogLink, .3)
       &:active
-        color: #abb55d - 30%
+        color: sprogLink - 30%
       &:visited
-        color: #abb55d
+        color: sprogLink
   .nav-pills>li.active>a, .nav-pills>li>a.active
-    color #061C17
-    background-color: #abb55d
+    color qudBG
+    background-color: sprogLink
