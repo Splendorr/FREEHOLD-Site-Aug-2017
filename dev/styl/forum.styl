@@ -11,12 +11,18 @@ sprog()
 freeWhite = #EBE8E7
 freeLink = #F15F22
 freeBG = #111
+freeButton = #988E8A
 qudWhite = #C1D3D6
-qudLink = #bb3234
+// qudLink = #bb3234
+// qudLink = #f7e9ca
+qudLink = #ad9d20
 qudBG = #061C17
 sprogWhite = #fdfae8
-sprogLink = #abb55d
-sprogBG = #1c0d08
+// sprogLink = #abb55d
+// sprogBG = #150905
+sprogLink = #1abc33
+// sprogLink = #a0f9f1
+sprogBG = #041b21
 
 @keyframes background-fade-highlight{
   0%{background-color: rgba(freeLink, .2) }
@@ -33,15 +39,28 @@ sprogBG = #1c0d08
 
 .category-caves-of-qud
   color: qudWhite;
+  background-color: qudBG
 .category-sproggiwood
   color: sprogWhite;
+  background-color: sprogBG
 
 *
   &:focus
     outline 1px solid freeLink
   -webkit-tap-highlight-color: rgba(freeLink, .5)
+  +qud()
+    &:focus
+      outline 1px solid qudLink
+    -webkit-tap-highlight-color: rgba(qudLink, .5)
+  +sprog()
+    &:focus
+      outline 1px solid sprogLink
+    -webkit-tap-highlight-color: rgba(sprogLink, .5)
+.dropdown-header
+  &:focus
+    outline none
 
-a
+a, .extra-info-wrapper .topic-link, .d-header-icons .icon, .topic-list-item.visited a.title:not(.badge-notification)
   color: freeLink
   &:link
     color: freeLink
@@ -72,6 +91,16 @@ a
     &:visited
       color: sprogLink
 
+.btn-flat .d-icon
+  opacity 1
+
+.topic-list>tbody>tr:first-of-type, .topic-list>tbody>tr, .topic-avatar, .topic-body, .topic-status-info
+  border-color: rgba(freeWhite - 50%, .8)
+  +qud()
+    border-color: rgba(qudWhite - 50%, .8)
+  +sprog()
+    border-color: rgba(sprogWhite - 50%, .8)
+
 #main
   background-color: freeBG
   +qud()
@@ -85,6 +114,21 @@ a
     color: qudWhite;
   +sprog()
     color: sprogWhite;
+
+.topic-list-main-link a.title.visited:not(.badge-notification), .topic-list .main-link a.title.visited:not(.badge-notification), .latest-topic-list-item .main-link a.title.visited:not(.badge-notification), .topic-list a.title.visited:not(.badge-notification)
+  color freeWhite
+  +qud()
+    color qudWhite
+  +sprog()
+    color sprogWhite
+
+.topic-list th, .topic-list td
+  color freeWhite -30%
+  +qud()
+    color qudWhite -30%
+  +sprog()
+    color sprogWhite -30%
+
 
 .extra-info-wrapper .badge-wrapper.bullet span.badge-category
   color freeWhite
@@ -168,18 +212,51 @@ a
     .bg
       background-color: rgba(sprogLink, .2)
 
+.btn
+  color freeWhite
+  background-color: freeButton -20%
+  &:hover
+    color freeBG
+    background-color: freeButton + 30%
+  &:active
+    color freeWhite
+    background-color: freeButton - 40%
+  
 .btn-primary
   color: freeWhite
   background-color: freeLink
+  &:hover
+    color: freeBG
+    background-color: freeLink + 30%
+  &[disabled], &.disabled
+    background-color freeLink - 60%
   &:active
     background-color: freeLink - 30%;
     background-image: linear-gradient(to bottom, freeLink - 30%, freeLink - 40%);
   +qud()
-    color: qudWhite
+    // color: qudWhite
+    color: qudBG
     background-color: qudLink
+    &:hover
+      color: qudBG
+      background-color: qudLink + 30%
+    &[disabled], &.disabled
+      background-color qudLink - 60%
+    &:active
+      background-color: qudLink - 30%;
+      background-image: linear-gradient(to bottom, qudLink - 30%, qudLink - 40%);
   +sprog()
-    color: sprogWhite
+    // color: sprogWhite
+    color: sprogBG
     background-color: sprogLink
+    &:hover
+      color: sprogBG
+      background-color: sprogLink + 30%
+    &[disabled], &.disabled
+      background-color sprogLink - 60%
+    &:active
+      background-color: sprogLink - 30%;
+      background-image: linear-gradient(to bottom, sprogLink - 30%, sprogLink - 40%);
 
 nav.post-controls a, nav.post-controls button
   color rgba(freeWhite, .5)
@@ -193,6 +270,11 @@ nav.post-controls a, nav.post-controls button
     color rgba(sprogWhite, .5)
     &.d-hover
       color rgba(sprogWhite, 1)
+
+
+#reply-control
+  +qud()
+    background-color: qudBG - 60%
 
 // CAVES OF QUD /////////////////
   // .alert.alert-info
