@@ -497,7 +497,7 @@ a:active {
     padding-right: 10px;
   }
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 760px) {
   .navLinks a {
     font-size: 18px;
     line-height: 18px;
@@ -539,12 +539,10 @@ a:active {
     margin: 0;
   }
 }
-@media only screen and (min-width: 1000px) {
-  .navSocial {
-    max-width: 160px;
-  }
-}
 .navSocial a {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
   padding-left: 5px;
   padding-right: 5px;
 }
@@ -665,38 +663,68 @@ svg#freehold-logo {
 svg#freehold-logo #freehold-mark,
 svg#freehold-logo #freehold-text,
 svg#freehold-logo #freehold-games {
+  opacity: 1;
+}
+svg#freehold-logo #freehold-games {
+  opacity: 0;
+  -webkit-transform-origin: 106px 257px;
+          transform-origin: 106px 257px;
+}
+svg#freehold-logo #freehold-text {
   opacity: 0;
 }
-svg#freehold-logo #freehold-outlines {
+svg#freehold-logo #freehold-text #text-f {
+  -webkit-transform-origin: 6px 208px;
+          transform-origin: 6px 208px;
+}
+svg#freehold-logo #freehold-text #text-r {
+  -webkit-transform-origin: 45px 208px;
+          transform-origin: 45px 208px;
+}
+svg#freehold-logo #freehold-text #text-e1 {
+  -webkit-transform-origin: 89px 208px;
+          transform-origin: 89px 208px;
+}
+svg#freehold-logo #freehold-text #text-e2 {
+  -webkit-transform-origin: 129px 208px;
+          transform-origin: 129px 208px;
+}
+svg#freehold-logo #freehold-text #text-h {
+  -webkit-transform-origin: 169px 208px;
+          transform-origin: 169px 208px;
+}
+svg#freehold-logo #freehold-text #text-o {
+  -webkit-transform-origin: 213px 208px;
+          transform-origin: 213px 208px;
+}
+svg#freehold-logo #freehold-text #text-l {
+  -webkit-transform-origin: 266px 208px;
+          transform-origin: 266px 208px;
+}
+svg#freehold-logo #freehold-text #text-d {
+  -webkit-transform-origin: 301px 208px;
+          transform-origin: 301px 208px;
+}
+svg#freehold-logo #freehold-mark #castle {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  will-change: transform;
+  -webkit-transform-origin: 168px 108px;
+          transform-origin: 168px 108px;
+}
+svg#freehold-logo #freehold-mark #flame-bottom {
+  position: relative;
   opacity: 0;
+  will-change: transform;
+  -webkit-transform-origin: 156px 72px;
+          transform-origin: 156px 72px;
 }
-svg#freehold-logo #freehold-outlines #flame-bottom path {
-  stroke: #f15f22;
-  stroke-width: 1px;
-  fill: none;
-}
-svg#freehold-logo #freehold-outlines #freehold-mark-outline #flame-bottom path,
-svg#freehold-logo #freehold-outlines #freehold-mark-outline #flame-top path {
-  stroke: #f15f22;
-  stroke-width: 1px;
-  fill: none;
-}
-svg#freehold-logo #freehold-outlines #freehold-mark-outline #castle path {
-  stroke: #988e8a;
-  stroke-width: 1px;
-  fill: none;
-}
-svg#freehold-logo #freehold-outlines #freehold-text-outline path,
-svg#freehold-logo #freehold-outlines #freehold-text-outline polygon {
-  stroke: #e7e5e4;
-  stroke-width: 1px;
-  fill: none;
-}
-svg#freehold-logo #freehold-outlines #freehold-games-outline path,
-svg#freehold-logo #freehold-outlines #freehold-games-outline polygon {
-  stroke: #f15f22;
-  stroke-width: 1px;
-  fill: none;
+svg#freehold-logo #freehold-mark #flame-top {
+  position: relative;
+  opacity: 0;
+  will-change: transform;
+  -webkit-transform-origin: 149px 65px;
+          transform-origin: 149px 65px;
 }
 .mainContent {
   margin-left: auto;
@@ -1025,6 +1053,7 @@ svg#freehold-logo #freehold-outlines #freehold-games-outline polygon {
   border-color: #cf460d;
 }
 .game-page-play-button {
+  z-index: 75;
   pointer-events: none;
   position: absolute;
   position: absolute;
@@ -1271,17 +1300,18 @@ svg#freehold-logo #freehold-outlines #freehold-games-outline polygon {
 .team-photo {
   width: 100%;
   height: auto;
+  min-height: 300px;
   background-origin: center;
   background-position: center;
   background-size: cover;
   background-color: #171412;
-  min-height: 250px;
   -ms-flex-negative: 2;
       flex-shrink: 2;
 }
 @media only screen and (min-width: 590px) {
   .team-photo {
     width: 33.333333333333336%;
+    min-height: 250px;
   }
 }
 .team-description {
@@ -1328,20 +1358,10 @@ svg#freehold-logo #freehold-outlines #freehold-games-outline polygon {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   width: 100%;
-}
-@media only screen and (min-width: 1000px) {
-  .team-contact {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
 }
 .contributor-grid-item {
   display: inline-block;
@@ -1350,8 +1370,8 @@ svg#freehold-logo #freehold-outlines #freehold-games-outline polygon {
   padding-right: 0;
   padding-bottom: 20px;
 }
-.contributor-grid-item .team-role:last-child {
-  margin: 0;
+.contributor-grid-item .team-box {
+  height: 100%;
 }
 @media only screen and (min-width: 760px) {
   .contributor-grid-item {
@@ -1369,6 +1389,21 @@ svg#freehold-logo #freehold-outlines #freehold-games-outline polygon {
   width: 100%;
   background-color: rgba(23,20,18,0.75);
   padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media only screen and (min-width: 590px) {
+  .contributor-description {
+    min-height: 175px;
+  }
 }
 .contact-box,
 .mailing-box {
@@ -1542,5 +1577,31 @@ svg#freehold-logo #freehold-outlines #freehold-games-outline polygon {
 @media only screen and (min-width: 760px) {
   .footer {
     padding: 40px;
+  }
+}
+.fade-in {
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+  -webkit-animation-duration: 1.3s;
+          animation-duration: 1.3s;
+  -webkit-animation-timing-function: cubic-bezier(0, 0, 0.4, 1);
+          animation-timing-function: cubic-bezier(0, 0, 0.4, 1);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

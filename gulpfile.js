@@ -119,7 +119,7 @@ gulp.task('js', function(cb) {
   pump([
     gulp.src(dev_path.js + '*.js'),
     babel(),
-    // uglify(),
+    uglify(),
     gulp.dest(build_path.js),
     browsersync.reload({stream: true})
   ],

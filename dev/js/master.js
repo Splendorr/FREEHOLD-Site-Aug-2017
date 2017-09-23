@@ -8,11 +8,11 @@ document.addEventListener('DOMContentLoaded', function () {
   console.log('loaded');
 }); // End DOMContentLoaded / onready
 
-// window.addEventListener("load", function (event) {
+window.addEventListener("load", function (event) {
+  
+  console.log("All resources finished loading!");
 
-//   console.log("All resources finished loading!");
-
-// });
+});
 
 function setCurrentCopyrightYear() {
   let currentDate = new Date().getFullYear().toString();
@@ -96,61 +96,126 @@ let logoTimeline;
 function animateLogo() {
   // logoVivus = new Vivus('freehold-logo', { duration: 100 });
   // logoVivus.play();
-  logoTimeline = anime.timeline();
+  logoTimeline = anime.timeline({
+    // delay: 3000
+  });
 
   logoTimeline
+    // .add({
+    //   targets: '#freehold-outlines',
+    //   duration: 10,
+    //   opacity: 1,
+    //   offset: 0
+    // })
+    // .add({
+    //   targets: '#freehold-mark-outline path, #freehold-mark-outline polygon, #freehold-text-outline path, #freehold-text-outline polygon, #freehold-games-outline path, #freehold-games-outline polygon',
+    //   strokeDashoffset: [anime.setDashoffset, 0],
+    //   // strokeDashoffset: function (el) {
+    //   //   return [el.getAttribute('stroke-dasharray'), 0];
+    //   // },
+    //   easing: 'easeInOutSine',
+    //   duration: 900,
+    //   delay: function(el, i) {
+    //     return i * 100;
+    //   },
+    //   offset: 500
+    // })
     .add({
-      targets: '#freehold-outlines',
+      targets: '#freehold-text',
       duration: 10,
       opacity: 1,
-      offset: 0
+      // offset: '+=300'
+      offset: 100
     })
     .add({
-      targets: '#freehold-mark-outline path, #freehold-mark-outline polygon, #freehold-text-outline path, #freehold-text-outline polygon, #freehold-games-outline path, #freehold-games-outline polygon',
-      strokeDashoffset: [anime.setDashoffset, 0],
-      // strokeDashoffset: function (el) {
-      //   return [el.getAttribute('stroke-dasharray'), 0];
-      // },
-      easing: 'easeInOutSine',
-      duration: 900,
+      targets: '#castle',
+      duration: 650,
+      scale: [0, 1],
+      // easing: 'easeInSine',
+      elasticity: 400,
+      offset: 1500
+    })
+    .add({
+      targets: '#flame-bottom, #flame-top',
+      duration: 650,
+      // opacity: { value: 1, duration: 250 },
       delay: function(el, i) {
         return i * 100;
       },
-      offset: 500
+      opacity: 1,
+      scaleX: [0, 1],
+      offset: '-=325'
+      // loop: true
     })
     .add({
-      targets: '#freehold-mark, #freehold-text, #freehold-games',
-      easing: 'easeInOutSine',
-      duration: 500,
+      targets: '#freehold-text path, #freehold-text polygon',
+      // easing: 'easeInOutElastic',
+      elasticity: 50,
+      duration: 650,
       delay: function(el, i) {
-        return i * 100;
+        return i * 50;
       },
-      opacity: [0, 1],
-      offset: '-=500'
+      // opacity: [0, 1],
+      // translateY: [200, 0],
+      scaleX: [0, 1],
+      offset: '-=325'
+      // offset: 700
     })
     .add({
-      targets: '#freehold-outlines',
-      opacity: 0,
-      duration: 1000
-      // offset: '-=250'
+      targets: '#freehold-games',
+      // easing: 'easeInOutSine',
+      elasticity: 50,
+      opacity: {value: 1, duration: 10},
+      // translateY: [200, 0],
+      scaleX: [0, 1],
+      duration: 650,
+      offset: '-=487',
+      complete: function (anim) {
+        console.log(anim.completed);
+        flameRepeat();
+      }
     })
+    // .add({
+      //   targets: '#freehold-outlines',
+      //   opacity: 0,
+      //   duration: 1000
+      //   // offset: '-=250'
+      // })
   ;
-
-  // let lineDrawing = anime({
-  //   targets: '#freehold-logo path, #freehold-logo polygon',
-  //   strokeDashoffset: [anime.setDashoffset, 0],
-  //   easing: 'easeInOutSine',
-  //   duration: 1500,
-  //   delay: function (el, i) { return i * 250 },
-  //   // direction: 'alternate',
-  //   // loop: true
-  //   complete: function(anim) {
-  //     console.log('animation completed');
       
-  //     removeClass('freehold-logo', 'no-fill');
-  //   }
-  // });
-}
+  
+  // let lineDrawing = anime({
+    //   targets: '#freehold-logo path, #freehold-logo polygon',
+    //   strokeDashoffset: [anime.setDashoffset, 0],
+    //   easing: 'easeInOutSine',
+    //   duration: 1500,
+    //   delay: function (el, i) { return i * 250 },
+    //   // direction: 'alternate',
+    //   // loop: true
+    //   complete: function(anim) {
+      //     console.log('animation completed');
+      
+      //     removeClass('freehold-logo', 'no-fill');
+      //   }
+      // });
+    }
+    
+function flameRepeat() {
+  let flames = anime({
+    targets: '#flame-bottom, #flame-top',
+    duration: 1500,
+    // opacity: { value: 1, duration: 250 },
+    delay: function(el, i) {
+      return i * 250;
+    },
+    easing: 'easeInOutSine',
+    // elasticity: 500,
+    scaleX: 1.10,
+    scaleY: {value: 1.05, duration: 1500},
+    direction: 'alternate',
+    loop: true
+  });
+};
 
 // function removeClass(elem, cl) {
 //   let id = document.getElementById(elem);id.classList.remove(cl);

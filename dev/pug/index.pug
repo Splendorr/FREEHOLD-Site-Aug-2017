@@ -45,21 +45,23 @@ html(xmlns:fb="http://ogp.me/ns/fb#")
     meta(name="twitter:image" content=shareThumb + "-twitter-optim.png")
     meta(name="twitter:image:alt" content=shareAlt)
     meta(name='twitter:url' content=shareUrl)
-    meta(name='twitter:label1' content='Now Available')
+    meta(name='twitter:label1' content='Now Available') 
     meta(name='twitter:data1' content='Steam and PS VR')
 
 
     link(rel="stylesheet", href="css/main.css")
 
+    //- script(src="js/jquery-1.11.3.min.js", type="text/javascript")
     <script   src="https://code.jquery.com/jquery-1.12.4.min.js"   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   crossorigin="anonymous" ></script>
     <script src="swipebox/js/jquery.swipebox.js"></script>
     <link rel="stylesheet" href="swipebox/css/swipebox.css">
+    
     //- script(src="js/parallax.js", type="text/javascript")
     //- script(src="js/parallax.min.js", type="text/javascript")
     //- script(src="js/moveTo.js", type="text/javascript")
     script(src="js/moveTo.min.js", type="text/javascript")
-    script(src="js/anime.js", type="text/javascript")
-    //- script(src="js/anime.min.js", type="text/javascript")
+    //- script(src="js/anime.js", type="text/javascript")
+    script(src="js/anime.min.js", type="text/javascript")
     //- link(rel='shortcut icon', href='img/favicon.png?v=1')
     link(rel='shortcut icon', href='img/favicon.ico?v=2', type='image/x-icon')
 
@@ -72,7 +74,7 @@ html(xmlns:fb="http://ogp.me/ns/fb#")
           img(src="img/FREEHOLD_Mark.svg", alt="").navMark
         a(href="#games", title="Games").js-trigger.rise Games
         //- a(href="#projects", title="Projects") Projects
-        a(href="#team", title="Team").js-trigger.rise Team
+        a(href="#team", title="Team").js-trigger.rise Team 
         a(href="#contact", title="Contact").js-trigger.rise Contact
         a(href="http://freeholdgames.com/Press/", title="Press", target="_blank").rise Press
         a(href="http://forums.freeholdentertainment.com/forumdisplay.php?7-CoQ-General", title="Forums", target="_blank").rise Forums
@@ -103,14 +105,14 @@ html(xmlns:fb="http://ogp.me/ns/fb#")
                     //- img.game-page-play-button(src="img/play_button.svg")
                     .game-page-play-button
                       include ../img/play_button.svg
-                    img(src!='http://i1.ytimg.com/vi/Qqz0p_kiDIQ/mqdefault.jpg')
+                    img.js-lazy-image(data-src!='http://i1.ytimg.com/vi/Qqz0p_kiDIQ/mqdefault.jpg')
                 //- each shot in ['game1', 'game3', 'qud_barathrums-study', 'qud_equipment-screen']
                 //-   .game-screen.grid-item
                 //-     a(href="img/screens-qud/" + shot + ".png", title="", rel='qud-gallery').swipebox.rise
-                //-       img(src="img/screens-qud/" + shot + ".png", alt="")
+                //-       img.js-lazy-image(data-src="img/screens-qud/" + shot + ".png", alt="")
             .game-description
               .game-description-text
-                p #[span.firstSentence Caves of Qud] 
+                //- p #[span.firstSentence Caves of Qud] 
                 p A science fantasy RPG & roguelike epic set in a far future that’s deeply simulated, richly cultured, and rife with sentient plants. 
                 p 
                   a.rise.socialIcon(href='http://cavesofqud.com')
@@ -122,16 +124,16 @@ html(xmlns:fb="http://ogp.me/ns/fb#")
                 each shot in ['game1', 'game3', 'barathrums-study', 'equipment-screen']
                   .game-screen.grid-item
                     a(href="img/screenshots/qud-" + shot + ".png", title="", rel='qud-gallery').swipebox.rise
-                      img(src="img/screenshots/qud-" + shot + "-thumb.png", alt="")
+                      img.js-lazy-image(data-src="img/screenshots/qud-" + shot + "-thumb.png", alt="")
             .game-action
               p Available in Early Access. 
               
               .store-buttons
                 a.rise(href="http://store.steampowered.com/app/333640", title="Purchase Caves of Qud on Steam") 
-                  img(src="img/store-steam_80.png", alt="Steam logo")
+                  img.js-lazy-image(data-src="img/store-steam_80.png", alt="Steam logo")
                   span Steam
                 a.rise(href="http://www.cavesofqud.com/#humble_purchase", title="Purchase Caves of Qud on the Humble Store")
-                  img(src="img/store-humble_80.png", alt="Humble logo")
+                  img.js-lazy-image(data-src="img/store-humble_80.png", alt="Humble logo")
                   span Humble
 
               //- p #[a.rise(href="http://cavesofqud.com") Learn More] • #[a.rise(href="http://forums.freeholdentertainment.com/forumdisplay.php?7-CoQ-General") Join the Forum]
@@ -150,14 +152,14 @@ html(xmlns:fb="http://ogp.me/ns/fb#")
                     //- img.game-page-play-button(src="img/play_button.svg")
                     .game-page-play-button
                       include ../img/play_button.svg
-                    img(src!='http://i1.ytimg.com/vi/k4IGxuuMWG0/mqdefault.jpg')
+                    img.js-lazy-image(data-src!='http://i1.ytimg.com/vi/k4IGxuuMWG0/mqdefault.jpg')
                 //- each shot in ['Adventure1', 'Adventure2', 'Map', 'Town']
                 //-   .game-screen.grid-item
                 //-     a(href="img/screens-sproggiwood/" + shot + ".png", title="", rel='sproggi-gallery').swipebox.rise
-                //-       img(src="img/screens-sproggiwood/" + shot + ".png", alt="")
+                //-       img.js-lazy-image(data-src="img/screens-sproggiwood/" + shot + ".png", alt="")
             .game-description
               .game-description-text
-                p #[span.firstSentence Sproggiwood] 
+                //- p #[span.firstSentence Sproggiwood] 
                 p A story-driven, turn-based roguelike set in a humorous world inspired by Finnish mythology. One moment, you're a simple farmer tending your grove — the next, you’re lured through a mysterious portal by a talking sheep. Now you’re the prisoner of Sproggi, a mischievous forest spirit who tasks you with taming the monsters of its realm. But things go awry when you discover a new civilization — will you befriend these curious newcomers, or will you crush them and claim Sproggiwood for your own?
 
             .game-screens
@@ -165,14 +167,14 @@ html(xmlns:fb="http://ogp.me/ns/fb#")
                 each shot in ['Adventure1', 'Adventure2', 'Map', 'Town']
                   .game-screen.grid-item
                     a(href="img/screenshots/sproggi-" + shot + ".png", title="", rel='sproggi-gallery').swipebox.rise
-                      img(src="img/screenshots/sproggi-" + shot + "-thumb.png", alt="")
+                      img.js-lazy-image(data-src="img/screenshots/sproggi-" + shot + "-thumb.png", alt="")
             
             .game-action
               p Available Now.
 
               .store-buttons
                 a.rise(href="https://www.google.com/url?q=https%3A%2F%2Fitunes.apple.com%2Fapp%2Fid625411864&sa=D&sntz=1&usg=AFQjCNEf8LagINBo9vg3MuzpeYp3bDX04g", title="Buy Sproggiwood on the App Store")
-                  img(src="img/store-ios_80.png", alt="Steam logo")
+                  img.js-lazy-image(data-src="img/store-ios_80.png", alt="Steam logo")
                   span iOS
                 a.rise(href="https://play.google.com/store/apps/details?id=com.freeholdgames.sproggiwood", title="Buy Sproggiwood on Google Play")
                   img(src="img/store-google_80.png", alt="Steam logo")
@@ -228,7 +230,7 @@ html(xmlns:fb="http://ogp.me/ns/fb#")
                     //- a(href="#", title="title") webpage.com 
           .team-grid-item
             .team-box.freeShadow
-              .team-photo(style="background-image: url('img/jason.png');")
+              .team-photo(style="background-image: url('img/jason-512.png');")
               .team-description
                 .team-text
                   .team-name Jason Grinblat
@@ -250,9 +252,9 @@ html(xmlns:fb="http://ogp.me/ns/fb#")
               .contributor-grid-item
                 .team-box.freeShadow
                   .contributor-description
-                    //- .team-text
-                    .team-name= person.name
-                    .team-role= person.role
+                    .team-text
+                      .team-name= person.name
+                      .team-role= person.role
                     if person.twitter || person.site
                       .team-contact
                         if person.twitter
@@ -319,5 +321,7 @@ html(xmlns:fb="http://ogp.me/ns/fb#")
         p Site design by #[a(href="http://splendorr.com" title="Splendorr").rise Splendorr]
         a(href="privacypolicy.htm", title="Privacy Policy").rise Privacy Policy 
 
+    //- script(src="js/lazy-load.js", type="text/javascript")
+    script(src="js/lazy-load.min.js", type="text/javascript")
     script(src="js/master.js", type="text/javascript")
 

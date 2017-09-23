@@ -1,0 +1,350 @@
+a
+  transition color .2s ease
+
+qud()
+  .category-caves-of-qud &
+    {block}
+sprog()
+  .category-sproggiwood &
+    {block}
+
+freeWhite = #EBE8E7
+freeLink = #F15F22
+freeBG = #111
+freeButton = #988E8A
+
+qudWhite = #fdfae8
+qudLink = #1abc33
+qudBG = #041b21
+
+sprogWhite = #fdfffe
+sprogLink = #fff145
+sprogBG = #191c39
+
+@keyframes background-fade-highlight{
+  0%{background-color: rgba(freeLink, .2) }
+  100%{background-color:transparent}
+}
+@keyframes background-fade-highlight-qud{
+  0%{background-color: rgba(qudLink, .2) }
+  100%{background-color:transparent}
+}
+@keyframes background-fade-highlight-sprog{
+  0%{background-color: rgba(qudLink, .2) }
+  100%{background-color:transparent}
+}
+
+.category-caves-of-qud
+  color: qudWhite;
+  background-color: qudBG
+.category-sproggiwood
+  color: sprogWhite;
+  background-color: sprogBG
+
+*
+  &:focus
+    outline 1px solid freeLink
+  -webkit-tap-highlight-color: rgba(freeLink, .5)
+  +qud()
+    &:focus
+      outline 1px solid qudLink
+    -webkit-tap-highlight-color: rgba(qudLink, .5)
+  +sprog()
+    &:focus
+      outline 1px solid sprogLink
+    -webkit-tap-highlight-color: rgba(sprogLink, .5)
+.dropdown-header
+  &:focus
+    outline none
+
+a, .extra-info-wrapper .topic-link, .d-header-icons .icon, .topic-list-item.visited a.title:not(.badge-notification)
+  color: freeLink
+  &:link
+    color: freeLink
+  &:hover, &:focus
+    color: freeLink + 30%
+  &:active
+    color: freeLink - 30%
+  &:visited
+    color: freeLink
+  +qud()
+    color: qudLink
+    &:link
+      color: qudLink
+    &:hover, &:focus
+      color: qudLink + 30%
+    &:active
+      color: qudLink - 30%
+    &:visited
+      color: qudLink
+  +sprog()
+    color: sprogLink
+    &:link
+      color: sprogLink
+    &:hover, &:focus
+      color: sprogLink + 30%
+    &:active
+      color: sprogLink - 30%
+    &:visited
+      color: sprogLink
+
+.btn-flat .d-icon
+  opacity 1
+
+.topic-list>tbody>tr:first-of-type, .topic-list>tbody>tr, .topic-avatar, .topic-body, .topic-status-info
+  border-color: rgba(freeWhite - 50%, .8)
+  +qud()
+    border-color: rgba(qudWhite - 50%, .8)
+  +sprog()
+    border-color: rgba(sprogWhite - 50%, .8)
+
+#main
+  background-color: freeBG
+  +qud()
+    background-color: qudBG
+  +sprog()
+    background-color: sprogBG
+
+#topic-title h1 a
+  color freeWhite
+  +qud()
+    color: qudWhite;
+  +sprog()
+    color: sprogWhite;
+
+.topic-list-main-link a.title.visited:not(.badge-notification), .topic-list .main-link a.title.visited:not(.badge-notification), .latest-topic-list-item .main-link a.title.visited:not(.badge-notification), .topic-list a.title.visited:not(.badge-notification)
+  color freeWhite
+  +qud()
+    color qudWhite
+  +sprog()
+    color sprogWhite
+
+.topic-list th, .topic-list td
+  color freeWhite -30%
+  +qud()
+    color qudWhite -30%
+  +sprog()
+    color sprogWhite -30%
+
+
+.extra-info-wrapper .badge-wrapper.bullet span.badge-category
+  color freeWhite
+  +qud()
+    color: qudWhite;
+  +sprog()
+    color: sprogWhite;
+
+.alert.alert-info
+  background-color rgba(freeLink, .2)
+  +qud()
+    background-color rgba(qudLink, .2)
+  +sprog()
+    background-color rgba(sprogLink, .2)
+
+.nav-pills
+  a
+    color: freeLink
+    &:link
+      color: freeLink
+    &:hover, &:focus
+      color: freeLink + 30%
+      background-color: rgba(freeLink, .3)
+    &:active
+      color: freeLink - 30%
+    &:visited
+      color: freeLink
+  +qud()
+    a
+      color: qudLink
+      &:link
+        color: qudLink
+      &:hover, &:focus
+        color: qudLink + 30%
+        background-color: rgba(qudLink, .3)
+      &:active
+        color: qudLink - 30%
+      &:visited
+        color: qudLink
+  +sprog()
+    a
+      color: sprogLink
+      &:link
+        color: sprogLink
+      &:hover, &:focus
+        color: sprogLink + 30%
+        background-color: rgba(sprogLink, .3)
+      &:active
+        color: sprogLink - 30%
+      &:visited
+        color: sprogLink
+.nav-pills>li.active>a, .nav-pills>li>a.active
+  color freeBG
+  background-color: freeLink
+  +qud()
+    color qudBG
+    background-color: qudLink
+  +sprog()
+    color sprogBG
+    background-color: sprogLink
+
+.topic-body.highlighted
+  +qud()
+    animation background-fade-highlight-qud 2.5s ease-out
+  +sprog()
+    animation background-fade-highlight-sprog 2.5s ease-out
+
+#topic-progress
+  color freeLink
+  border-color rgba(freeLink, .4)
+  .bg
+    background-color: rgba(freeLink, .2)
+  +qud()
+    color qudLink
+    border-color rgba(qudLink, .4)
+    .bg
+      background-color: rgba(qudLink, .2)
+  +sprog()
+    color sprogLink
+    border-color rgba(sprogLink, .4)
+    .bg
+      background-color: rgba(sprogLink, .2)
+
+.btn
+  color freeWhite
+  background-color: freeButton -20%
+  &:hover
+    color freeBG
+    background-color: freeButton + 30%
+  &:active
+    color freeWhite
+    background-color: freeButton - 40%
+  
+.btn-primary
+  color: freeWhite
+  background-color: freeLink
+  &:hover
+    color: freeBG
+    background-color: freeLink + 30%
+  &[disabled], &.disabled
+    background-color freeLink - 60%
+  &:active
+    background-color: freeLink - 30%;
+    background-image: linear-gradient(to bottom, freeLink - 30%, freeLink - 40%);
+  +qud()
+    // color: qudWhite
+    color: qudBG
+    background-color: qudLink
+    &:hover
+      color: qudBG
+      background-color: qudLink + 30%
+    &[disabled], &.disabled
+      background-color qudLink - 60%
+    &:active
+      background-color: qudLink - 30%;
+      background-image: linear-gradient(to bottom, qudLink - 30%, qudLink - 40%);
+  +sprog()
+    // color: sprogWhite
+    color: sprogBG
+    background-color: sprogLink
+    &:hover
+      color: sprogBG
+      background-color: sprogLink + 30%
+    &[disabled], &.disabled
+      background-color sprogLink - 60%
+    &:active
+      background-color: sprogLink - 30%;
+      background-image: linear-gradient(to bottom, sprogLink - 30%, sprogLink - 40%);
+
+nav.post-controls a, nav.post-controls button
+  color rgba(freeWhite, .5)
+  &.d-hover
+    color rgba(freeWhite, 1)
+  +qud()
+    color rgba(qudWhite, .5)
+    &.d-hover
+      color rgba(qudWhite, 1)
+  +sprog()
+    color rgba(sprogWhite, .5)
+    &.d-hover
+      color rgba(sprogWhite, 1)
+
+
+#reply-control
+  +qud()
+    background-color: qudBG - 60%
+
+// CAVES OF QUD /////////////////
+  // .alert.alert-info
+  //   background-color: rgba(qudLink, .2)
+  
+  // #main
+  //   background-color: qudBG;
+  // #topic-title h1 a
+  //   color: qudWhite;
+  // .extra-info-wrapper .badge-wrapper.bullet span.badge-category
+  //   color: qudWhite;
+  // .alert.alert-info
+  //   background-color rgba(qudLink, .2)
+
+  // .topic-body.highlighted
+  //  animation background-fade-highlight-qud 2.5s ease-out
+  
+  // a
+  //   color: qudLink
+  //   &:link
+  //     color: qudLink
+  //   &:hover, &:focus
+  //     color: qudLink + 30%
+  //   &:active
+  //     color: qudLink - 30%
+  //   &:visited
+  //     color: qudLink
+  // .nav-pills
+  //   a
+  //     color: qudLink
+  //     &:link
+  //       color: qudLink
+  //     &:hover, &:focus
+  //       color: qudLink + 30%
+  //       background-color: rgba(qudLink, .3)
+  //     &:active
+  //       color: qudLink - 30%
+  //     &:visited
+  //       color: qudLink
+  // .nav-pills>li.active>a, .nav-pills>li>a.active
+  //   color qudBG
+  //   background-color: qudLink
+
+// .category-sproggiwood
+//   color: sprogWhite;
+  // #main
+  //   backgrnd-color: sproggiBG - 30%
+  // #topic-title h1 a
+  //   color: sprogWhite;
+  // .extra-info-wrapper .badge-wrapper.buet span.badge-category
+  //   color: sprogWhite;
+  // a
+  //   color: sprognk
+  //   &:link
+  //     color: sprogLink
+  //   &:hover, &:focus
+  //     color: sprogLink + 30%
+  //   &:active
+  //     color: sprogLink - 30%
+  //   &:visited
+  //     color: sprogLink
+  // .nav-pills
+  //   a
+  //     color: sprogLink
+  //     &:link
+  //       color: sprogLink
+  //     &:hover, &:focus
+  //       color: sprogLink + 30%
+  //       background-color: rgba(sprogLink, .3)
+  //     &:active
+  //       color: sprogLink - 30%
+  //     &:visited
+  //       color: sprogLink
+  // .nav-pills>li.active>a, .nav-pills>li>a.active
+  //   color qudBG
+  //   background-color: sprogLink
