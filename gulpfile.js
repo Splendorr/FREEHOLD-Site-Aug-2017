@@ -91,7 +91,7 @@ gulp.task('stylus', function() {
     }))
     .pipe(stylus({
       use: [axis(), jeet(), rupture(), autoprefixer()],
-      compress: false
+      compress: true
       //
       // TK this isn't right, isn't building properly
       // sourcemap: {
