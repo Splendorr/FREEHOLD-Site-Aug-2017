@@ -27,30 +27,27 @@ var plumber = require('gulp-plumber');
 // var merge = require('merge-stream');
 var pump = require('pump');
 
-var dev_path =
-  {
-    root: 'dev/',
-    styl: 'dev/styl/',
-    pug: 'dev/pug/',
-    templates: 'dev/templates/',
-    js: 'dev/js/',
-    fonts: 'dev/fonts/',
-    slick: 'dev/slick/',
-    img: 'dev/img/',
-    screenshots: 'dev/img/screenshots/'
-  };
+var dev_path = {
+  root: 'dev/',
+  styl: 'dev/styl/',
+  pug: 'dev/pug/',
+  templates: 'dev/templates/',
+  js: 'dev/js/',
+  fonts: 'dev/fonts/',
+  slick: 'dev/slick/',
+  img: 'dev/img/',
+  screenshots: 'dev/img/screenshots/'
+};
 
-
-var build_path =
-  {
-    root: 'public/',
-    css: 'public/css/',
-    js: 'public/js/',
-    fonts: 'public/fonts/',
-    slick: 'public/slick/',
-    img: 'public/img/',
-    screenshots: 'public/img/screenshots/'
-  };
+var build_path = {
+  root: 'public/',
+  css: 'public/css/',
+  js: 'public/js/',
+  fonts: 'public/fonts/',
+  slick: 'public/slick/',
+  img: 'public/img/',
+  screenshots: 'public/img/screenshots/'
+};
 
 // gulp.task('clean', function () {
 //   return del([
@@ -65,43 +62,48 @@ var build_path =
 
 // Compile pug
 gulp.task('pug', function() {
-  return gulp.src([
-    dev_path.pug + '**/*.pug',
-    '!' + dev_path.pug + '**/_*.pug'
-  ])
-  .pipe(plumber({
-    errorHandler: notify.onError('Pug Error: <%= error.message %>')
-  }))
-  .pipe(pug({pretty: true}))
-  .pipe(gulp.dest(build_path.root))
-  // .pipe(ext_replace('.php'))
-  // .pipe(gulp.dest(build_path.php))
-  .pipe(browsersync.reload({stream: true}));
+  return (gulp
+      .src([dev_path.pug + '**/*.pug', '!' + dev_path.pug + '**/_*.pug'])
+      .pipe(
+        plumber({
+          errorHandler: notify.onError('Pug Error: <%= error.message %>')
+        })
+      )
+      .pipe(pug({ pretty: true }))
+      .pipe(gulp.dest(build_path.root))
+      // .pipe(ext_replace('.php'))
+      // .pipe(gulp.dest(build_path.php))
+      .pipe(browsersync.reload({ stream: true })) );
 });
 
 // Compile Stylus
 gulp.task('stylus', function() {
-  gulp.src([
-    dev_path.styl + '*.styl',
-    '!' + dev_path.styl + '_*.styl',
-    '!' + dev_path.styl + '_*'
-  ])
-    .pipe(plumber({
-      errorHandler: notify.onError('Stylus Error: <%= error.message %>')
-    }))
-    .pipe(stylus({
-      use: [axis(), jeet(), rupture(), autoprefixer()],
-      compress: true
-      //
-      // TK this isn't right, isn't building properly
-      // sourcemap: {
-      //   inline: false,
-      //   sourceRoot: build_path.css
-      // }
-    }))
+  gulp
+    .src([
+      dev_path.styl + '*.styl',
+      '!' + dev_path.styl + '_*.styl',
+      '!' + dev_path.styl + '_*'
+    ])
+    .pipe(
+      plumber({
+        errorHandler: notify.onError('Stylus Error: <%= error.message %>')
+      })
+    )
+    .pipe(
+      stylus({
+        use: [axis(), jeet(), rupture(), autoprefixer()],
+        compress: true
+        //
+        // TK this isn't right, isn't building properly
+        // sourcemap: {
+        //   inline: false,
+        //   sourceRoot: build_path.css
+        // }
+      })
+    )
     // .on('error', console.log)
     .pipe(gulp.dest(build_path.css))
-    .pipe(browsersync.reload({stream: true}));
+    .pipe(browsersync.reload({ stream: true }));
 });
 
 // JavaScript
@@ -116,13 +118,14 @@ gulp.task('js', function(cb) {
   //   .pipe(gulp.dest(build_path.js))
   //   .pipe(browsersync.reload({stream: true}));
 
-  pump([
-    gulp.src(dev_path.js + '*.js'),
-    babel(),
-    uglify(),
-    gulp.dest(build_path.js),
-    browsersync.reload({stream: true})
-  ],
+  pump(
+    [
+      gulp.src(dev_path.js + '*.js'),
+      babel(),
+      uglify(),
+      gulp.dest(build_path.js),
+      browsersync.reload({ stream: true })
+    ],
     cb
     // notify.on(cb)
   );
@@ -133,32 +136,38 @@ gulp.task('js', function(cb) {
   //     errorHandler: notify.onError('Javascript Error: <%= error.message %>')
   //   }))
   //   .pipe(uglify({
-	// 		mangle: true,
-	// 		preserveComments: false,
+  // 		mangle: true,
+  // 		preserveComments: false,
   //     compressor: true
-	// 	}))
+  // 	}))
   //   .pipe(gulp.dest(build_path.js))
   //   .pipe(browsersync.reload({stream: true}));
 });
 
 // Minification Images
 gulp.task('images', function() {
-  gulp.src([dev_path.img + '**/*'])
+  gulp
+    .src([dev_path.img + '**/*'])
     .pipe(changed(build_path.img))
     // .pipe(imagemin())
     .pipe(gulp.dest(build_path.img))
-    .pipe(browsersync.reload({stream: true}));
+    .pipe(browsersync.reload({ stream: true }));
 });
 
 // Generate Screenshot Thumbnails
 gulp.task('screenshot_thumbs', function() {
-  gulp.src([dev_path.screenshots + '**/*'])
+  gulp
+    .src([dev_path.screenshots + '**/*'])
     .pipe(changed(build_path.screenshots))
     .pipe(imageResize({ percentage: 40 }))
-    .pipe(rename(function (path) { path.basename += "-thumb"; }))
+    .pipe(
+      rename(function(path) {
+        path.basename += '-thumb';
+      })
+    )
     // .pipe(imagemin())
     .pipe(gulp.dest(build_path.screenshots))
-    .pipe(browsersync.reload({stream: true}));
+    .pipe(browsersync.reload({ stream: true }));
 });
 
 // Start Browser-Sync server
@@ -189,7 +198,6 @@ gulp.task('vendor', function() {
   // gulp.src('dev/local_api/**/*').pipe(gulp.dest('build/local_api/'));
 });
 
-
 //
 // WATCH TASK
 //
@@ -204,7 +212,10 @@ gulp.task('watch', function() {
   gulp.watch([dev_path.screenshots + '**/*'], ['screenshot_thumbs']);
   gulp.watch(dev_path.js + '**/*.js', ['js']);
 
-  gulp.watch([dev_path.styl + 'vendor/*', dev_path.js + 'vendor/*'], ['vendor']);
+  gulp.watch(
+    [dev_path.styl + 'vendor/*', dev_path.js + 'vendor/*'],
+    ['vendor']
+  );
 });
 
 //
@@ -212,12 +223,19 @@ gulp.task('watch', function() {
 //
 
 // gulp.task('default', ['hb_iframes', 'vendor', 'pug', 'templates', 'stylus', 'images', 'js'
-gulp.task('default', ['vendor', 'stylus', 'images', 'js'
-]);
+gulp.task('default', ['vendor', 'stylus', 'images', 'js']);
 
 // gulp.task('localdev', ['hb_iframes', 'vendor', 'pug', 'templates', 'stylus', 'images', 'js', 'browsersync-server', 'watch'
 
 // gulp.task('localdev', ['vendor', 'pug', 'stylus', 'images', 'screenshot_thumbs', 'js', 'browsersync-server', 'watch'
-gulp.task('localdev', ['vendor', 'pug', 'stylus', 'images', 'screenshot_thumbs', 'js', 'browsersync-server', 'watch'
+gulp.task('localdev', [
+  'vendor',
+  'pug',
+  'stylus',
+  'images',
+  'screenshot_thumbs',
+  'js',
+  'browsersync-server',
+  'watch'
   // 'vendor', 'pug', 'stylus', 'js', 'connect-sync', 'watch',
 ]);
